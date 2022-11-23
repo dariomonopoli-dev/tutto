@@ -14,25 +14,29 @@ public class Player {
     public int getPlayerScore () {
         return playerScore;
     }
-    public void setPlayerScore (int additionalScore) {
+    public void updatePlayerScore (int additionalScore) {
         playerScore += additionalScore;
     }
+
+    Scanner input = new Scanner(System.in);
     public boolean getChoiceRorE () {
-        Scanner input = new Scanner(System.in);
         System.out.println("Do you want to roll the dice (enter R) or end your turn (enter E)?");
         String answer = input.nextLine();
-        System.out.println(answer == "R");
-        while (answer != "R") {
+        while (!answer.equals("R") && !answer.equals("E")) {
             System.out.println("Invalid input =(");
-            System.out.println("Please enter R to roll the dice(s) or E if you wish to end your turn.");
+            System.out.println("Please enter 'R' to roll the dice(s) or 'E' if you wish to end your turn.");
             answer = input.nextLine();
         }
-        System.out.println("Your answer is: " + answer);
-        return true;
+        return answer.equals("R");
     }
-    public static void main (String[] args) {
-        Player testPlayer = new Player("Jonas");
-        testPlayer.getChoiceRorE();
+    public boolean getChoiceAnotherRound () {
+        System.out.println("Do you want to start another round (enter Y) or end your turn (enter N)?");
+        String answer = input.nextLine();
+        while (!answer.equals("Y") && !answer.equals("N")) {
+            System.out.println("Invalid input =(");
+            System.out.println("Please enter 'Y' to start another round or 'N' if you wish to end your turn.");
+            answer = input.nextLine();
+        }
+        return answer.equals("Y");
     }
-
 }
