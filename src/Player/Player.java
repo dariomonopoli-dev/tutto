@@ -1,5 +1,8 @@
+package Player;
+
+import java.util.List;
 import java.util.Scanner;
-public class Player {
+public class Player implements Comparable<Player> {
     private final String playerName;
     private int playerScore;
 
@@ -19,7 +22,7 @@ public class Player {
     }
 
     Scanner input = new Scanner(System.in);
-    public boolean getChoiceRorE () {
+    public boolean getChoiceContinueRoll () {
         System.out.println("Do you want to roll the dice (enter R) or end your turn (enter E)?");
         String answer = input.nextLine();
         while (!answer.equals("R") && !answer.equals("E")) {
@@ -38,5 +41,10 @@ public class Player {
             answer = input.nextLine();
         }
         return answer.equals("Y");
+    }
+
+    @Override
+    public int compareTo(Player player) {
+        return playerName.compareToIgnoreCase(player.getPlayerName());
     }
 }
