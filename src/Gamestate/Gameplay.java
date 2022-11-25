@@ -4,19 +4,13 @@ import Player.Player;
 import java.util.ArrayList;
 
 public class Gameplay {
-    private void startGame() {
-        // Instanciating an ArrayList of all Player Instances
-        String[] playerNames = GameInitailizer.getPlayerNames();
+    private static void startGame() {
 
-        ArrayList<Player> playerInstances = new ArrayList<>();
-        for(String playerName : playerNames) {
-            playerInstances.add(new Player(playerName));
-        }
-
-        int maxScore = GameInitailizer.getMaxScore();
+        ArrayList<Player> players = GameInitializer.getPlayers();
+        int winningScore = GameInitializer.getWinningScore();
     }
 
     public static void main(String[] args) {
-        //startGame();
+        startGame();
     }
 }
