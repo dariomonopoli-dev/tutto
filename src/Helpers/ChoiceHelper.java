@@ -9,7 +9,7 @@ public class ChoiceHelper {
 
     private static Scanner input = new Scanner(System.in);
 
-    public static String getNewIndexChoice() {
+    private static String getNewIndexChoice() {
         System.out.println("Invalid input =(");
         System.out.println("Please enter indexes in the correct format (e.g. 2 or 2,3,4):");
         return input.nextLine();
