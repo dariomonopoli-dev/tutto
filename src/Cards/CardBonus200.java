@@ -1,5 +1,5 @@
 package Cards;
-import Turn.Turn;
+import Round.Round;
 
 public class CardBonus200 extends AbstractCard {
 
@@ -18,6 +18,6 @@ public class CardBonus200 extends AbstractCard {
     // abstract method, invoke playRound for this card type
     @Override
     public void playRound() {
-        Turn.playBonusCard(bonus);}
+        Round.playBonusCard(bonus);}
     }
 
