@@ -14,7 +14,8 @@ public class GameInitializer {
         while (true) {
             try {
                 int inputNumber = scanner.nextInt();
-                 if (inputNumber < 2 || inputNumber > 10) {
+                scanner.nextLine(); // "throws away" the leftover \n so that the next "nextLine" doesn't take it
+                if (inputNumber < 2 || inputNumber > 10) {
                      System.out.println("This game is only playable by 2-10 players, please enter a valid number!");
                  } else {
                      return inputNumber;
@@ -22,6 +23,7 @@ public class GameInitializer {
             } catch (Exception e) {
                 System.out.println("Something went wrong :(");
                 System.out.println("please try again!");
+                scanner.next(); // advances scanner so that it doesn't get caught in endless while loop of exceptions
             }
         }
     }
@@ -60,6 +62,7 @@ public class GameInitializer {
         while (true) {
             try {
                 int inputNumber = scanner.nextInt();
+                scanner.nextLine();
                 if (inputNumber < 1) {
                     System.out.println("Do you even want to play? The winning points can't be smaller than 1!");
                 } else {
@@ -68,6 +71,7 @@ public class GameInitializer {
             } catch (Exception e) {
                 System.out.println("Something went wrong :(");
                 System.out.println("please try again!");
+                scanner.next();
             }
         }
     }
