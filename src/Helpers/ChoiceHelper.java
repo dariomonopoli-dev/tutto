@@ -1,9 +1,6 @@
 package Helpers;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class ChoiceHelper {
 
@@ -70,7 +67,7 @@ public class ChoiceHelper {
     /**
      * @post method ensures the selected die-indexes are valid options
      */
-    public static void checkChoiceValidity(String answer, List<Integer> rolledDice) {
+    public static List<String> checkChoiceValidity(String answer, List<Integer> rolledDice) {
         List<String> answerList = getAnswerList(answer);
         boolean validInput = isValidInput(rolledDice, answerList);
         while (!validInput) {
@@ -79,6 +76,7 @@ public class ChoiceHelper {
             // go through every choice
             validInput = isValidInput(rolledDice, answerList);
         }
+        return getChoicesList(rolledDice, answerList);
     }
 
     private static boolean isValidInput(List<Integer> rolledDice, List<String> answerList) {
@@ -115,5 +113,22 @@ public class ChoiceHelper {
         int currentChoice = rolledDice.get(currentIndex);
         return singles.contains(Integer.toString(currentChoice));
     }
-}
 
+    private static List<String> getChoicesList(List<Integer> rolledDice, List<String> answerList) {
+        List<String> choicesList = new ArrayList<>();
+        for (int i = 0; i < answerList.size(); i++) {
+            int choice = Integer.parseInt(answerList.get(i))-1;
+            // check whether current index is concatenated with the next 2
+            if (answerList.size()-i > 2 && isConcatenated(answerList, i)) {
+                String placeholder = Integer.toString(rolledDice.get(choice));
+                choicesList.add(placeholder.repeat(3));
+                i += 2;
+            } else {
+                String placeholder = Integer.toString(rolledDice.get(choice));
+                choicesList.add(placeholder);
+            }
+        }
+        return choicesList;
+    }
+
+}
