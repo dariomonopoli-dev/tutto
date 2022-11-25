@@ -1,5 +1,6 @@
-import Helper.GameInitailizer;
+package Gamestate;
 
+import Player.Player;
 import java.util.ArrayList;
 
 public class Gameplay {

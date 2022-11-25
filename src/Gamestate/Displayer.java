@@ -1,4 +1,4 @@
-package Helper;
+package Gamestate;
 
 public class Displayer {
     public static void displayDices() {
