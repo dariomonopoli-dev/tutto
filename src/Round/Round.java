@@ -2,6 +2,7 @@ package Round;
 
 import Cards.AbstractCard;
 import Gamestate.Displayer;
+import Helpers.DiceRoller;
 import Player.Player;
 
 import java.util.*;
@@ -22,22 +23,25 @@ public class Round {
                 System.out.println(activePlayer.getPlayerName() + " if you wish to roll the dice enter R:");
                 checkAnswerRandD(answer);
             }
-            activePlayer.updatePlayerScore(playTurn(activePlayer, cardStack));
-
+            playTurn(activePlayer, cardStack);
         }
     }
-
-    private static int playTurn (Player activePlayer, Stack<AbstractCard> cardStack) {
+    List<String> someList = Arrays.asList("1", "444", "5");
+    List<Integer> someOtherList = Arrays.asList(1, 444, 5);
+    private static void playTurn (Player activePlayer, Stack<AbstractCard> cardStack) {
         int activeDice = 6;
+        boolean turnIsFinished = false;
+        int turnScore = 0;
+        DiceRoller.rollDice(activeDice);
         List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
         Displayer.displayDice(rolledDice);
         System.out.println(activePlayer.getPlayerName() + " choose at least one valid die or triplet by entering the index (e.g. 2 or 2,3,4):");
         String answer = input.nextLine();
         checkDieIndex(answer, activeDice);
         List<String> diceSetAside = checkChoiceValidity(answer, rolledDice);
-        calculateScore(diceSetAside);
+        turnScore = calculateScore(diceSetAside);
         activeDice -= countDiceSetAside(diceSetAside);
-        return 1;
+        if (turnIsFinished) {activePlayer.updatePlayerScore(turnScore);}
     }
 
     private static int countDiceSetAside(List<String> diceSetAside) {
