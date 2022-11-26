@@ -18,6 +18,7 @@ public class Player implements Comparable<Player> {
         return playerScore;
     }
     public void updatePlayerScore (int additionalScore) {
+        if (additionalScore <= 0) throw new IllegalArgumentException("Score must be positive!");
         playerScore += additionalScore;
     }
 

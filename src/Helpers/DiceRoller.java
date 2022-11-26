@@ -11,7 +11,7 @@ public class DiceRoller {
 
         public void rollDices(int numberOfDices) {
             if (!(numberOfDices >=1 && numberOfDices <=6)) {
-                throw new IllegalArgumentException("Insert a number of dices between 1 and 6!");
+                throw new IllegalArgumentException("Enter a number of dices between 1 and 6!");
             }
             for (int i = 0; i < numberOfDices; i++) {
                 rolledDices.set(i, ran.nextInt(6) + 1);

@@ -15,8 +15,8 @@ public class GameInitializer {
             try {
                 int inputNumber = scanner.nextInt();
                 scanner.nextLine(); // "throws away" the leftover \n so that the next "nextLine" doesn't take it
-                if (inputNumber < 2 || inputNumber > 10) {
-                     System.out.println("This game is only playable by 2-10 players, please enter a valid number!");
+                if (inputNumber < 2 || inputNumber > 4) {
+                     System.out.println("This game is only playable by 2-4 players, please enter a valid number!");
                  } else {
                      return inputNumber;
                  }
