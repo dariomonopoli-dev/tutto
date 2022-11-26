@@ -66,6 +66,7 @@ public class ChoiceHelper {
 
     /**
      * @post method ensures the selected die-indexes are valid options
+     * and returns a list where each choice corresponds to one item
      */
     public static List<String> checkChoiceValidity(String answer, List<Integer> rolledDice) {
         List<String> answerList = getAnswerList(answer);
