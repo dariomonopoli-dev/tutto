@@ -32,23 +32,25 @@ public class Round {
         int activeDice = 6;
         boolean turnIsFinished = false;
         int turnScore = 0;
-        DiceRoller.rollDice(activeDice);
-        List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
-        Displayer.displayDice(rolledDice);
-        System.out.println(activePlayer.getPlayerName() + " choose at least one valid die or triplet by entering the index (e.g. 2 or 2,3,4):");
-        String answer = input.nextLine();
-        checkDieIndex(answer, activeDice);
-        List<String> diceSetAside = checkChoiceValidity(answer, rolledDice);
-        turnScore = calculateScore(diceSetAside);
-        activeDice -= countDiceSetAside(diceSetAside);
-        if (turnIsFinished) {activePlayer.updatePlayerScore(turnScore);}
+        while (!turnIsFinished) {
+            DiceRoller.rollDice(activeDice);
+            List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
+            Displayer.displayDice(rolledDice);
+            System.out.println(activePlayer.getPlayerName() + " choose at least one valid die or triplet by entering the index (e.g. 2 or 2,3,4):");
+            String answer = input.nextLine();
+            checkDieIndex(answer, activeDice);
+            List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice);
+            turnScore = calculateScore(diceSetAside);
+            activeDice -= countDiceSetAside(diceSetAside);
+        }
+        activePlayer.updatePlayerScore(turnScore);
     }
 
-    private static int countDiceSetAside(List<String> diceSetAside) {
+    private static int countDiceSetAside(List<Integer> diceSetAside) {
         int total = 0;
         if (diceSetAside.size() > 0) {
-            for (String dice : diceSetAside) {
-                total += (dice.length() > 1) ? 3 : 1;
+            for (int dice : diceSetAside) {
+                total += (dice > 6) ? 3 : 1;
             }
         }
         return total;
