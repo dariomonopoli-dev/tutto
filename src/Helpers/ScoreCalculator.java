@@ -1,24 +1,24 @@
 package Helpers;
 
 
-import Cards.AbstractCard;
-import Cards.CardBonus;
+import Cards.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Collections;
 public class ScoreCalculator {
-    private int tempScore = 0;
-    private int result = 0;
-    private int validDices = 0;
-    private int numberOfTuttos = 0;
-    private ArrayList<Integer> tempArr = new ArrayList<>(6);
+    private static int tempScore = 0;
+    private static int result = 0;
+    private static int validDices = 0;
+    private static int numberOfTuttos = 0;
+    private static List<Integer> tempArr = new ArrayList<>(6);
 
-    private boolean checkZeroInArray(ArrayList<Integer> tempArr) {
+    private boolean checkZeroInArray(List<Integer> tempArr) {
         return tempArr.contains(0);
 
     }
 
-    private int calculateNormal(ArrayList <Integer> dices, String cardName) {
+    private static int calculateNormal(List <Integer> dices, AbstractCard card) {
 
         for (int i = 0; i < dices.size(); i++) {
             if (dices.get(i) != 0) {
@@ -36,15 +36,15 @@ public class ScoreCalculator {
         }
         if (validDices == dices.size()) {
             numberOfTuttos += 1;
-            if (cardName.equals("Cloverleaf")) {
-                ArrayList <Integer> new_dices = DiceRoller.rollDice(6);
-                calculateScore(new_dices, AbstractCard.getCloverleaf());
+            if (card instanceof CardCloverleaf) {
+                List <Integer> new_dices = DiceRoller.rollDice(6);
+                calculateScore(new_dices, card);
             }
             return tempScore;
         } else {
-            if (cardName.equals("Fireworks")) {
+            if (card instanceof CardFireworks) {
                 return tempScore;
-            } else if (cardName.equals("Bonus") || cardName.equals("Cloverleaf") || cardName.equals("X2")) {
+            } else if (card instanceof CardBonus || card instanceof CardCloverleaf || card instanceof CardX2) {
 
                 tempScore = 0;
                 return tempScore;
@@ -52,8 +52,8 @@ public class ScoreCalculator {
         }
         return tempScore;
     }
-    private int calculateStraight(ArrayList <Integer> dices) {
-        ArrayList<Integer> tempDices;
+    private static int calculateStraight(List <Integer> dices) {
+        List<Integer> tempDices;
         boolean checkNewDice;
         int index = 0;
         for (int i = 0; i < dices.size(); i++) {
@@ -87,28 +87,28 @@ public class ScoreCalculator {
 
 
 
-    public int calculateScore(ArrayList<Integer> dices, AbstractCard card) {
+    public static int calculateScore(List<Integer> dices, AbstractCard card) {
         if (card.getCardName().equals("Cloverleaf")) {
             if (numberOfTuttos == 2) {
                 System.out.println("Player X won the game!");
 
             }
             else {
-                return calculateNormal(dices, card.getCardName());
+                return calculateNormal(dices, card);
             }
         }
         if (card instanceof CardBonus) {
             CardBonus bonusCard = (CardBonus) card;
-            result = calculateNormal(dices, card.getCardName());
+            result = calculateNormal(dices, card);
             if (result != 0) {
-                result = calculateNormal(dices, card.getCardName()) + bonusCard.getBonus();
+                result = calculateNormal(dices, card) + bonusCard.getBonus();
             }
             return result;
         }
         else if (card.getCardName().equals("X2")) {
-            result = calculateNormal(dices, card.getCardName());
+            result = calculateNormal(dices, card);
             if (result != 0) {
-                result = 2 * calculateNormal(dices, card.getCardName());
+                result = 2 * calculateNormal(dices, card);
             }
             return result;
         }
@@ -118,7 +118,7 @@ public class ScoreCalculator {
         }
 
         else if (card.getCardName().equals("Fireworks")) {
-            result = calculateNormal(dices, card.getCardName());
+            result = calculateNormal(dices, card);
             return result;
 
         }
