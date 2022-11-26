@@ -88,7 +88,7 @@ public class ScoreCalculator {
 
 
     public static int calculateScore(List<Integer> dices, AbstractCard card) {
-        if (card.getCardName().equals("Cloverleaf")) {
+        if (card instanceof CardCloverleaf) {
             if (numberOfTuttos == 2) {
                 System.out.println("Player X won the game!");
 
@@ -105,19 +105,19 @@ public class ScoreCalculator {
             }
             return result;
         }
-        else if (card.getCardName().equals("X2")) {
+        else if (card instanceof CardX2) {
             result = calculateNormal(dices, card);
             if (result != 0) {
                 result = 2 * calculateNormal(dices, card);
             }
             return result;
         }
-        else if (card.getCardName().equals("Straight")) {
+        else if (card instanceof CardStraight) {
             result = calculateStraight(dices);
             return result;
         }
 
-        else if (card.getCardName().equals("Fireworks")) {
+        else if (card instanceof CardFireworks) {
             result = calculateNormal(dices, card);
             return result;
 
