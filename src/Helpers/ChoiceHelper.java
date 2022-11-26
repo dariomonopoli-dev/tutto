@@ -53,14 +53,10 @@ public class ChoiceHelper {
                 "2,3,4,5,6",
                 "1,2,3,4,5,6"
         );
-        List<String> answerList = (answer.length() > 1) ?
-                Arrays.asList(answer.split(",")) :
-                Collections.singletonList(answer);
+        List<String> answerList = getAnswerList(answer);
         while (!possibleAnswers.contains(answer) || answerList.size() > activeDice) {
             answer = getNewIndexChoice();
-            answerList = (answer.length() > 1) ?
-                    Arrays.asList(answer.split(",")) :
-                    Collections.singletonList(answer);
+            answerList = getAnswerList(answer);
         }
     }
 
