@@ -2,7 +2,6 @@ package Helpers;
 
 import java.util.*;
 public class DiceRoller {
-
         private static Random ran = new Random();
 
         public static List<Integer> rollDice(int numberOfDice) {
