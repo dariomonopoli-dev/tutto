@@ -2,6 +2,7 @@ package Helpers;
 
 
 import Cards.AbstractCard;
+import Cards.CardBonus;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,10 +37,7 @@ public class ScoreCalculator {
         if (validDices == dices.size()) {
             numberOfTuttos += 1;
             if (cardName.equals("Cloverleaf")) {
-                DiceRoller newRoll = new DiceRoller();
-                newRoll.rollDices(6);
-                newRoll.rollDices(6);
-                ArrayList <Integer> new_dices = newRoll.getRolledDices();
+                ArrayList <Integer> new_dices = DiceRoller.rollDice(6);
                 calculateScore(new_dices, AbstractCard.getCloverleaf());
             }
             return tempScore;
@@ -72,9 +70,7 @@ public class ScoreCalculator {
                 while ((tempArr.stream().distinct().toList().size() != 6) && checkZeroInArray(tempArr)) {
 
                     if (checkNewDice) {
-                        DiceRoller newRoll = new DiceRoller();
-                        newRoll.rollDices(6 - (tempArr.stream().distinct()).toList().size());
-                        tempDices = newRoll.getRolledDices();
+                        tempDices = DiceRoller.rollDice(6 - (tempArr.stream().distinct()).toList().size());
                         calculateStraight(tempDices);
 
                     } else if ((tempArr.stream().distinct()).toList().size() == 6 & checkZeroInArray(tempArr)) {
@@ -101,10 +97,11 @@ public class ScoreCalculator {
                 return calculateNormal(dices, card.getCardName());
             }
         }
-        if (card.getCardName().startsWith("Bonus")) {
+        if (card instanceof CardBonus) {
+            CardBonus bonusCard = (CardBonus) card;
             result = calculateNormal(dices, card.getCardName());
             if (result != 0) {
-                result = calculateNormal(dices, card.getCardName()) + card.bonus;
+                result = calculateNormal(dices, card.getCardName()) + bonusCard.getBonus();
             }
             return result;
         }
