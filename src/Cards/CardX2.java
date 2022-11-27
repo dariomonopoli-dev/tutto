@@ -10,14 +10,12 @@ public class CardX2 extends AbstractCard {
         return uniqueInstance;
     }
 
-    private final String cardName = "Card x2";
-
     public void playRound() {
         Round.playX2Card();
     }
 
     public String getCardName(){
-        return cardName;
+        return "Card x2";
     }
 
     public int getBonus(){

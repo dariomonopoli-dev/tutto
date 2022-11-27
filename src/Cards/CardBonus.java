@@ -11,14 +11,14 @@ public class CardBonus extends AbstractCard {
     private CardBonus(int bonus) {
 
         this.cardBonus = bonus;
-        this.cardName = "Bonus Card " + String.valueOf(bonus);
+        this.cardName = "Bonus Card " + bonus;
     }
     final private int cardBonus;
     final private String cardName;
-    final static Map<Integer, CardBonus> bonusCards = new HashMap<Integer, CardBonus>();
+    final static Map<Integer, CardBonus> bonusCards = new HashMap<>();
     //Flyweight Factory
     static {
-        ArrayList<Integer> allPossibleBonus = new ArrayList<Integer>();
+        ArrayList<Integer> allPossibleBonus = new ArrayList<>();
         allPossibleBonus.add(200);
         allPossibleBonus.add(300);
         allPossibleBonus.add(400);

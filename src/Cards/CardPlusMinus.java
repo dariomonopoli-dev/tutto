@@ -10,14 +10,12 @@ public class CardPlusMinus extends AbstractCard {
         return uniqueInstance;
     }
 
-    private final String cardName = "Card Plus/Minus";
-
     public void playRound() {
         Round.playPlusMinusCard();
     }
 
     public String getCardName(){
-        return cardName;
+        return "Card Plus/Minus";
     }
 
     public int getBonus(){

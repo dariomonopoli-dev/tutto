@@ -10,14 +10,12 @@ public class CardStop extends AbstractCard {
         return uniqueInstance;
     }
 
-    private final String cardName = "Card Stop";
-
     public void playRound() {
         Round.playStopCard();
     }
 
     public String getCardName(){
-        return cardName;
+        return "Card Stop";
     }
 
     public int getBonus(){

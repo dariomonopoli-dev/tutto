@@ -9,14 +9,12 @@ public class CardCloverleaf extends AbstractCard {
         return uniqueInstance;
     }
 
-    private final String cardName = "Card Cloverleaf";
-
     public void playRound() {
         Round.playCloverLeafCard();
     }
 
     public String getCardName(){
-        return cardName;
+        return "Card Cloverleaf";
     }
 
     public int getBonus(){

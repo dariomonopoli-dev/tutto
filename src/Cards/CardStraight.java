@@ -9,14 +9,12 @@ public class CardStraight extends AbstractCard {
         private CardStraight() {}
         public static CardStraight getInstance() {return uniqueInstance;}
 
-        private final String cardName = "Card Straight";
-
         public void playRound() {
                 Round.playStraightCard();
         }
 
         public String getCardName(){
-                return cardName;
+                return "Card Straight";
         }
 
         public int getBonus(){
