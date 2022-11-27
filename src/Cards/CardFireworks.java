@@ -10,9 +10,17 @@ public class CardFireworks extends AbstractCard {
         return uniqueInstance;
     }
 
-    public final String cardName = "Card Fireworks";
+    private final String cardName = "Card Fireworks";
 
-    @Override
     public void playRound() {
-        Round.playFireWorkCard();}
+        Round.playFireWorkCard();
+    }
+
+    public String getCardName(){
+        return cardName;
+    }
+
+    public int getBonus(){
+        return 0;
+    }
 }

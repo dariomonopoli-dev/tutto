@@ -10,9 +10,18 @@ public class CardX2 extends AbstractCard {
         return uniqueInstance;
     }
 
-    public final String cardName = "Card x2";
+    private final String cardName = "Card x2";
 
-    @Override
-    public void playRound() {Round.playX2Card();}
+    public void playRound() {
+        Round.playX2Card();
     }
+
+    public String getCardName(){
+        return cardName;
+    }
+
+    public int getBonus(){
+        return 0;
+    }
+}
 

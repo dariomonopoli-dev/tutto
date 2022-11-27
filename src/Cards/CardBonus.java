@@ -9,12 +9,13 @@ public class CardBonus extends AbstractCard {
 
     // Flyweight private constructor
     private CardBonus(int bonus) {
-        this.CardBonus = bonus;
+
+        this.cardBonus = bonus;
+        this.cardName = "Bonus Card " + String.valueOf(bonus);
     }
-    // Individual name and bonus of Instance
-    private int CardBonus;
-    final public String cardName = "Bonus Card" + CardBonus;
-    final static Map<Integer, CardBonus> BonusCards = new HashMap<Integer, CardBonus>();
+    final private int cardBonus;
+    final private String cardName;
+    final static Map<Integer, CardBonus> bonusCards = new HashMap<Integer, CardBonus>();
     //Flyweight Factory
     static {
         ArrayList<Integer> allPossibleBonus = new ArrayList<Integer>();
@@ -24,17 +25,26 @@ public class CardBonus extends AbstractCard {
         allPossibleBonus.add(500);
         allPossibleBonus.add(600);
         for (int bonus : allPossibleBonus){
-            BonusCards.put(bonus, new CardBonus(bonus));
+            bonusCards.put(bonus, new CardBonus(bonus));
         }
     }
 
     //Flyweight access method
     public static CardBonus getInstance(Integer bonus) {
-        return BonusCards.get(bonus);
+        return bonusCards.get(bonus);
     }
 
-    @Override
     public void playRound() {
-        Round.playBonusCard(CardBonus);}
+        Round.playBonusCard(cardBonus);}
+
+    public String getCardName() {
+        return cardName;
+    }
+
+    public int getBonus(){
+        return cardBonus;
+    }
+
+
 }
 

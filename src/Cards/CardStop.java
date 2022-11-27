@@ -10,9 +10,17 @@ public class CardStop extends AbstractCard {
         return uniqueInstance;
     }
 
-    public final String cardName = "Card Stop";
+    private final String cardName = "Card Stop";
 
-    @Override
     public void playRound() {
-        Round.playStopCard();}
+        Round.playStopCard();
+    }
+
+    public String getCardName(){
+        return cardName;
+    }
+
+    public int getBonus(){
+        return 0;
+    }
 }

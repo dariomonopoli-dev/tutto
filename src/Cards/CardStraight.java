@@ -9,10 +9,18 @@ public class CardStraight extends AbstractCard {
         private CardStraight() {}
         public static CardStraight getInstance() {return uniqueInstance;}
 
-        public final String cardName = "Card Straight";
+        private final String cardName = "Card Straight";
 
-        @Override
         public void playRound() {
-        Round.playStraightCard();}
-    }
+                Round.playStraightCard();
+        }
+
+        public String getCardName(){
+                return cardName;
+        }
+
+        public int getBonus(){
+                return 0;
+        }
+}
 

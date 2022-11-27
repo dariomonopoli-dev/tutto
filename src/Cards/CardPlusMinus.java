@@ -10,10 +10,18 @@ public class CardPlusMinus extends AbstractCard {
         return uniqueInstance;
     }
 
-    public final String cardName = "Card Plus/Minus";
+    private final String cardName = "Card Plus/Minus";
 
-    @Override
     public void playRound() {
-        Round.playPlusMinusCard();}
+        Round.playPlusMinusCard();
+    }
+
+    public String getCardName(){
+        return cardName;
+    }
+
+    public int getBonus(){
+        return 0;
+    }
 }
 
