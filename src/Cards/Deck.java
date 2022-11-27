@@ -37,26 +37,26 @@ public class Deck {
         }
 
         for (int i = 0; i < numberOfFireworksCards; i++) {
-            deck.push(new CardFireworks());
+            deck.push(CardFireworks.getInstance());
         }
 
         for (int i = 0; i < numberOfStopCards; i++) {
-            deck.push(new CardStop());
+            deck.push(CardStop.getInstance());
         }
 
         for (int i = 0; i < numberOfPlusMinusCards; i++) {
-            deck.push(new CardPlusMinus());
+            deck.push(CardPlusMinus.getInstance());
         }
 
         for (int i = 0; i < numberOfStraightCards; i++) {
-            deck.push(new CardStraight());
+            deck.push(CardStraight.getInstance());
         }
 
         for (int i = 0; i < numberOfX2Cards; i++) {
-            deck.push(new CardX2());
+            deck.push(CardX2.getInstance());
         }
 
-        deck.push(new CardCloverleaf());
+        deck.push(CardCloverleaf.getInstance());
 
     }
 
