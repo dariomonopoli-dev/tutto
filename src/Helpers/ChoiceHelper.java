@@ -26,6 +26,14 @@ public class ChoiceHelper {
         }
     }
 
+    public static void checkAnswerRandE (String answer) {
+        while (!answer.equals("R") && !answer.equals("E")) {
+            System.out.println("Invalid input =(");
+            System.out.println("Please enter 'R' to roll the dice or 'E' to end your turn:");
+            answer = input.nextLine();
+        }
+    }
+
     /**
      * @post method checks whether the input if of the correct form and
      *  a feasible choice (i.e. not more indexes than dice)
@@ -74,6 +82,36 @@ public class ChoiceHelper {
             validInput = isValidInput(rolledDice, answerList);
         }
         return getChoicesList(rolledDice, answerList);
+    }
+
+    /**
+     * @post check whether a roll has valid dice to choose
+     */
+    public static boolean checkIsValidRoll (List<Integer> rolledDice) {
+        int occurrenceOnes = 0;
+        int occurrenceTwos = 0;
+        int occurrenceThrees = 0;
+        int occurrenceFours = 0;
+        int occurrenceFives = 0;
+        int occurrenceSix = 0;
+        
+        for (int die : rolledDice) {
+            if (die == 1) {
+                occurrenceOnes++;
+            } else if (die == 2) {
+                occurrenceTwos++;
+            } else if (die == 3) {
+                occurrenceThrees++;
+            } else if (die == 4) {
+                occurrenceFours++;
+            } else if (die == 5) {
+                occurrenceFives++;
+            } else {
+                occurrenceSix++;
+            }
+        }
+        return (occurrenceOnes > 0 || occurrenceTwos > 2 || occurrenceThrees > 2 ||
+                occurrenceFours > 2 || occurrenceFives > 0 || occurrenceSix > 2);
     }
 
     private static boolean isValidInput(List<Integer> rolledDice, List<String> answerList) {
