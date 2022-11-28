@@ -1,7 +1,9 @@
 package Player;
 
-import java.util.List;
 import java.util.Scanner;
+
+import static Helpers.InputValidator.checkDieIndex;
+
 public class Player implements Comparable<Player> {
     private final String playerName;
     private int playerScore;
@@ -24,7 +26,7 @@ public class Player implements Comparable<Player> {
 
     Scanner input = new Scanner(System.in);
     public boolean getChoiceContinueRoll () {
-        System.out.println("Do you want to roll the dice (enter R) or end your turn (enter E)?");
+        System.out.println(playerName + ", do you want to roll the dice (enter R) or end your turn (enter E)?");
         String answer = input.nextLine();
         while (!answer.equals("R") && !answer.equals("E")) {
             System.out.println("Invalid input =(");
@@ -33,8 +35,9 @@ public class Player implements Comparable<Player> {
         }
         return answer.equals("R");
     }
+
     public boolean getChoiceAnotherRound () {
-        System.out.println("Do you want to start another round (enter Y) or end your turn (enter N)?");
+        System.out.println(playerName + ", do you want to start another round (enter Y) or end your turn (enter N)?");
         String answer = input.nextLine();
         while (!answer.equals("Y") && !answer.equals("N")) {
             System.out.println("Invalid input =(");
@@ -42,6 +45,25 @@ public class Player implements Comparable<Player> {
             answer = input.nextLine();
         }
         return answer.equals("Y");
+    }
+
+    public boolean getChoiceDisplayScores () {
+        System.out.println(playerName + ", do you want to start the round (enter R) or display the scores (enter D)?");
+        String answer = input.nextLine();
+        while (!answer.equals("R") && !answer.equals("D")) {
+            System.out.println("Invalid input =(");
+            System.out.println("Please enter 'R' to start the round or 'D' if you wish to display the scores.");
+            answer = input.nextLine();
+        }
+        return answer.equals("D");
+    }
+
+    public String getChoiceDice (int activeDice) {
+        System.out.println(playerName + " choose at least one valid die or " +
+                "triplet by entering the index (e.g. 2 or 2,3,4):");
+        String answer = input.nextLine();
+        checkDieIndex(answer, activeDice);
+        return answer;
     }
 
     @Override
