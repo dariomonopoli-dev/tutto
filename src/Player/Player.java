@@ -62,8 +62,24 @@ public class Player implements Comparable<Player> {
         System.out.println(playerName + " choose at least one valid die or " +
                 "triplet by entering the index (e.g. 2 or 2,3,4):");
         String answer = input.nextLine();
+        while (answer.length() == 0) {
+            System.out.println("Invalid input =(");
+            System.out.println(playerName + " choose at least one valid die or " +
+                    "triplet by entering the index (e.g. 2 or 2,3,4):");
+            answer = input.nextLine();
+        }
         checkDieIndex(answer, activeDice);
         return answer;
+    }
+
+    public void getAnotherRoll () {
+        System.out.println(playerName + ", enter R to roll your dice again:");
+        String answer = input.nextLine();
+        while (!answer.equals("R")) {
+            System.out.println("Invalid input =(");
+            System.out.println("Please enter 'R' to roll the dice.");
+            answer = input.nextLine();
+        }
     }
 
     @Override

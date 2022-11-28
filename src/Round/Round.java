@@ -1,41 +1,64 @@
 package Round;
 
-import Cards.AbstractCard;
-import Cards.Deck;
+import Cards.*;
 import Gamestate.Displayer;
 import Helpers.DiceRoller;
 import Player.Player;
 
 import java.util.*;
 
-import static Helpers.ChoiceHelper.*;
+import static Helpers.InputValidator.*;
 import static Helpers.ScoreCalculator.*;
 
 public class Round {
+
+    private static Deck cardDeck;
+
+    private static Player activePlayer;
+
+    private static List<Player> highestScoringPlayers = new ArrayList<>();
+
     private static Scanner input = new Scanner(System.in);
 
-    private static int numberOfTuttos = 0;
+    private static int numberOfTuttos;
 
-    public static void playRound (List<Player> players, Deck cardDeck) {
+    public static void playRound (List<Player> players, Deck aDeck) {
+        cardDeck = aDeck;
         Collections.sort(players);
-        for (Player activePlayer : players) {
-            System.out.println(activePlayer.getPlayerName() + " do you want to roll the dice (enter R) or display the current scores (enter D)?");
-            String answer = input.nextLine();
-            checkAnswerRandD(answer);
-            while (answer.equals("D")) {
+        setHighestScoringPlayer(players);
+        for (Player aPlayer : players) {
+            activePlayer = aPlayer;
+            boolean displayScores = activePlayer.getChoiceDisplayScores();
+            if (displayScores) {
                 Displayer.displayScores(players);
-                System.out.println(activePlayer.getPlayerName() + " if you wish to roll the dice enter R:");
-                checkAnswerRandD(answer);
+                while (displayScores) {
+                    System.out.println(activePlayer.getPlayerName() + " if you wish to roll the dice enter R:");
+                    String answer = input.nextLine();
+                    displayScores = answer.equals("R");
+                }
             }
-            playTurn(activePlayer, cardDeck);
+            AbstractCard activeCard = cardDeck.getTopCard();
+            activeCard.playRound();
         }
     }
 
-    private static void playTurn (Player activePlayer, Deck cardDeck) {
+    public static void setHighestScoringPlayer(List<Player> players) {
+        highestScoringPlayers.add(players.get(0));
+        for (Player player : players) {
+            if (player.getPlayerScore() > highestScoringPlayers.get(0).getPlayerScore()) {
+                highestScoringPlayers.clear();
+                highestScoringPlayers.add(player);
+            } else if (player.getPlayerScore() == highestScoringPlayers.get(0).getPlayerScore()) {
+                highestScoringPlayers.add(player);
+            }
+        }
+    }
+
+    private static void playBonusAndDoubleTurn (int bonus, boolean isDouble) {
+        numberOfTuttos = 0;
         int activeDice = 6;
         boolean turnIsActive = true;
         int turnScore = 0;
-        AbstractCard activeCard = cardDeck.getTopCard();
         while (turnIsActive) {
             List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
             Displayer.displayDice(rolledDice);
@@ -45,29 +68,28 @@ public class Round {
                 System.out.println(activePlayer.getPlayerName() + " your turn is finished...");
                 break;
             }
-            System.out.println(activePlayer.getPlayerName() + " choose at least one valid die or " +
-                    "triplet by entering the index (e.g. 2 or 2,3,4):");
-            String answer = input.nextLine();
-            checkDieIndex(answer, activeDice);
+            String answer = activePlayer.getChoiceDice(activeDice);
             List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice);
-            turnScore = calculateScore(diceSetAside, activeCard);
+            turnScore = calculateScore(diceSetAside);
             activeDice -= countDiceSetAside(diceSetAside);
             if (activeDice == 0) {
                 turnIsActive = tuttoBehavior(activePlayer);
+                turnScore += isDouble ? turnScore*2 : bonus;
+            } else if (turnIsActive && activeDice == 0) {
+                AbstractCard activeCard = cardDeck.getTopCard();
+                activeCard.playRound();
+            } else {
+                turnIsActive = activePlayer.getChoiceContinueRoll();
             }
-
         }
         activePlayer.updatePlayerScore(turnScore);
     }
 
     private static boolean tuttoBehavior (Player activePlayer) {
         System.out.println("Congratulations " + activePlayer.getPlayerName() + "! You have a Tutto!");
-        System.out.println("If you wish to continue and roll the dice enter R or " +
-                "if you want to end your turn please enter E:");
-        String answer = input.nextLine();
-        checkAnswerRandE(answer);
+        boolean anotherRound = activePlayer.getChoiceAnotherRound();
         numberOfTuttos++;
-        return answer.equals("R");
+        return anotherRound;
     }
 
     private static int countDiceSetAside(List<Integer> diceSetAside) {
@@ -81,28 +103,122 @@ public class Round {
     }
 
     public static void playBonusCard (int bonus) {
-    }
-
-    public static void playCloverLeafCard () {
-    }
-
-    public static void playFireWorkCard () {
-    }
-
-    public static void playPlusMinusCard () {
-    }
-
-    public static void playStopCard () {
-    }
-
-    public static void playStraightCard () {
+        Displayer.displayCard(CardBonus);
+        playBonusAndDoubleTurn(bonus, false);
     }
 
     public static void playX2Card () {
+        Displayer.displayCard(CardX2);
+        playBonusAndDoubleTurn(0, true);
     }
 
-    public static void main (String[] args) {
-        Player somePlayer = new Player("Jonas");
-        System.out.println(tuttoBehavior(somePlayer));
+    public static void playStopCard () {
+        Displayer.displayCard(CardStop);
+        System.out.println("You drew a Stop card... better luck next round!");
+    }
+
+    public static void playFireWorkCard () {
+        Displayer.displayCard(CardFireworks);
+        numberOfTuttos = 0;
+        int activeDice = 6;
+        boolean turnIsActive = true;
+        int turnScore = 0;
+        while (turnIsActive) {
+            List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
+            Displayer.displayDice(rolledDice);
+            activePlayer.getAnotherRoll();
+            List<Integer> diceSetAside = DiceRoller.getAllValidDice(rolledDice);
+            turnScore += calculateScore(diceSetAside);
+            activeDice -= countDiceSetAside(diceSetAside);
+            if (diceSetAside.size() == 0) { turnIsActive = false; }
+        }
+        activePlayer.updatePlayerScore(turnScore);
+    }
+
+    public static void playPlusMinusCard () {
+        Displayer.displayCard(CardPlusMinus);
+        numberOfTuttos = 0;
+        int activeDice = 6;
+        boolean turnIsActive = true;
+        while (turnIsActive) {
+            List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
+            Displayer.displayDice(rolledDice);
+            turnIsActive = checkIsValidRoll(rolledDice);
+            if (!turnIsActive) {
+                System.out.println("Tough luck!");
+                System.out.println(activePlayer.getPlayerName() + " your turn is finished...");
+                break;
+            }
+            String answer = activePlayer.getChoiceDice(activeDice);
+            List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice);
+            activeDice -= countDiceSetAside(diceSetAside);
+            if (activeDice == 0) {
+                System.out.println("Congratulations you scored a Tutto! You get 1000 points!");
+                turnIsActive = false;
+            }
+        }
+        activePlayer.updatePlayerScore(1000);
+        for (Player highestScoringPlayer : highestScoringPlayers) {
+            highestScoringPlayer.updatePlayerScore(-1000);
+        }
+    }
+
+    public static void playCloverLeafCard () {
+        Displayer.displayCard(CardCloverleaf);
+        numberOfTuttos = 0;
+        int activeDice = 6;
+        boolean turnIsActive = true;
+        int turnScore = 0;
+        while (turnIsActive) {
+            List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
+            Displayer.displayDice(rolledDice);
+            turnIsActive = checkIsValidRoll(rolledDice);
+            if (!turnIsActive) {
+                System.out.println("Tough luck!");
+                System.out.println(activePlayer.getPlayerName() + " your turn is finished...");
+                break;
+            }
+            String answer = activePlayer.getChoiceDice(activeDice);
+            List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice);
+            activeDice -= countDiceSetAside(diceSetAside);
+            if (activeDice == 0 && numberOfTuttos < 2) {
+                System.out.println("Congratulations " + activePlayer.getPlayerName() + ", you got a Tutto! " +
+                        "Get a second one to win the game!");
+                numberOfTuttos++;
+                activePlayer.getAnotherRoll();
+            } else if (activeDice == 0 && numberOfTuttos == 2) {
+                System.out.println("Congratulations! " + activePlayer.getPlayerName() + " won the game!");
+            } else {
+                activePlayer.getAnotherRoll();
+            }
+        }
+    }
+
+    public static void playStraightCard () {
+        Displayer.displayCard(CardStraight);
+        numberOfTuttos = 0;
+        int activeDice = 6;
+        boolean turnIsActive = true;
+        List<Integer> diceSetAside;
+        while (turnIsActive) {
+            List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
+            Displayer.displayDice(rolledDice);
+            if (diceSetAside == null) {
+                turnIsActive = checkIsValidRollStraight(rolledDice, null);
+                if (!turnIsActive) {
+                    System.out.println("Tough luck!");
+                    System.out.println(activePlayer.getPlayerName() + " your turn is finished...");
+                    break;
+                }
+            }
+            String answer = activePlayer.getChoiceDice(activeDice);
+            diceSetAside = checkChoiceValidityStraight(answer, rolledDice, diceSetAside);
+            activeDice -= countDiceSetAside(diceSetAside);
+            if (activeDice == 0) {
+                System.out.println("Congratulations you scored a Straight! You get 2000 points!");
+                turnIsActive = false;
+            }
+        }
+        activePlayer.updatePlayerScore(2000);
     }
 }

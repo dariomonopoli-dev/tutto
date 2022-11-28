@@ -6,18 +6,6 @@ public class InputValidator {
 
     private static Scanner input = new Scanner(System.in);
 
-    private static String getNewIndexChoice() {
-        System.out.println("Invalid input =(");
-        System.out.println("Please enter indexes in the correct format (e.g. 2 or 2,3,4):");
-        return input.nextLine();
-    }
-
-    private static List<String> getAnswerList(String answer) {
-        return (answer.length() > 1) ?
-                Arrays.asList(answer.split(",")) :
-                Collections.singletonList(answer);
-    }
-
     /**
      * @post method checks whether the input if of the correct form and
      *  a feasible choice (i.e. not more indexes than dice)
@@ -45,10 +33,10 @@ public class InputValidator {
                 "2,3,4,5,6",
                 "1,2,3,4,5,6"
         );
-        List<String> answerList = getAnswerList(answer);
+        List<String> answerList = getStringList(answer);
         while (!possibleAnswers.contains(answer) || answerList.size() > activeDice) {
             answer = getNewIndexChoice();
-            answerList = getAnswerList(answer);
+            answerList = getStringList(answer);
         }
     }
 
@@ -56,16 +44,33 @@ public class InputValidator {
      * @post method ensures the selected die-indexes are valid options
      * and returns a list where each choice corresponds to one item
      */
-    public static List<Integer> checkChoiceValidity(String answer, List<Integer> rolledDice) {
-        List<String> answerList = getAnswerList(answer);
-        boolean validInput = isValidInput(rolledDice, answerList);
+    public static List<Integer> checkChoiceValidity (String answer, List<Integer> rolledDice) {
+        List<String> answerList = getStringList(answer);
+        boolean validInput = isValidChoice(rolledDice, answerList);
         while (!validInput) {
             answer = getNewIndexChoice();
-            answerList = getAnswerList(answer);
+            answerList = getStringList(answer);
             // go through every choice
-            validInput = isValidInput(rolledDice, answerList);
+            validInput = isValidChoice(rolledDice, answerList);
         }
-        return getChoicesList(rolledDice, answerList);
+        return getIntegerList(answerList, rolledDice);
+    }
+
+    /**
+     * @post method ensures the selected die-indexes are valid options
+     * for a straight and returns a list where each choice corresponds
+     * to one item
+     */
+    public static List<Integer> checkChoiceValidityStraight (String answer, List<Integer> rolledDice, List<Integer> diceSetAside) {
+        List<String> answerList = getStringList(answer);
+        if (diceSetAside == null) {
+            return getIntegerList(answerList, rolledDice);
+        }
+        while (!isValidChoiceStraight(answerList, rolledDice, diceSetAside)) {
+            answer = getNewIndexChoice();
+            answerList = getStringList(answer);
+        }
+        return getIntegerList(answerList, rolledDice);
     }
 
     /**
@@ -98,7 +103,19 @@ public class InputValidator {
                 occurrenceFours > 2 || occurrenceFives > 0 || occurrenceSix > 2);
     }
 
-    private static boolean isValidInput(List<Integer> rolledDice, List<String> answerList) {
+    /**
+     * @post check whether a roll has valid dice for a straight to choose
+     */
+    public static boolean checkIsValidRollStraight (List<Integer> rolledDice, List<Integer> diceSetAside) {
+        for (int i = 0; i < rolledDice.size(); i++) {
+            if (!diceSetAside.contains(rolledDice.get(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isValidChoice (List<Integer> rolledDice, List<String> answerList) {
         boolean validInput = false;
         for (int i = 0; i < answerList.size(); i++) {
             int choice = Integer.parseInt(answerList.get(i))-1;
@@ -111,6 +128,16 @@ public class InputValidator {
             }
         }
         return validInput;
+    }
+
+    private static boolean isValidChoiceStraight (List<String> answerList, List<Integer> rolledDice, List<Integer> diceSetAside) {
+        for (int i = 0; i < answerList.size(); i++) {
+            int index = Integer.parseInt(answerList.get(i))-1;
+            if (diceSetAside.contains(rolledDice.get(index))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private static boolean isConcatenated(List<String> answerList, int currentIndex) {
@@ -133,7 +160,13 @@ public class InputValidator {
         return singles.contains(Integer.toString(currentChoice));
     }
 
-    private static List<Integer> getChoicesList(List<Integer> rolledDice, List<String> answerList) {
+    private static List<String> getStringList(String answer) {
+        return (answer.length() > 1) ?
+                Arrays.asList(answer.split(",")) :
+                Collections.singletonList(answer);
+    }
+
+    private static List<Integer> getIntegerList(List<String> answerList, List<Integer> rolledDice) {
         List<Integer> choicesList = new ArrayList<>();
         for (int i = 0; i < answerList.size(); i++) {
             int choice = Integer.parseInt(answerList.get(i))-1;
@@ -148,4 +181,9 @@ public class InputValidator {
         return choicesList;
     }
 
+    private static String getNewIndexChoice() {
+        System.out.println("Invalid input =(");
+        System.out.println("Please enter indexes in the correct format (e.g. 2 or 2,3,4):");
+        return input.nextLine();
+    }
 }
