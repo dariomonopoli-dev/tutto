@@ -2,7 +2,7 @@ package Helpers;
 
 import java.util.*;
 
-public class ChoiceHelper {
+public class InputValidator {
 
     private static Scanner input = new Scanner(System.in);
 
@@ -16,22 +16,6 @@ public class ChoiceHelper {
         return (answer.length() > 1) ?
                 Arrays.asList(answer.split(",")) :
                 Collections.singletonList(answer);
-    }
-
-    public static void checkAnswerRandD (String answer) {
-        while (!answer.equals("R") && !answer.equals("D")) {
-            System.out.println("Invalid input =(");
-            System.out.println("Please enter 'R' to roll the dice or 'D' if you wish the scores to be displayed:");
-            answer = input.nextLine();
-        }
-    }
-
-    public static void checkAnswerRandE (String answer) {
-        while (!answer.equals("R") && !answer.equals("E")) {
-            System.out.println("Invalid input =(");
-            System.out.println("Please enter 'R' to roll the dice or 'E' to end your turn:");
-            answer = input.nextLine();
-        }
     }
 
     /**
