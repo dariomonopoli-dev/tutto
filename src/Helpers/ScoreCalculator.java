@@ -13,7 +13,7 @@ public class ScoreCalculator {
     private static int numberOfTuttos = 0;
     private static List<Integer> tempArr = new ArrayList<>(6);
 
-    private boolean checkZeroInArray(List<Integer> tempArr) {
+    private static boolean checkZeroInArray(List<Integer> tempArr) {
         return tempArr.contains(0);
 
     }
