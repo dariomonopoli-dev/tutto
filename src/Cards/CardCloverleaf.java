@@ -1,17 +1,23 @@
 package Cards;
-
-import Helpers.DiceRoller;
+import Round.Round;
 
 public class CardCloverleaf extends AbstractCard {
-    private static CardCloverleaf uniqueInstance = new CardCloverleaf();
-    @Override
-    public void playRound() {
-
-    }
-
-    public static CardCloverleaf getInstance() {
+    // Singleton, only one Instance of card is needed
+    private static final CardCloverleaf uniqueInstance = new CardCloverleaf();
+    private CardCloverleaf() {}
+    public static CardCloverleaf getInstance(){
         return uniqueInstance;
     }
 
-    // how declare instant win?
+    public void playRound() {
+        Round.playCloverLeafCard();
+    }
+
+    public String getCardName(){
+        return "Card Cloverleaf";
+    }
+
+    public int getBonus(){
+        return 0;
+    }
 }

@@ -2,11 +2,10 @@ package Helpers;
 
 import java.util.*;
 public class DiceRoller {
-
         private static Random ran = new Random();
 
-        public static ArrayList<Integer> rollDice(int numberOfDice) {
-            ArrayList<Integer> rolledDice = new ArrayList<Integer>(numberOfDice);
+        public static List<Integer> rollDice(int numberOfDice) {
+            List<Integer> rolledDice = new ArrayList<Integer>(numberOfDice);
             if (!(numberOfDice >=1 && numberOfDice <=6)) {
                 throw new IllegalArgumentException("Enter a number of dices between 1 and 6!");
             }

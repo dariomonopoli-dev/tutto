@@ -21,42 +21,42 @@ public class Deck {
 
     public void initializeDeck() {
         for (int i = 0; i < numberOfBonusCards200; i++) {
-            deck.push(new CardBonus(200));
+            deck.push(CardBonus.getInstance(200));
         }
         for (int i = 0; i < numberOfBonusCards300; i++) {
-            deck.push(new CardBonus(300));
+            deck.push(CardBonus.getInstance(300));
         }
         for (int i = 0; i < numberOfBonusCards400; i++) {
-            deck.push(new CardBonus(400));
+            deck.push(CardBonus.getInstance(400));
         }
         for (int i = 0; i < numberOfBonusCards500; i++) {
-            deck.push(new CardBonus(500));
+            deck.push(CardBonus.getInstance(500));
         }
         for (int i = 0; i < numberOfBonusCards600; i++) {
-            deck.push(new CardBonus(600));
+            deck.push(CardBonus.getInstance(600));
         }
 
         for (int i = 0; i < numberOfFireworksCards; i++) {
-            deck.push(new CardFireworks());
+            deck.push(CardFireworks.getInstance());
         }
 
         for (int i = 0; i < numberOfStopCards; i++) {
-            deck.push(new CardStop());
+            deck.push(CardStop.getInstance());
         }
 
         for (int i = 0; i < numberOfPlusMinusCards; i++) {
-            deck.push(new CardPlusMinus());
+            deck.push(CardPlusMinus.getInstance());
         }
 
         for (int i = 0; i < numberOfStraightCards; i++) {
-            deck.push(new CardStraight());
+            deck.push(CardStraight.getInstance());
         }
 
         for (int i = 0; i < numberOfX2Cards; i++) {
-            deck.push(new CardX2());
+            deck.push(CardX2.getInstance());
         }
 
-        deck.push(new CardCloverleaf());
+        deck.push(CardCloverleaf.getInstance());
 
     }
 
