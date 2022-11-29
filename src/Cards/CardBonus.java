@@ -18,13 +18,13 @@ public class CardBonus extends AbstractCard {
                 "bonus.";
         this.cardGraphicalRepresentation =
                 """                
-                                  +--------+  
-                                  |        | 
-                                  |        | 
-                                  | BONUS  | 
-                                  |        | 
-                                  |        | 
-                                  +--------+ 
+                                  ╔═════════╗ 
+                                  ║         ║ 
+                                  ║         ║ 
+                                  ║  BONUS  ║ 
+                                  ║         ║ 
+                                  ║         ║ 
+                                  ╚═════════╝ 
                                 """;
     }
     final private int cardBonus;

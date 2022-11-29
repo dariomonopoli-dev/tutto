@@ -13,13 +13,13 @@ public class CardCloverleaf extends AbstractCard {
                 you have!\s
                 """;
         this.cardGraphicalRepresentation =                 """                
-                                  +---------+  
-                                  |         | 
-                                  | CLOVER  | 
-                                  | LEAF    | 
-                                  |         | 
-                                  |         | 
-                                  +---------+ 
+                                  ╔══════════╗ 
+                                  ║          ║ 
+                                  ║  CLOVER  ║ 
+                                  ║   LEAF   ║ 
+                                  ║          ║ 
+                                  ║          ║ 
+                                  ╚══════════╝ 
                                 """;
         this.cardBonus = 0;
     }

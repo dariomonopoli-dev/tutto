@@ -17,13 +17,13 @@ public class CardStraight extends AbstractCard {
                         score any points. But if you accomplish a “Straight”, you score 2,000 points for it. A
                         “Straight” is considered a “TUTTO” – consequently, you may continue if you want.""";
                 this.cardGraphicalRepresentation = """                
-                                  +----------+  
-                                  |          | 
-                                  |          | 
-                                  | STRAIGHT | 
-                                  |          | 
-                                  |          | 
-                                  +----------+ 
+                                  ╔══════════╗ 
+                                  ║          ║ 
+                                  ║          ║ 
+                                  ║ STRAIGHT ║ 
+                                  ║          ║ 
+                                  ║          ║ 
+                                  ╚══════════╝ 
                                 """;
                 this.cardBonus = 0;
         }

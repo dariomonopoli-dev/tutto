@@ -13,13 +13,13 @@ public class CardFireworks extends AbstractCard {
                 you have to continue without revealing a new card. Your turn ends only when you
                 roll a null. However, you score all points you have rolled on this turn.""";
         this.cardGraphicalRepresentation = """                
-                                  +---------+  
-                                  |         | 
-                                  |  FIRE   | 
-                                  |  WORKS  | 
-                                  |         | 
-                                  |         | 
-                                  +---------+ 
+                                  ╔══════════╗ 
+                                  ║          ║ 
+                                  ║   FIRE   ║ 
+                                  ║   WORKS  ║ 
+                                  ║          ║ 
+                                  ║          ║ 
+                                  ╚══════════╝ 
                                 """;
         this.cardBonus = 0;
     }

@@ -9,14 +9,14 @@ public class CardStop extends AbstractCard {
         this.cardName = "Card Stop";
         this.cardDescription = "Tough luck! You have to end your turn, and your left neighbour has his turn.";
         this.cardGraphicalRepresentation = """                
-                                  +--------+  
-                                  |        | 
-                                  |        | 
-                                  |  STOP  | 
-                                  |        | 
-                                  |        | 
-                                  +--------+ 
-                                """;;
+                                  ╔══════════╗ 
+                                  ║          ║ 
+                                  ║          ║ 
+                                  ║   STOP   ║ 
+                                  ║          ║ 
+                                  ║          ║ 
+                                  ╚══════════╝ 
+                                """;
         this.cardBonus = 0;
     }
     public static CardStop getInstance(){

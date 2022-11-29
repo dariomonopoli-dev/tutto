@@ -18,13 +18,13 @@ public class CardPlusMinus extends AbstractCard {
                 card, naturally he doesn’t have to deduct any points from his score when he
                 accomplishes a “TUTTO”""";
         this.cardGraphicalRepresentation = """                
-                                  +---------+  
-                                  |         | 
-                                  |  PLUS/  | 
-                                  |  MINUS  | 
-                                  |         | 
-                                  |         | 
-                                  +---------+ 
+                                  ╔═════════╗ 
+                                  ║         ║ 
+                                  ║  PLUS/  ║ 
+                                  ║  MINUS  ║ 
+                                  ║         ║ 
+                                  ║         ║ 
+                                  ╚═════════╝ 
                                 """;
         this.cardBonus = 0;
     }
