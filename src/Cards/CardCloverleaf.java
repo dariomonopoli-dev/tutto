@@ -12,7 +12,15 @@ public class CardCloverleaf extends AbstractCard {
                 if you succeed, the game ends immediately, and you win – no matter what score
                 you have!\s
                 """;
-        this.cardGraphicalRepresentation = "***";
+        this.cardGraphicalRepresentation =                 """                
+                                  +---------+  
+                                  |         | 
+                                  | CLOVER  | 
+                                  | LEAF    | 
+                                  |         | 
+                                  |         | 
+                                  +---------+ 
+                                """;
         this.cardBonus = 0;
     }
     public static CardCloverleaf getInstance(){

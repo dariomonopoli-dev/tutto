@@ -16,7 +16,15 @@ public class CardStraight extends AbstractCard {
                         yet put aside. If the roll doesn’t contain any valid die, it counts as a null and you don’t
                         score any points. But if you accomplish a “Straight”, you score 2,000 points for it. A
                         “Straight” is considered a “TUTTO” – consequently, you may continue if you want.""";
-                this.cardGraphicalRepresentation = "***";
+                this.cardGraphicalRepresentation = """                
+                                  +----------+  
+                                  |          | 
+                                  |          | 
+                                  | STRAIGHT | 
+                                  |          | 
+                                  |          | 
+                                  +----------+ 
+                                """;
                 this.cardBonus = 0;
         }
         public static CardStraight getInstance() {return uniqueInstance;}

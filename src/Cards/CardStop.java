@@ -8,7 +8,15 @@ public class CardStop extends AbstractCard {
     private CardStop() {
         this.cardName = "Card Stop";
         this.cardDescription = "Tough luck! You have to end your turn, and your left neighbour has his turn.";
-        this.cardGraphicalRepresentation = "***";
+        this.cardGraphicalRepresentation = """                
+                                  +--------+  
+                                  |        | 
+                                  |        | 
+                                  |  STOP  | 
+                                  |        | 
+                                  |        | 
+                                  +--------+ 
+                                """;;
         this.cardBonus = 0;
     }
     public static CardStop getInstance(){

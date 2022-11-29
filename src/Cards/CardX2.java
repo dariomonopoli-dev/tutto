@@ -11,7 +11,15 @@ public class CardX2 extends AbstractCard {
                 If you accomplish a “TUTTO”, all points you have rolled so far on this turn are
                 doubled. If you stop and have not accomplished a “TUTTO”, you score only the
                 points rolled.""";
-        this.cardGraphicalRepresentation = "***";
+        this.cardGraphicalRepresentation = """                
+                                  +--------+  
+                                  |        | 
+                                  |        | 
+                                  |   X2   | 
+                                  |        | 
+                                  |        | 
+                                  +--------+ 
+                                """;
         this.cardBonus = 0;
     }
     public static CardX2 getInstance(){
