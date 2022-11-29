@@ -60,9 +60,9 @@ public class Deck {
 
     }
 
-    public AbstractCard getTopCard(Stack<AbstractCard> s) {
-        AbstractCard currentCard = s.pop();
-        if (s.isEmpty()){
+    public AbstractCard getTopCard() {
+        AbstractCard currentCard = deck.pop();
+        if (deck.isEmpty()){
             System.out.println("Re-shuffling deck");
             initializeDeck();
             System.out.println("Deck has been shuffled");
@@ -73,7 +73,7 @@ public class Deck {
     }
 
 
-    public void shuffle(Stack<AbstractCard> deck) {
+    public void shuffle() {
         System.out.println("Shuffling deck...");
         Collections.shuffle(deck);
         System.out.println("Deck has been shuffled");

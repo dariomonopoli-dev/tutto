@@ -24,6 +24,11 @@ public class Player implements Comparable<Player> {
         playerScore += additionalScore;
     }
 
+    public void subtractPlayerScore(int additionalScore) {
+        if (additionalScore != 1000) throw new IllegalArgumentException("You can only subtract 1000 points!");
+        playerScore -= additionalScore;
+    }
+
     Scanner input = new Scanner(System.in);
     public boolean getChoiceContinueRoll () {
         System.out.println(playerName + ", do you want to roll the dice (enter R) or end your turn (enter E)?");
