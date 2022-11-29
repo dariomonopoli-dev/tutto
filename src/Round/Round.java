@@ -200,11 +200,11 @@ public class Round {
         numberOfTuttos = 0;
         int activeDice = 6;
         boolean turnIsActive = true;
-        List<Integer> diceSetAside;
+        List<Integer> diceSetAside = new ArrayList<>();
         while (turnIsActive) {
             List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
             Displayer.displayDice(rolledDice);
-            if (diceSetAside == null) {
+            if (diceSetAside.isEmpty()) {
                 turnIsActive = checkIsValidRollStraight(rolledDice, null);
                 if (!turnIsActive) {
                     System.out.println("Tough luck!");
