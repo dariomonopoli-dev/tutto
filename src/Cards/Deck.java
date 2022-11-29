@@ -7,7 +7,9 @@ import java.util.Collections;
 import java.util.Stack;
 
 public class Deck {
-    private static Stack<AbstractCard> deck = new Stack<AbstractCard>();
+    private static final Deck uniqueInstance = new Deck();
+    private static Stack<AbstractCard> deck;
+
     private final int numberOfBonusCards200 = 5;
     private final int numberOfBonusCards300 = 5;
     private final int numberOfBonusCards400 = 5;
@@ -18,6 +20,11 @@ public class Deck {
     private final int numberOfPlusMinusCards = 5;
     private final int numberOfStraightCards = 5;
     private final int numberOfX2Cards = 5;
+
+    private Deck(){
+        deck = new Stack<>();
+        initializeDeck();
+    }
 
     public void initializeDeck() {
         for (int i = 0; i < numberOfBonusCards200; i++) {
@@ -58,14 +65,13 @@ public class Deck {
 
         deck.push(CardCloverleaf.getInstance());
 
+        shuffle();
     }
 
     public AbstractCard getTopCard() {
         AbstractCard currentCard = deck.pop();
         if (deck.isEmpty()){
-            System.out.println("Re-shuffling deck");
             initializeDeck();
-            System.out.println("Deck has been shuffled");
             return currentCard;
         }
         return currentCard;
@@ -73,9 +79,7 @@ public class Deck {
 
 
     public void shuffle() {
-        System.out.println("Shuffling deck...");
         Collections.shuffle(deck);
-        System.out.println("Deck has been shuffled");
     }
 
     public int getDeckSize() {
@@ -85,6 +89,8 @@ public class Deck {
     private boolean isEmpty() {
         return (deck.size() == 0);
     }
+    public static Deck getInstance(){
+    return uniqueInstance;
+    }
 }
-
 

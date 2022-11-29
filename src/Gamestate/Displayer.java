@@ -44,6 +44,6 @@ public class Displayer {
         System.out.println("Developed by Valentin Meyer, Dario Monopoli, Lennart Töllke and Remo Wiget"+ANSI_RESET);
     }
 
-    public static void displayWinnerScreen() {
+    public static void displayWinnerScreen(List<Player> winningPlayers) {
     }
 }

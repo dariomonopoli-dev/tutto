@@ -5,6 +5,7 @@ import Player.Player;
 import Round.Round;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Gameplay {
@@ -23,7 +24,7 @@ public class Gameplay {
         // Initialization
         ArrayList<Player> players = GameInitializer.getPlayers();
         int winningScore = GameInitializer.getWinningScore();
-        Deck cardDeck = new Deck();
+        Deck cardDeck = Deck.getInstance();
 
         // Gameplay
         boolean winningScoreReached = false;
@@ -45,7 +46,9 @@ public class Gameplay {
                 maxScore = player.getPlayerScore();
             }
         }
-        Displayer.displayWinnerScreen();
+        List<Player> listOfWinners = new ArrayList<Player>();
+
+        Displayer.displayWinnerScreen(listOfWinners);
     }
 
     public static void main(String[] args) {
