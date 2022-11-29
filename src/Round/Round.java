@@ -132,7 +132,7 @@ public class Round {
             List<Integer> diceSetAside = DiceRoller.getAllValidDice(rolledDice);
             turnScore += calculateScore(diceSetAside);
             activeDice -= countDiceSetAside(diceSetAside);
-            if (diceSetAside.size() == 0) { turnIsActive = false; }
+            turnIsActive = (!diceSetAside.isEmpty());
         }
         activePlayer.updatePlayerScore(turnScore);
     }

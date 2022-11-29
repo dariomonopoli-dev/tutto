@@ -121,10 +121,10 @@ public class InputValidator {
             int choice = Integer.parseInt(answerList.get(i))-1;
             // check whether current index is concatenated with the next 2
             if (answerList.size()-i > 2 && isConcatenated(answerList, i)) {
-                validInput = checkTriplets(rolledDice, choice);
+                validInput = hasTriplet(rolledDice, choice);
                 i += 2;
             } else {
-                validInput = checkSingles(rolledDice, choice);
+                validInput = hasSingle(rolledDice, choice);
             }
         }
         return validInput;
@@ -147,14 +147,14 @@ public class InputValidator {
         return (index+1 == nextIndex && index+2 == nextButOneIndex);
     }
 
-    private static boolean checkTriplets(List<Integer> rolledDice, int currentIndex) {
+    public static boolean hasTriplet (List<Integer> rolledDice, int currentIndex) {
         int indexValue = rolledDice.get(currentIndex);
         int nextIndexValue = rolledDice.get(currentIndex+1);
         int nextButOneIndexValue = rolledDice.get(currentIndex+1);
         return (indexValue == nextIndexValue && indexValue == nextButOneIndexValue);
     }
 
-    private static boolean checkSingles(List<Integer> rolledDice, int currentIndex) {
+    public static boolean hasSingle (List<Integer> rolledDice, int currentIndex) {
         List<String> singles = Arrays.asList("1","5");
         int currentChoice = rolledDice.get(currentIndex);
         return singles.contains(Integer.toString(currentChoice));
