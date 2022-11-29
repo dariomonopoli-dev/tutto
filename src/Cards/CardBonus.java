@@ -49,7 +49,10 @@ public class CardBonus extends AbstractCard {
 
     @Override
     public String getDescription() {
-        return null;
+        return "If you accomplish a “TUTTO”, you get the bonus points indicated on " +
+                "the card in addition to the points you have rolled. If you stop and have not " +
+                "accomplished a “TUTTO”, you score only the points rolled without getting the " +
+                "bonus.";
     }
 
     @Override

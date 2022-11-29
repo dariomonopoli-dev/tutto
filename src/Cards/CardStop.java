@@ -27,7 +27,7 @@ public class CardStop extends AbstractCard {
 
     @Override
     public String getDescription() {
-        return null;
+        return "Tough luck! You have to end your turn, and your left neighbour has his turn.";
     }
 
     @Override

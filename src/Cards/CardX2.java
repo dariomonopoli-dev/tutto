@@ -27,7 +27,10 @@ public class CardX2 extends AbstractCard {
 
     @Override
     public String getDescription() {
-        return null;
+        return """
+                If you accomplish a “TUTTO”, all points you have rolled so far on this turn are
+                doubled. If you stop and have not accomplished a “TUTTO”, you score only the
+                points rolled.""";
     }
 
     @Override
