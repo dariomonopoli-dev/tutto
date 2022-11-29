@@ -7,6 +7,9 @@ public class CardStop extends AbstractCard {
     private static final CardStop uniqueInstance = new CardStop();
     private CardStop() {
         this.cardName = "Card Stop";
+        this.cardDescription = "Tough luck! You have to end your turn, and your left neighbour has his turn.";
+        this.cardGraphicalRepresentation = "***";
+        this.cardBonus = 0;
     }
     public static CardStop getInstance(){
         return uniqueInstance;
@@ -15,21 +18,5 @@ public class CardStop extends AbstractCard {
     @Override
     public void playTurn() {
         Round.playStopCard();
-    }
-
-
-    @Override
-    public int getBonus(){
-        return 0;
-    }
-
-    @Override
-    public String getDescription() {
-        return "Tough luck! You have to end your turn, and your left neighbour has his turn.";
-    }
-
-    @Override
-    public String getGraphicalRepresentation() {
-        return null;
     }
 }
