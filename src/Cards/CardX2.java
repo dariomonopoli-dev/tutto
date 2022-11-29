@@ -10,16 +10,32 @@ public class CardX2 extends AbstractCard {
         return uniqueInstance;
     }
 
-    public void playRound() {
+    @Override
+    public void playTurn() {
         Round.playX2Card();
     }
 
+    @Override
     public String getCardName(){
         return "Card x2";
     }
 
+    @Override
     public int getBonus(){
         return 0;
+    }
+
+    @Override
+    public String getDescription() {
+        return """
+                If you accomplish a “TUTTO”, all points you have rolled so far on this turn are
+                doubled. If you stop and have not accomplished a “TUTTO”, you score only the
+                points rolled.""";
+    }
+
+    @Override
+    public String getGraphicalRepresentation() {
+        return null;
     }
 }
 

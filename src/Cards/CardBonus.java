@@ -33,16 +33,31 @@ public class CardBonus extends AbstractCard {
     public static CardBonus getInstance(Integer bonus) {
         return bonusCards.get(bonus);
     }
-
-    public void playRound() {
+    @Override
+    public void playTurn() {
         Round.playBonusCard(cardBonus);}
 
+    @Override
     public String getCardName() {
         return cardName;
     }
 
+    @Override
     public int getBonus(){
         return cardBonus;
+    }
+
+    @Override
+    public String getDescription() {
+        return "If you accomplish a “TUTTO”, you get the bonus points indicated on " +
+                "the card in addition to the points you have rolled. If you stop and have not " +
+                "accomplished a “TUTTO”, you score only the points rolled without getting the " +
+                "bonus.";
+    }
+
+    @Override
+    public String getGraphicalRepresentation() {
+        return null;
     }
 
 

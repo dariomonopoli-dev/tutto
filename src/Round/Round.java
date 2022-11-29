@@ -79,7 +79,7 @@ public class Round {
                 turnScore += isDouble ? turnScore*2 : bonus;
             } else if (turnIsActive && activeDice == 0) {
                 activeCard = cardDeck.getTopCard();
-                activeCard.playRound();
+                activeCard.playTurn();
             } else {
                 turnIsActive = activePlayer.getChoiceContinueRoll();
             }

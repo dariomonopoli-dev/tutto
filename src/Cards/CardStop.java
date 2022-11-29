@@ -10,15 +10,28 @@ public class CardStop extends AbstractCard {
         return uniqueInstance;
     }
 
-    public void playRound() {
+    @Override
+    public void playTurn() {
         Round.playStopCard();
     }
 
+    @Override
     public String getCardName(){
         return "Card Stop";
     }
 
+    @Override
     public int getBonus(){
         return 0;
+    }
+
+    @Override
+    public String getDescription() {
+        return "Tough luck! You have to end your turn, and your left neighbour has his turn.";
+    }
+
+    @Override
+    public String getGraphicalRepresentation() {
+        return null;
     }
 }
