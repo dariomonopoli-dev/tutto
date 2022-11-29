@@ -67,7 +67,6 @@ public class Deck {
             initializeDeck();
             System.out.println("Deck has been shuffled");
             return currentCard;
-
         }
         return currentCard;
     }
@@ -77,10 +76,6 @@ public class Deck {
         System.out.println("Shuffling deck...");
         Collections.shuffle(deck);
         System.out.println("Deck has been shuffled");
-    }
-
-    public Stack<AbstractCard> getDeck() {
-        return deck;
     }
 
     public int getDeckSize() {
