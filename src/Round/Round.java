@@ -34,9 +34,7 @@ public class Round {
             if (displayScores) {
                 Displayer.displayScores(players);
                 while (displayScores) {
-                    System.out.println(activePlayer.getPlayerName() + " if you wish to roll the dice enter R:");
-                    String answer = input.nextLine();
-                    displayScores = answer.equals("R");
+                    displayScores = activePlayer.getChoiceDisplayScores();
                 }
             }
             activeCard = cardDeck.getTopCard();
