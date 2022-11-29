@@ -73,7 +73,7 @@ public class Deck {
     }
 
 
-    public void shuffle(Stack<AbstractCard> deck) {
+    public void shuffle() {
         System.out.println("Shuffling deck...");
         Collections.shuffle(deck);
         System.out.println("Deck has been shuffled");
