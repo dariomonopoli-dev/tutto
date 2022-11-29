@@ -5,7 +5,9 @@ import Round.Round;
 public class CardFireworks extends AbstractCard {
     // Singleton, only one Instance of card is needed
     private static final CardFireworks uniqueInstance = new CardFireworks();
-    private CardFireworks() {}
+    private CardFireworks() {
+        this.cardName = "Card Fireworks";
+    }
     public static CardFireworks getInstance(){
         return uniqueInstance;
     }
@@ -13,11 +15,6 @@ public class CardFireworks extends AbstractCard {
     @Override
     public void playTurn() {
         Round.playFireWorkCard();
-    }
-
-    @Override
-    public String getCardName(){
-        return "Card Fireworks";
     }
 
     @Override

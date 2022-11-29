@@ -4,7 +4,9 @@ import Round.Round;
 public class CardCloverleaf extends AbstractCard {
     // Singleton, only one Instance of card is needed
     private static final CardCloverleaf uniqueInstance = new CardCloverleaf();
-    private CardCloverleaf() {}
+    private CardCloverleaf() {
+        this.cardName = "Card Cloverleaf";
+    }
     public static CardCloverleaf getInstance(){
         return uniqueInstance;
     }
@@ -14,10 +16,6 @@ public class CardCloverleaf extends AbstractCard {
         Round.playCloverLeafCard();
     }
 
-    @Override
-    public String getCardName(){
-        return "Card Cloverleaf";
-    }
     @Override
     public int getBonus(){
         return 0;

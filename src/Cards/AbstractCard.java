@@ -1,8 +1,10 @@
 package Cards;
 
 public abstract class AbstractCard {
-
-    public abstract String getCardName();
+    String cardName;
+    public String getCardName() {
+        return this.cardName;
+    }
 
     public abstract void playTurn();
     public abstract int getBonus();

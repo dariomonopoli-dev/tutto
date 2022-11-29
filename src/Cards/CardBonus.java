@@ -14,7 +14,6 @@ public class CardBonus extends AbstractCard {
         this.cardName = "Bonus Card " + bonus;
     }
     final private int cardBonus;
-    final private String cardName;
     final static Map<Integer, CardBonus> bonusCards = new HashMap<>();
     //Flyweight Factory
     static {
@@ -36,11 +35,6 @@ public class CardBonus extends AbstractCard {
     @Override
     public void playTurn() {
         Round.playBonusCard(cardBonus);}
-
-    @Override
-    public String getCardName() {
-        return cardName;
-    }
 
     @Override
     public int getBonus(){

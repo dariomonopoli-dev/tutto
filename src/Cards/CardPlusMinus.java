@@ -5,7 +5,9 @@ import Round.Round;
 public class CardPlusMinus extends AbstractCard {
     // Singleton, only one Instance of card is needed
     private static final CardPlusMinus uniqueInstance = new CardPlusMinus();
-    private CardPlusMinus() {}
+    private CardPlusMinus() {
+        this.cardName = "Card Plus/Minus";
+    }
     public static CardPlusMinus getInstance(){
         return uniqueInstance;
     }
@@ -13,11 +15,6 @@ public class CardPlusMinus extends AbstractCard {
     @Override
     public void playTurn() {
         Round.playPlusMinusCard();
-    }
-
-    @Override
-    public String getCardName(){
-        return "Card Plus/Minus";
     }
 
     @Override

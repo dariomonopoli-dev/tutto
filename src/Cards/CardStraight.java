@@ -6,17 +6,14 @@ public class CardStraight extends AbstractCard {
 
         // Singleton, only one Instance of card is needed
         private static final CardStraight uniqueInstance = new CardStraight();
-        private CardStraight() {}
+        private CardStraight() {
+                this.cardName = "Card Straight";
+        }
         public static CardStraight getInstance() {return uniqueInstance;}
 
         @Override
         public void playTurn() {
                 Round.playStraightCard();
-        }
-
-        @Override
-        public String getCardName(){
-                return "Card Straight";
         }
 
         @Override
