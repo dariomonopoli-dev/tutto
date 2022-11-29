@@ -21,6 +21,20 @@ public class Displayer {
     public static void displayDice(List<Integer> dice) {
         for(int die : dice) {
             System.out.println(die);
+            System.out.println("""                
+                                  ┌────────┐ 
+                                  │ ■      │ 
+                                  │   ■    │ 
+                                  │     ■  │ 
+                                  └────────┘
+                                  
+                                  ┌────────┐ 
+                                  │  ■  ■  │ 
+                                  │  ■  ■  │ 
+                                  │  ■  ■  │ 
+                                  └────────┘
+  
+                                """);
         }
     }
 
