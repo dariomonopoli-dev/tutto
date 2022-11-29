@@ -33,16 +33,28 @@ public class CardBonus extends AbstractCard {
     public static CardBonus getInstance(Integer bonus) {
         return bonusCards.get(bonus);
     }
-
+    @Override
     public void playTurn() {
         Round.playBonusCard(cardBonus);}
 
+    @Override
     public String getCardName() {
         return cardName;
     }
 
+    @Override
     public int getBonus(){
         return cardBonus;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
+    public String getGraphicalRepresentation() {
+        return null;
     }
 
 

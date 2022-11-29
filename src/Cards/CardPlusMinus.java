@@ -10,16 +10,29 @@ public class CardPlusMinus extends AbstractCard {
         return uniqueInstance;
     }
 
+    @Override
     public void playTurn() {
         Round.playPlusMinusCard();
     }
 
+    @Override
     public String getCardName(){
         return "Card Plus/Minus";
     }
 
+    @Override
     public int getBonus(){
         return 0;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
+    public String getGraphicalRepresentation() {
+        return null;
     }
 }
 

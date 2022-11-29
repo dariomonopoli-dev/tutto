@@ -9,15 +9,27 @@ public class CardCloverleaf extends AbstractCard {
         return uniqueInstance;
     }
 
+    @Override
     public void playTurn() {
         Round.playCloverLeafCard();
     }
 
+    @Override
     public String getCardName(){
         return "Card Cloverleaf";
     }
-
+    @Override
     public int getBonus(){
         return 0;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
+    public String getGraphicalRepresentation() {
+        return null;
     }
 }

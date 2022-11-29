@@ -10,15 +10,28 @@ public class CardFireworks extends AbstractCard {
         return uniqueInstance;
     }
 
+    @Override
     public void playTurn() {
         Round.playFireWorkCard();
     }
 
+    @Override
     public String getCardName(){
         return "Card Fireworks";
     }
 
+    @Override
     public int getBonus(){
         return 0;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
+    public String getGraphicalRepresentation() {
+        return null;
     }
 }
