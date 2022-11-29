@@ -159,7 +159,7 @@ public class Round {
         }
         activePlayer.updatePlayerScore(1000);
         for (Player highestScoringPlayer : highestScoringPlayers) {
-            highestScoringPlayer.updatePlayerScore(-1000);
+            highestScoringPlayer.subtractPlayerScore(1000);
         }
     }
 
