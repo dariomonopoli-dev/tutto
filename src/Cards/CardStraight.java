@@ -9,7 +9,7 @@ public class CardStraight extends AbstractCard {
         private CardStraight() {}
         public static CardStraight getInstance() {return uniqueInstance;}
 
-        public void playRound() {
+        public void playTurn() {
                 Round.playStraightCard();
         }
 

@@ -10,7 +10,7 @@ public class CardPlusMinus extends AbstractCard {
         return uniqueInstance;
     }
 
-    public void playRound() {
+    public void playTurn() {
         Round.playPlusMinusCard();
     }
 

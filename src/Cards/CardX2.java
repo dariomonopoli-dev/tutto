@@ -10,7 +10,7 @@ public class CardX2 extends AbstractCard {
         return uniqueInstance;
     }
 
-    public void playRound() {
+    public void playTurn() {
         Round.playX2Card();
     }
 

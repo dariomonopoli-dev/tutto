@@ -34,7 +34,7 @@ public class CardBonus extends AbstractCard {
         return bonusCards.get(bonus);
     }
 
-    public void playRound() {
+    public void playTurn() {
         Round.playBonusCard(cardBonus);}
 
     public String getCardName() {

@@ -10,7 +10,7 @@ public class CardStop extends AbstractCard {
         return uniqueInstance;
     }
 
-    public void playRound() {
+    public void playTurn() {
         Round.playStopCard();
     }
 

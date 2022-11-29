@@ -9,7 +9,7 @@ public class CardCloverleaf extends AbstractCard {
         return uniqueInstance;
     }
 
-    public void playRound() {
+    public void playTurn() {
         Round.playCloverLeafCard();
     }
 
