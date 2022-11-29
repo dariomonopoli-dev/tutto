@@ -22,6 +22,8 @@ public class Round {
 
     private static int numberOfTuttos;
 
+    private static AbstractCard activeCard;
+
     public static void playRound (List<Player> players, Deck aDeck) {
         cardDeck = aDeck;
         Collections.sort(players);
@@ -37,8 +39,8 @@ public class Round {
                     displayScores = answer.equals("R");
                 }
             }
-            AbstractCard activeCard = cardDeck.getTopCard();
-            activeCard.playRound();
+            activeCard = cardDeck.getTopCard();
+            activeCard.playTurn();
         }
     }
 
@@ -76,7 +78,7 @@ public class Round {
                 turnIsActive = tuttoBehavior(activePlayer);
                 turnScore += isDouble ? turnScore*2 : bonus;
             } else if (turnIsActive && activeDice == 0) {
-                AbstractCard activeCard = cardDeck.getTopCard();
+                activeCard = cardDeck.getTopCard();
                 activeCard.playRound();
             } else {
                 turnIsActive = activePlayer.getChoiceContinueRoll();
@@ -103,22 +105,22 @@ public class Round {
     }
 
     public static void playBonusCard (int bonus) {
-        Displayer.displayCard(CardBonus);
+        Displayer.displayCard(activeCard);
         playBonusAndDoubleTurn(bonus, false);
     }
 
     public static void playX2Card () {
-        Displayer.displayCard(CardX2);
+        Displayer.displayCard(activeCard);
         playBonusAndDoubleTurn(0, true);
     }
 
     public static void playStopCard () {
-        Displayer.displayCard(CardStop);
+        Displayer.displayCard(activeCard);
         System.out.println("You drew a Stop card... better luck next round!");
     }
 
     public static void playFireWorkCard () {
-        Displayer.displayCard(CardFireworks);
+        Displayer.displayCard(activeCard);
         numberOfTuttos = 0;
         int activeDice = 6;
         boolean turnIsActive = true;
@@ -136,7 +138,7 @@ public class Round {
     }
 
     public static void playPlusMinusCard () {
-        Displayer.displayCard(CardPlusMinus);
+        Displayer.displayCard(activeCard);
         numberOfTuttos = 0;
         int activeDice = 6;
         boolean turnIsActive = true;
@@ -164,11 +166,10 @@ public class Round {
     }
 
     public static void playCloverLeafCard () {
-        Displayer.displayCard(CardCloverleaf);
+        Displayer.displayCard(activeCard);
         numberOfTuttos = 0;
         int activeDice = 6;
         boolean turnIsActive = true;
-        int turnScore = 0;
         while (turnIsActive) {
             List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
             Displayer.displayDice(rolledDice);
@@ -195,7 +196,7 @@ public class Round {
     }
 
     public static void playStraightCard () {
-        Displayer.displayCard(CardStraight);
+        Displayer.displayCard(activeCard);
         numberOfTuttos = 0;
         int activeDice = 6;
         boolean turnIsActive = true;
