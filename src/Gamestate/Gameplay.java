@@ -39,14 +39,8 @@ public class Gameplay {
         }
 
         // GameEnd
-        int maxScore = 0;
-        for (Player player : players) {
-            if (player.getPlayerScore() > maxScore) {
-                String winnerName = player.getPlayerName();
-                maxScore = player.getPlayerScore();
-            }
-        }
-        List<Player> listOfWinners = new ArrayList<Player>();
+        // take the list of the highest scoring players from round and pass it to displayer
+        List<Player> listOfWinners = new ArrayList<>();
 
         Displayer.displayWinnerScreen(listOfWinners);
     }
