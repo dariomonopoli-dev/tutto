@@ -17,25 +17,59 @@ public class Displayer {
     public static final String GREEN_BOLD_BRIGHT = "\033[1;92m";
 
 
-
     public static void displayDice(List<Integer> dice) {
-        for(int die : dice) {
-            System.out.println(die);
-            System.out.println("""                
-                                  ┌────────┐ 
-                                  │ ■      │ 
-                                  │   ■    │ 
-                                  │     ■  │ 
-                                  └────────┘
-                                  
-                                  ┌────────┐ 
-                                  │  ■  ■  │ 
-                                  │  ■  ■  │ 
-                                  │  ■  ■  │ 
-                                  └────────┘
-  
-                                """);
+        final String[] one = {
+                "┌─────────┐",
+                "│         │",
+                "│    ■    │",
+                "│         │",
+                "└─────────┘"};
+        final String[] two = {
+                "┌─────────┐",
+                "│  ■      │",
+                "│         │",
+                "│      ■  │",
+                "└─────────┘"};
+        final String[] three = {
+                "┌─────────┐",
+                "│  ■      │",
+                "│    ■    │",
+                "│      ■  │",
+                "└─────────┘"};
+        final String[] four = {
+                "┌─────────┐",
+                "│  ■   ■  │",
+                "│         │",
+                "│  ■   ■  │",
+                "└─────────┘"};
+        final String[] five = {
+                "┌─────────┐",
+                "│  ■   ■  │",
+                "│    ■    │",
+                "│  ■   ■  │",
+                "└─────────┘"};
+        final String[] six = {
+                "┌─────────┐",
+                "│  ■   ■  │",
+                "│  ■   ■  │",
+                "│  ■   ■  │",
+                "└─────────┘"};
+
+        final String[][] diceRepresentations = {one,two,three,four,five,six};
+
+        // Print Dice next to each other
+        final int linesOfDiceRepresentation = 5;
+        for (int i = 0; i < linesOfDiceRepresentation; i++) {
+            for(int die : dice) {
+                System.out.print(diceRepresentations[die-1][i] + "  ");
+            }
+            System.out.println();
         }
+        // Print identification numbers beneath them
+        for (int idx = 1; idx <= dice.size(); idx++) {
+            System.out.print("     " + idx + "       ");
+        }
+        System.out.println();
     }
 
     public static void displayScores(List<Player> players) {
@@ -43,8 +77,9 @@ public class Displayer {
             System.out.println(player.getPlayerScore());
         }
     }
+
     public static void displayCard(AbstractCard card) {
-        System.out.println(card.getCardName());
+        System.out.println(card.getGraphicalRepresentation());
     }
     
     public static void displayWelcomeScreen() {
