@@ -21,7 +21,7 @@ public class Deck {
     private final int numberOfStraightCards = 5;
     private final int numberOfX2Cards = 5;
 
-    private Deck(){
+    public Deck(){
         deck = new Stack<>();
         initializeDeck();
     }
@@ -86,7 +86,7 @@ public class Deck {
         return deck.size();
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return (deck.size() == 0);
     }
     public static Deck getInstance(){

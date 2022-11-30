@@ -1,27 +1,38 @@
 package Test.Cards;
 
+import Cards.AbstractCard;
 import org.junit.jupiter.api.Test;
+import Cards.Deck;
+
+import java.util.Stack;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TestDeck {
 
     @Test
-    void initializeDeck() {
-    }
+    void isEmpty() {
+        final Deck deck = new Deck();
+        deck.initializeDeck();
+        assertEquals(false, deck.isEmpty());
 
-    @Test
-    void getTopCard() {
-    }
-
-    @Test
-    void shuffle() {
     }
 
     @Test
     void getDeckSize() {
+        final Deck deck = new Deck();
+        deck.initializeDeck();
+        System.out.println("" + deck.getDeckSize());
+        assertEquals(56, deck.getDeckSize());
     }
 
     @Test
     void getInstance() {
+        final Deck deck = new Deck();
+        deck.initializeDeck();
+        final Deck deckInstance = deck.getInstance();
+        assertEquals(deckInstance, deck.getInstance());
     }
-}
+
+    }
+
