@@ -14,9 +14,9 @@ public class CardX2 extends AbstractCard {
                 points rolled.""";
         this.cardGraphicalRepresentation = Displayer.ANSI_BLUE + """
                                   ╔══════════╗
-                                  ║          ║
-                                  ║          ║
-                                  ║    x2    ║
+                                  ║          ║  If you accomplish a “TUTTO”, all points you have rolled so far on this turn are
+                                  ║          ║  doubled. If you stop and have not accomplished a “TUTTO”, you score only the
+                                  ║    x2    ║  points rolled.
                                   ║          ║
                                   ║          ║
                                   ╚══════════╝

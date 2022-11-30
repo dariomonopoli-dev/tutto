@@ -12,7 +12,7 @@ public class CardStop extends AbstractCard {
         this.cardGraphicalRepresentation = Displayer.ANSI_RED + """                
                                   ╔══════════╗
                                   ║          ║
-                                  ║          ║
+                                  ║          ║  Tough luck! You have to end your turn, and your left neighbour has his turn.
                                   ║   STOP   ║
                                   ║          ║
                                   ║          ║

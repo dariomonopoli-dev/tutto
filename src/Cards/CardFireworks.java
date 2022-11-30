@@ -15,10 +15,10 @@ public class CardFireworks extends AbstractCard {
                 roll a null. However, you score all points you have rolled on this turn.""";
         this.cardGraphicalRepresentation = Displayer.ANSI_YELLOW + """                
                                   ╔══════════╗
-                                  ║          ║
-                                  ║   FIRE   ║
-                                  ║   WORKS  ║
-                                  ║          ║
+                                  ║          ║  You have to keep throwing the dice until you roll a null. After each roll,
+                                  ║   FIRE   ║  you need to keep all valid single dice and triplets. If you accomplish a “TUTTO”,
+                                  ║   WORKS  ║  you have to continue without revealing a new card. Your turn ends only when you
+                                  ║          ║  roll a null. However, you score all points you have rolled on this turn.
                                   ║          ║
                                   ╚══════════╝
                                 """ + Displayer.ANSI_RESET;
