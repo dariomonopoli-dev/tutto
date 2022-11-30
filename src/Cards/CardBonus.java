@@ -21,8 +21,12 @@ public class CardBonus extends AbstractCard {
                 """                
                                   ╔═════════╗
                                   ║         ║   If you accomplish a “TUTTO”, you get the bonus points indicated on
-                                  ║         ║   the card in addition to the points you have rolled. If you stop and have not
-                                  ║  BONUS  ║   accomplished a “TUTTO”, you score only the points rolled without getting the
+                                  ║  BONUS  ║   the card in addition to the points you have rolled. If you stop and have not
+                                """
+
+                +              "  ║   "+cardBonus+"   ║   accomplished a “TUTTO”, you score only the points rolled without getting the\n" +
+
+                """               
                                   ║         ║   bonus.
                                   ║         ║
                                   ╚═════════╝
