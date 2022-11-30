@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b304c9ff-1b60-419c-9da6-33c034d8c063" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/Gameplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/Gameplay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestDiceRoller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestDiceRoller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Player/TestPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Player/TestPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/DiceRoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/DiceRoller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Helpers/TestDiceRoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Helpers/TestDiceRoller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Player/TestPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Player/TestPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Helpers/TestScoreCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Helpers/TestScoreCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +38,7 @@
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TestPlayer">
+  <component name="RunManager" selected="JUnit.TestScoreCalculator">
     <configuration name="TestDeck" type="JUnit" factoryName="JUnit">
       <module name="tutto" />
       <extension name="coverage" sample_coverage="false" />
@@ -122,6 +114,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestScoreCalculator" type="JUnit" factoryName="JUnit">
+      <module name="tutto" />
+      <extension name="coverage" sample_coverage="false" />
+      <option name="PACKAGE_NAME" value="Test.Helpers" />
+      <option name="MAIN_CLASS_NAME" value="Test.Helpers.TestScoreCalculator" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="tutto" />
       <extension name="coverage" sample_coverage="false" />
@@ -136,6 +139,7 @@
     <list>
       <item itemvalue="JUnit.TestDeck" />
       <item itemvalue="JUnit.Unnamed" />
+      <item itemvalue="JUnit.TestScoreCalculator" />
       <item itemvalue="JUnit.TestDiceRoller.isConcatenated" />
       <item itemvalue="JUnit.TestPlayer" />
       <item itemvalue="JUnit.TestDeck.getDeckSize" />
@@ -158,7 +162,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669822414390</updated>
-      <workItem from="1669822417176" duration="3510000" />
+      <workItem from="1669822417176" duration="3966000" />
     </task>
     <servers />
   </component>
@@ -180,7 +184,7 @@
     <SUITE FILE_PATH="coverage/tutto$TestDiceRoller_isConcatenated.ic" NAME="TestDiceRoller.isConcatenated Coverage Results" MODIFIED="1669824251304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Test.Helpers.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tutto$TestPlayer.ic" NAME="TestPlayer Coverage Results" MODIFIED="1669825609783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/tutto$TestPlayer.ic" NAME="TestPlayer Coverage Results" MODIFIED="1669826124958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Test.Player.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/tutto$TestDeck_getInstance.ic" NAME="TestDeck.getInstance Coverage Results" MODIFIED="1669823062569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -190,6 +194,6 @@
     <SUITE FILE_PATH="coverage/tutto$TestDeck_getDeckSize.ic" NAME="TestDeck.getDeckSize Coverage Results" MODIFIED="1669823346481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Test.Cards.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tutto$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1669825388131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/tutto$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1669826042426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

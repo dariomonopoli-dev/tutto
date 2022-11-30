@@ -19,7 +19,7 @@ public class ScoreCalculator {
                     score += placeholderDie * 100; }
             } else if (die == 1) {
                 score += 100;
-            } else {
+            } else if (die == 5){
                 score += 50;
             }
         }
