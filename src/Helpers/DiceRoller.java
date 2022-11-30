@@ -16,6 +16,7 @@ public class DiceRoller {
         for (int i = 0; i < numberOfDice; i++) {
             rolledDice.add(ran.nextInt(6) + 1);
         }
+        Collections.sort(rolledDice);
         return rolledDice;
     }
 
