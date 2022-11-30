@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import Helpers.DiceRoller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -32,6 +33,7 @@ public class TestDiceRoller {
 
     }
 
+
     @Test
     void isConcatenated() {
         DiceRoller dr = new DiceRoller();
@@ -51,7 +53,15 @@ public class TestDiceRoller {
         rolledDice.add(2, 2);
         assertEquals(false, dr.isConcatenated(rolledDice, 0));
     }
+
+    @Test
+    void getAllValidDice() {
+        final DiceRoller dr = new DiceRoller();
+        List<Integer> diceRoll = new ArrayList<Integer>(Arrays.asList(1,1,2,3,4,5));
+        List<Integer> expected = new ArrayList<Integer>(Arrays.asList(1,1,5));
+        assertEquals(expected, dr.getAllValidDice(diceRoll));
     }
+}
 
 
 

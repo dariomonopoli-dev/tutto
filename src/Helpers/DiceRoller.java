@@ -40,6 +40,7 @@ public class DiceRoller {
     public static boolean isConcatenated (List<Integer> rolledDice, int index) {
         return (rolledDice.get(index) == rolledDice.get(index+1) && rolledDice.get(index) == rolledDice.get(index+2));
     }
+
 }
 
 
