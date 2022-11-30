@@ -122,7 +122,11 @@ public class InputValidator {
             // check whether current index is concatenated with the next 2
             if (answerList.size()-i > 2 && isConcatenated(answerList, i)) {
                 validInput = hasTriplet(rolledDice, choice);
-                i += 2;
+                if (validInput) {
+                    i += 2;
+                } else {
+                    validInput = hasSingle(rolledDice, choice);
+                }
             } else {
                 validInput = hasSingle(rolledDice, choice);
             }

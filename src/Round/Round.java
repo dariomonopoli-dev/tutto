@@ -24,7 +24,7 @@ public class Round {
 
     private static AbstractCard activeCard;
 
-    public static void playRound (List<Player> players, Deck aDeck) {
+    public static List<Player> playRound (List<Player> players, Deck aDeck) {
         cardDeck = aDeck;
         Collections.sort(players);
         setHighestScoringPlayer(players);
@@ -40,6 +40,7 @@ public class Round {
             activeCard = cardDeck.getTopCard();
             activeCard.playTurn();
         }
+        return highestScoringPlayers;
     }
 
     public static void setHighestScoringPlayer(List<Player> players) {
@@ -59,6 +60,7 @@ public class Round {
         int activeDice = 6;
         boolean turnIsActive = true;
         int turnScore = 0;
+        List<Integer> diceSetAside = new ArrayList<>();
         while (turnIsActive) {
             List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
             Displayer.displayDice(rolledDice);
@@ -69,14 +71,19 @@ public class Round {
                 break;
             }
             String answer = activePlayer.getChoiceDice(activeDice);
-            List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice);
+            List<Integer> diceSetAsideThrow = checkChoiceValidity(answer, rolledDice);
+            for (int die : diceSetAsideThrow) {
+                diceSetAside.add(die);
+            }
             turnScore = calculateScore(diceSetAside);
-            activeDice -= countDiceSetAside(diceSetAside);
+            activeDice -= countDiceSetAside(diceSetAsideThrow);
             if (activeDice == 0) {
                 turnIsActive = tuttoBehavior(activePlayer);
                 turnScore += isDouble ? turnScore*2 : bonus;
-            } else if (turnIsActive && activeDice == 0) {
+            }
+            if (turnIsActive && activeDice == 0) {
                 activeCard = cardDeck.getTopCard();
+                diceSetAside.clear();
                 activeCard.playTurn();
             } else {
                 turnIsActive = activePlayer.getChoiceContinueRoll();
@@ -158,8 +165,10 @@ public class Round {
             }
         }
         activePlayer.updatePlayerScore(1000);
-        for (Player highestScoringPlayer : highestScoringPlayers) {
-            highestScoringPlayer.subtractPlayerScore(1000);
+        if (!highestScoringPlayers.contains(activePlayer)) {
+            for (Player highestScoringPlayer : highestScoringPlayers) {
+                highestScoringPlayer.subtractPlayerScore(1000);
+            }
         }
     }
 
@@ -202,8 +211,8 @@ public class Round {
         while (turnIsActive) {
             List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
             Displayer.displayDice(rolledDice);
-            if (diceSetAside.isEmpty()) {
-                turnIsActive = checkIsValidRollStraight(rolledDice, null);
+            if (!diceSetAside.isEmpty()) {
+                turnIsActive = checkIsValidRollStraight(rolledDice, diceSetAside);
                 if (!turnIsActive) {
                     System.out.println("Tough luck!");
                     System.out.println(activePlayer.getPlayerName() + " your turn is finished...");
