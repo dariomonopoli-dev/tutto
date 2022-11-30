@@ -1,4 +1,5 @@
 package Cards;
+import Gamestate.Displayer;
 import Round.Round;
 
 public class CardCloverleaf extends AbstractCard {
@@ -12,15 +13,15 @@ public class CardCloverleaf extends AbstractCard {
                 if you succeed, the game ends immediately, and you win – no matter what score
                 you have!\s
                 """;
-        this.cardGraphicalRepresentation =                 """                
-                                  ╔══════════╗ 
-                                  ║          ║ 
-                                  ║  CLOVER  ║ 
-                                  ║   LEAF   ║ 
-                                  ║          ║ 
-                                  ║          ║ 
-                                  ╚══════════╝ 
-                                """;
+        this.cardGraphicalRepresentation = Displayer.ANSI_GREEN + """                
+                                  ╔══════════╗
+                                  ║          ║
+                                  ║  CLOVER  ║
+                                  ║   LEAF   ║
+                                  ║          ║
+                                  ║          ║
+                                  ╚══════════╝
+                                """ + Displayer.ANSI_RESET;
         this.cardBonus = 0;
     }
     public static CardCloverleaf getInstance(){
@@ -31,4 +32,5 @@ public class CardCloverleaf extends AbstractCard {
     public void playTurn() {
         Round.playCloverLeafCard();
     }
+
 }

@@ -1,4 +1,5 @@
 package Cards;
+import Gamestate.Displayer;
 import Round.Round;
 
 import java.util.ArrayList;
@@ -16,16 +17,16 @@ public class CardBonus extends AbstractCard {
                 "the card in addition to the points you have rolled. If you stop and have not " +
                 "accomplished a “TUTTO”, you score only the points rolled without getting the " +
                 "bonus.";
-        this.cardGraphicalRepresentation =
+        this.cardGraphicalRepresentation = Displayer.ANSI_BLUE +
                 """                
-                                  ╔═════════╗ 
-                                  ║         ║ 
-                                  ║         ║ 
-                                  ║  BONUS  ║ 
-                                  ║         ║ 
-                                  ║         ║ 
-                                  ╚═════════╝ 
-                                """;
+                                  ╔═════════╗
+                                  ║         ║
+                                  ║         ║
+                                  ║  BONUS  ║
+                                  ║         ║
+                                  ║         ║
+                                  ╚═════════╝
+                                """ + Displayer.ANSI_RESET;
     }
     final private int cardBonus;
     final static Map<Integer, CardBonus> bonusCards = new HashMap<>();

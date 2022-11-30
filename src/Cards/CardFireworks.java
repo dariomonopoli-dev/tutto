@@ -1,5 +1,6 @@
 package Cards;
 
+import Gamestate.Displayer;
 import Round.Round;
 
 public class CardFireworks extends AbstractCard {
@@ -12,15 +13,15 @@ public class CardFireworks extends AbstractCard {
                 you need to keep all valid single dice and triplets. If you accomplish a “TUTTO”,
                 you have to continue without revealing a new card. Your turn ends only when you
                 roll a null. However, you score all points you have rolled on this turn.""";
-        this.cardGraphicalRepresentation = """                
-                                  ╔══════════╗ 
-                                  ║          ║ 
-                                  ║   FIRE   ║ 
-                                  ║   WORKS  ║ 
-                                  ║          ║ 
-                                  ║          ║ 
-                                  ╚══════════╝ 
-                                """;
+        this.cardGraphicalRepresentation = Displayer.ANSI_YELLOW + """                
+                                  ╔══════════╗
+                                  ║          ║
+                                  ║   FIRE   ║
+                                  ║   WORKS  ║
+                                  ║          ║
+                                  ║          ║
+                                  ╚══════════╝
+                                """ + Displayer.ANSI_RESET;
         this.cardBonus = 0;
     }
     public static CardFireworks getInstance(){

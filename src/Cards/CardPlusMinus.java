@@ -1,5 +1,6 @@
 package Cards;
 
+import Gamestate.Displayer;
 import Round.Round;
 
 public class CardPlusMinus extends AbstractCard {
@@ -17,15 +18,15 @@ public class CardPlusMinus extends AbstractCard {
                 the dice, score 1,000 points only once. If it is the leading player who reveals this
                 card, naturally he doesn’t have to deduct any points from his score when he
                 accomplishes a “TUTTO”""";
-        this.cardGraphicalRepresentation = """                
-                                  ╔═════════╗ 
-                                  ║         ║ 
-                                  ║  PLUS/  ║ 
-                                  ║  MINUS  ║ 
-                                  ║         ║ 
-                                  ║         ║ 
-                                  ╚═════════╝ 
-                                """;
+        this.cardGraphicalRepresentation = Displayer.ANSI_PURPLE + """                
+                                  ╔═════════╗
+                                  ║         ║
+                                  ║  PLUS/  ║
+                                  ║  MINUS  ║
+                                  ║         ║
+                                  ║         ║
+                                  ╚═════════╝
+                                """ + Displayer.ANSI_RESET;
         this.cardBonus = 0;
     }
     public static CardPlusMinus getInstance(){

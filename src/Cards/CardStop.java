@@ -1,5 +1,6 @@
 package Cards;
 
+import Gamestate.Displayer;
 import Round.Round;
 
 public class CardStop extends AbstractCard {
@@ -8,15 +9,15 @@ public class CardStop extends AbstractCard {
     private CardStop() {
         this.cardName = "Card Stop";
         this.cardDescription = "Tough luck! You have to end your turn, and your left neighbour has his turn.";
-        this.cardGraphicalRepresentation = """                
-                                  ╔══════════╗ 
-                                  ║          ║ 
-                                  ║          ║ 
-                                  ║   STOP   ║ 
-                                  ║          ║ 
-                                  ║          ║ 
-                                  ╚══════════╝ 
-                                """;
+        this.cardGraphicalRepresentation = Displayer.ANSI_RED + """                
+                                  ╔══════════╗
+                                  ║          ║
+                                  ║          ║
+                                  ║   STOP   ║
+                                  ║          ║
+                                  ║          ║
+                                  ╚══════════╝
+                                """ + Displayer.ANSI_RESET;
         this.cardBonus = 0;
     }
     public static CardStop getInstance(){
