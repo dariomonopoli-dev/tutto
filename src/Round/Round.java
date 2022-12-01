@@ -24,7 +24,10 @@ public class Round {
 
     private static AbstractCard activeCard;
 
+    private static List<Player> currentPlayers;
+
     public static void playRound (List<Player> players, Deck aDeck) {
+        currentPlayers = players;
         cardDeck = aDeck;
         Collections.sort(players);
         setHighestScoringPlayer(players);
@@ -195,7 +198,10 @@ public class Round {
                 numberOfTuttos++;
                 activePlayer.getAnotherRoll();
             } else if (activeDice == 0 && numberOfTuttos == 2) {
-                System.out.println("Congratulations! " + activePlayer.getPlayerName() + " won the game!");
+                highestScoringPlayers.clear();
+                highestScoringPlayers.add(activePlayer);
+                Displayer.displayWinnerScreen(highestScoringPlayers, currentPlayers);
+                System.exit(0);
             } else {
                 activePlayer.getAnotherRoll();
             }
