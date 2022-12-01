@@ -38,7 +38,7 @@ public class Gameplay {
         }
 
         // GameEnd
-        Displayer.displayWinnerScreen(listOfLeaders);
+        Displayer.displayWinnerScreen(listOfLeaders, players);
     }
 
     public static void main(String[] args) {
