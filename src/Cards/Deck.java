@@ -27,6 +27,8 @@ public class Deck {
     }
 
     public void initializeDeck() {
+        deck.clear();
+
         for (int i = 0; i < numberOfBonusCards200; i++) {
             deck.push(CardBonus.getInstance(200));
         }
