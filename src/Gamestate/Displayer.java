@@ -15,6 +15,7 @@ public class Displayer {
     public static final String ANSI_YELLOW = "\033[0;93m";
     public static final String RED_BOLD_BRIGHT = "\033[1;91m";
     public static final String GREEN_BOLD_BRIGHT = "\033[1;92m";
+    public static final String BLUE_BOLD = "\033[1;34m";
 
     public static void displayWelcomeScreen() {
         System.out.println(ANSI_BLUE+ """
@@ -45,12 +46,12 @@ public class Displayer {
     }
 
     public static void displayScores(List<Player> players) {
-        System.out.println("┌────────────────────┬────────────┐");
-        System.out.println("│ Player             │ Score      │");
+        System.out.println("┌────────────────────┬─────────────┐");
+        System.out.println("│ " + BLUE_BOLD + "Player " + ANSI_RESET + "            │ " + BLUE_BOLD + "Score" + ANSI_RESET + "       │");
         for(Player player : players) {
-            System.out.println(player.getPlayerName() + " | " + player.getPlayerScore());
+            System.out.println("│ " + player.getPlayerName() + " ".repeat(18-player.getPlayerName().length()) + " │ " + player.getPlayerScore() + " ".repeat(11-String.valueOf(player.getPlayerScore()).length()) + " │");
         }
-        System.out.println("└────────────────────┴────────────┘");
+        System.out.println("└────────────────────┴─────────────┘");
     }
 
     public static void displayCard(AbstractCard card) {
