@@ -2,7 +2,7 @@ package Player;
 
 import java.util.Scanner;
 
-import static Helpers.InputValidator.checkDieIndex;
+import static Helpers.InputValidator.hasValidIndex;
 
 public class Player implements Comparable<Player> {
     private final String playerName;
@@ -20,7 +20,7 @@ public class Player implements Comparable<Player> {
         return playerScore;
     }
     public void updatePlayerScore (int additionalScore) {
-        if (additionalScore <= 0) throw new IllegalArgumentException("Score must be positive!");
+        if (additionalScore < 0) throw new IllegalArgumentException("Score must be positive!");
         playerScore += additionalScore;
     }
 
@@ -41,7 +41,7 @@ public class Player implements Comparable<Player> {
         return answer.equals("R");
     }
 
-    public boolean getChoiceAnotherRound () {
+    public boolean getChoiceAnotherRoll () {
         System.out.println(playerName + ", do you want to start another round (enter Y) or end your turn (enter N)?");
         String answer = input.nextLine();
         while (!answer.equals("Y") && !answer.equals("N")) {
@@ -63,17 +63,20 @@ public class Player implements Comparable<Player> {
         return answer.equals("D");
     }
 
+    /**
+     * @pre takes number of rolled Dice
+     * @post returns valid answer from player
+     */
     public String getChoiceDice (int activeDice) {
         System.out.println(playerName + " choose at least one valid die or " +
                 "triplet by entering the index (e.g. 2 or 2,3,4):");
         String answer = input.nextLine();
-        while (answer.length() == 0) {
+        while (!hasValidIndex(answer, activeDice)) {
             System.out.println("Invalid input =(");
             System.out.println(playerName + " choose at least one valid die or " +
                     "triplet by entering the index (e.g. 2 or 2,3,4):");
             answer = input.nextLine();
         }
-        checkDieIndex(answer, activeDice);
         return answer;
     }
 
