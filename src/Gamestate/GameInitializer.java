@@ -33,9 +33,9 @@ public class GameInitializer {
         while (true) {
             try {
                 String inputName = scanner.nextLine();
-                if (inputName.length() > 25) {
+                if (inputName.length() > 18) {
                     System.out.println("This name is waaay to long!");
-                    System.out.println("Please enter a name that has at most 25 letters");
+                    System.out.println("Please enter a name that has at most 18 letters");
                 } else if (inputName.length() < 1) {
                     System.out.println("You have to type in a name!");
                     System.out.println("Please enter at least one character");

@@ -41,9 +41,12 @@ public class Displayer {
     }
 
     public static void displayScores(List<Player> players) {
+        System.out.println("┌────────────────────┬────────────┐");
+        System.out.println("│ Player             │ Score      │");
         for(Player player : players) {
-            System.out.println(player.getPlayerScore());
+            System.out.println(player.getPlayerName() + " | " + player.getPlayerScore());
         }
+        System.out.println("└────────────────────┴────────────┘");
     }
 
     public static void displayCard(AbstractCard card) {
