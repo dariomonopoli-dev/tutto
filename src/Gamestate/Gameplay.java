@@ -27,22 +27,18 @@ public class Gameplay {
         Deck cardDeck = Deck.getInstance();
 
         // Gameplay
+        List<Player> listOfLeaders = new ArrayList<>();
         boolean winningScoreReached = false;
         while (!winningScoreReached) {
             Round.playRound(players, cardDeck);
-            for (Player player : players) {
-                if (player.getPlayerScore() >= winningScore) {
-                    winningScoreReached = true;
-                    break;
-                }
+            listOfLeaders = Round.setHighestScoringPlayer(players);
+            if (listOfLeaders.get(0).getPlayerScore() >= winningScore) {
+                winningScoreReached = true;
             }
         }
 
         // GameEnd
-        // take the list of the highest scoring players from round and pass it to displayer
-        List<Player> listOfWinners = new ArrayList<>();
-
-        Displayer.displayWinnerScreen(listOfWinners);
+        Displayer.displayWinnerScreen(listOfLeaders);
     }
 
     public static void main(String[] args) {
