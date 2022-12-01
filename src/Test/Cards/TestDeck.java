@@ -1,6 +1,5 @@
 package Test.Cards;
 
-import Cards.AbstractCard;
 import org.junit.jupiter.api.Test;
 import Cards.Deck;
 
@@ -12,8 +11,7 @@ class TestDeck {
     @Test
     void isEmpty() {
         final Deck deck = new Deck();
-        deck.initializeDeck();
-        assertEquals(false, deck.isEmpty());
+        assertFalse(deck.isEmpty());
 
     }
 
@@ -21,7 +19,6 @@ class TestDeck {
     void getDeckSize() {
         final Deck deck = new Deck();
         deck.initializeDeck();
-        System.out.println("" + deck.getDeckSize());
         assertEquals(56, deck.getDeckSize());
     }
 
