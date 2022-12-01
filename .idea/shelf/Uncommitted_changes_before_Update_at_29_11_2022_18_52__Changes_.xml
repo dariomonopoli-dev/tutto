@@ -1,0 +1,34 @@
+<changelist name="Uncommitted_changes_before_Update_at_29_11_2022_18_52_[Changes]" date="1669744373214" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022_18_52_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 29/11/2022 18:52 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/tutto/Gamestate/GameInitializer.class" />
+    <option name="AFTER_PATH" value="out/production/tutto/Gamestate/GameInitializer.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022_18_52_[Changes]/GameInitializer.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/tutto/Cards/Deck.class" />
+    <option name="AFTER_PATH" value="out/production/tutto/Cards/Deck.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022_18_52_[Changes]/Deck.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/tutto/Gamestate/Displayer.class" />
+    <option name="AFTER_PATH" value="out/production/tutto/Gamestate/Displayer.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022_18_52_[Changes]/Displayer.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/tutto/Player/Player.class" />
+    <option name="AFTER_PATH" value="out/production/tutto/Player/Player.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022_18_52_[Changes]/Player.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/tutto/Helpers/InputValidator.class" />
+    <option name="AFTER_PATH" value="out/production/tutto/Helpers/InputValidator.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022_18_52_[Changes]/InputValidator.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/tutto/Gamestate/Gameplay.class" />
+    <option name="AFTER_PATH" value="out/production/tutto/Gamestate/Gameplay.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_11_2022_18_52_[Changes]/Gameplay.class" />
+  </binary>
+</changelist>

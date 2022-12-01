@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b304c9ff-1b60-419c-9da6-33c034d8c063" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/AbstractCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/AbstractCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardBonus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardBonus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardCloverleaf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardCloverleaf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardFireworks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardFireworks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardPlusMinus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardPlusMinus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardStop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardStop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardStraight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardStraight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardX2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardX2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/GameInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/GameInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/Gameplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/Gameplay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/DiceRoller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/DiceRoller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/ScoreCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/ScoreCalculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Round/Round.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Round/Round.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Round/Round.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Round/Round.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tutto.iml" afterDir="false" />
-    </list>
+    <list default="true" id="b304c9ff-1b60-419c-9da6-33c034d8c063" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,19 +194,19 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tutto$TestDeck.ic" NAME="TestDeck Coverage Results" MODIFIED="1669825418324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/tutto$TestDiceRoller_isConcatenated.ic" NAME="TestDiceRoller.isConcatenated Coverage Results" MODIFIED="1669824251304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Test.Helpers.*</FILTER>
+    <SUITE FILE_PATH="coverage/tutto$TestDeck_getDeckSize.ic" NAME="TestDeck.getDeckSize Coverage Results" MODIFIED="1669823346481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Cards.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestDeck.ic" NAME="TestDeck Coverage Results" MODIFIED="1669825418324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/tutto$TestPlayer.ic" NAME="TestPlayer Coverage Results" MODIFIED="1669826124958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Test.Player.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/tutto$TestDeck_getInstance.ic" NAME="TestDeck.getInstance Coverage Results" MODIFIED="1669823062569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Test.Cards.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tutto$TestDeck_getDeckSize.ic" NAME="TestDeck.getDeckSize Coverage Results" MODIFIED="1669823346481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Test.Cards.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/tutto$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1669826042426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/tutto$TestDiceRoller_isConcatenated.ic" NAME="TestDiceRoller.isConcatenated Coverage Results" MODIFIED="1669824251304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Helpers.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -1,0 +1,117 @@
+Index: src/Gamestate/Displayer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Gamestate;\r\n\r\nimport Cards.AbstractCard;\r\nimport Player.Player;\r\n\r\nimport java.util.List;\r\n\r\npublic class Displayer {\r\n    public static void displayDice(List<Integer> numberOfDice) {\r\n        System.out.print(\"⚀⚁⚂⚃⚄⚅\");\r\n    }\r\n    public static void displayScores(List<Player> players) {\r\n\r\n    }\r\n    public static void displayCard(AbstractCard card) {\r\n\r\n    }\r\n    \r\n    public static void displayWelcomeScreen() {\r\n    }\r\n\r\n    public static void displayWinnerScreen() {\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Gamestate/Displayer.java b/src/Gamestate/Displayer.java
+--- a/src/Gamestate/Displayer.java	(revision a31a753d19b40ef672ea6c6fba5c581998d2f791)
++++ b/src/Gamestate/Displayer.java	(date 1669744353468)
+@@ -6,17 +6,42 @@
+ import java.util.List;
+ 
+ public class Displayer {
+-    public static void displayDice(List<Integer> numberOfDice) {
+-        System.out.print("⚀⚁⚂⚃⚄⚅");
++
++    public static final String ANSI_RESET = "\u001B[0m";
++    public static final String ANSI_RED = "\u001B[31m";
++    public static final String ANSI_GREEN = "\u001B[32m";
++    public static final String ANSI_BLUE = "\u001B[34m";
++    public static final String ANSI_PURPLE = "\u001B[35m";
++    public static final String ANSI_YELLOW = "\033[0;93m";
++    public static final String RED_BOLD_BRIGHT = "\033[1;91m";
++    public static final String GREEN_BOLD_BRIGHT = "\033[1;92m";
++
++
++
++    public static void displayDice(List<Integer> dice) {
++        for(int die : dice) {
++            System.out.println(die);
++        }
+     }
++
+     public static void displayScores(List<Player> players) {
+-
++        for(Player player : players) {
++            System.out.println(player.getPlayerScore());
++        }
+     }
+     public static void displayCard(AbstractCard card) {
+-
++        System.out.println(card.getCardName());
+     }
+     
+     public static void displayWelcomeScreen() {
++        System.out.println(ANSI_BLUE+
++                "██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ████████╗ ██████╗     ████████╗██╗   ██╗████████╗████████╗ ██████╗ \n" +
++                "██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔═══██╗    ╚══██╔══╝██║   ██║╚══██╔══╝╚══██╔══╝██╔═══██╗\n" +
++                "██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗         ██║   ██║   ██║       ██║   ██║   ██║   ██║      ██║   ██║   ██║\n" +
++                "██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝         ██║   ██║   ██║       ██║   ██║   ██║   ██║      ██║   ██║   ██║\n" +
++                "╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗       ██║   ╚██████╔╝       ██║   ╚██████╔╝   ██║      ██║   ╚██████╔╝\n" +
++                " ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝    ╚═════╝        ╚═╝    ╚═════╝    ╚═╝      ╚═╝    ╚═════╝ ");
++        System.out.println("Developed by Valentin Meyer, Dario Monopoli, Lennart Töllke and Remo Wiget"+ANSI_RESET);
+     }
+ 
+     public static void displayWinnerScreen() {
+Index: src/Gamestate/Gameplay.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Gamestate;\r\n\r\nimport Cards.Deck;\r\nimport Player.Player;\r\nimport Round.Round;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class Gameplay {\r\n    private static void startGame() {\r\n\r\n        Displayer.displayWelcomeScreen();\r\n\r\n        // Initialization\r\n        ArrayList<Player> players = GameInitializer.getPlayers();\r\n        int winningScore = GameInitializer.getWinningScore();\r\n        Deck cardDeck = new Deck();\r\n\r\n        // Gameplay\r\n        boolean winningScoreReached = false;\r\n        while (!winningScoreReached) {\r\n            Round.playRound(players, cardDeck);\r\n            for (Player player : players) {\r\n                if (player.getPlayerScore() >= winningScore) {\r\n                    winningScoreReached = true;\r\n                    break;\r\n                }\r\n            }\r\n        }\r\n\r\n        // GameEnd\r\n        int maxScore = 0;\r\n        for (Player player : players) {\r\n            if (player.getPlayerScore() > maxScore) {\r\n                String winnerName = player.getPlayerName();\r\n                maxScore = player.getPlayerScore();\r\n            }\r\n        }\r\n        Displayer.displayWinnerScreen();\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        startGame();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Gamestate/Gameplay.java b/src/Gamestate/Gameplay.java
+--- a/src/Gamestate/Gameplay.java	(revision a31a753d19b40ef672ea6c6fba5c581998d2f791)
++++ b/src/Gamestate/Gameplay.java	(date 1669743785202)
+@@ -5,11 +5,20 @@
+ import Round.Round;
+ 
+ import java.util.ArrayList;
++import java.util.Scanner;
+ 
+ public class Gameplay {
++
++    private static void waitForEnter(String message) {
++        Scanner getEnter = new Scanner(System.in);
++        System.out.println(Displayer.ANSI_YELLOW + message + Displayer.ANSI_RESET);
++        getEnter.nextLine();  // Read user input
++    }
++
+     private static void startGame() {
+ 
+         Displayer.displayWelcomeScreen();
++        waitForEnter("Press Enter to Start the game!");
+ 
+         // Initialization
+         ArrayList<Player> players = GameInitializer.getPlayers();
+Index: src/Cards/Deck.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Cards;\r\n\r\n\r\nimport Cards.*;\r\n\r\nimport java.util.Collections;\r\nimport java.util.Stack;\r\n\r\npublic class Deck {\r\n    private static Stack<AbstractCard> deck = new Stack<AbstractCard>();\r\n    private final int numberOfBonusCards200 = 5;\r\n    private final int numberOfBonusCards300 = 5;\r\n    private final int numberOfBonusCards400 = 5;\r\n    private final int numberOfBonusCards500 = 5;\r\n    private final int numberOfBonusCards600 = 5;\r\n    private final int numberOfFireworksCards = 5;\r\n    private final int numberOfStopCards = 10;\r\n    private final int numberOfPlusMinusCards = 5;\r\n    private final int numberOfStraightCards = 5;\r\n    private final int numberOfX2Cards = 5;\r\n\r\n    public void initializeDeck() {\r\n        for (int i = 0; i < numberOfBonusCards200; i++) {\r\n            deck.push(CardBonus.getInstance(200));\r\n        }\r\n        for (int i = 0; i < numberOfBonusCards300; i++) {\r\n            deck.push(CardBonus.getInstance(300));\r\n        }\r\n        for (int i = 0; i < numberOfBonusCards400; i++) {\r\n            deck.push(CardBonus.getInstance(400));\r\n        }\r\n        for (int i = 0; i < numberOfBonusCards500; i++) {\r\n            deck.push(CardBonus.getInstance(500));\r\n        }\r\n        for (int i = 0; i < numberOfBonusCards600; i++) {\r\n            deck.push(CardBonus.getInstance(600));\r\n        }\r\n\r\n        for (int i = 0; i < numberOfFireworksCards; i++) {\r\n            deck.push(CardFireworks.getInstance());\r\n        }\r\n\r\n        for (int i = 0; i < numberOfStopCards; i++) {\r\n            deck.push(CardStop.getInstance());\r\n        }\r\n\r\n        for (int i = 0; i < numberOfPlusMinusCards; i++) {\r\n            deck.push(CardPlusMinus.getInstance());\r\n        }\r\n\r\n        for (int i = 0; i < numberOfStraightCards; i++) {\r\n            deck.push(CardStraight.getInstance());\r\n        }\r\n\r\n        for (int i = 0; i < numberOfX2Cards; i++) {\r\n            deck.push(CardX2.getInstance());\r\n        }\r\n\r\n        deck.push(CardCloverleaf.getInstance());\r\n\r\n    }\r\n\r\n    public AbstractCard getTopCard() {\r\n        AbstractCard currentCard = deck.pop();\r\n        if (deck.isEmpty()){\r\n            System.out.println(\"Re-shuffling deck\");\r\n            initializeDeck();\r\n            System.out.println(\"Deck has been shuffled\");\r\n            return currentCard;\r\n\r\n        }\r\n        return currentCard;\r\n    }\r\n\r\n\r\n    public void shuffle() {\r\n        System.out.println(\"Shuffling deck...\");\r\n        Collections.shuffle(deck);\r\n        System.out.println(\"Deck has been shuffled\");\r\n    }\r\n\r\n    public Stack<AbstractCard> getDeck() {\r\n        return deck;\r\n    }\r\n\r\n    public int getDeckSize() {\r\n        return deck.size();\r\n    }\r\n\r\n    private boolean isEmpty() {\r\n        return (deck.size() == 0);\r\n    }\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Cards/Deck.java b/src/Cards/Deck.java
+--- a/src/Cards/Deck.java	(revision a31a753d19b40ef672ea6c6fba5c581998d2f791)
++++ b/src/Cards/Deck.java	(date 1669741582762)
+@@ -67,7 +67,6 @@
+             initializeDeck();
+             System.out.println("Deck has been shuffled");
+             return currentCard;
+-
+         }
+         return currentCard;
+     }
+@@ -79,10 +78,6 @@
+         System.out.println("Deck has been shuffled");
+     }
+ 
+-    public Stack<AbstractCard> getDeck() {
+-        return deck;
+-    }
+-
+     public int getDeckSize() {
+         return deck.size();
+     }
