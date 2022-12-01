@@ -68,7 +68,7 @@ public class Round {
             if (!turnIsActive) {
                 System.out.println("Tough luck!");
                 System.out.println(activePlayer.getPlayerName() + " your turn is finished...");
-                break;
+                return;
             }
             String answer = activePlayer.getChoiceDice(activeDice);
             List<Integer> diceSetAsideThrow = checkChoiceValidity(answer, rolledDice);
@@ -154,7 +154,7 @@ public class Round {
             if (!turnIsActive) {
                 System.out.println("Tough luck!");
                 System.out.println(activePlayer.getPlayerName() + " your turn is finished...");
-                break;
+                return;
             }
             String answer = activePlayer.getChoiceDice(activeDice);
             List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice);
@@ -184,7 +184,7 @@ public class Round {
             if (!turnIsActive) {
                 System.out.println("Tough luck!");
                 System.out.println(activePlayer.getPlayerName() + " your turn is finished...");
-                break;
+                return;
             }
             String answer = activePlayer.getChoiceDice(activeDice);
             List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice);
@@ -216,7 +216,7 @@ public class Round {
                 if (!turnIsActive) {
                     System.out.println("Tough luck!");
                     System.out.println(activePlayer.getPlayerName() + " your turn is finished...");
-                    break;
+                    return;
                 }
             }
             String answer = activePlayer.getChoiceDice(activeDice);
