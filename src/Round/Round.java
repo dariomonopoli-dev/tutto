@@ -24,7 +24,7 @@ public class Round {
 
     private static AbstractCard activeCard;
 
-    public static List<Player> playRound (List<Player> players, Deck aDeck) {
+    public static void playRound (List<Player> players, Deck aDeck) {
         cardDeck = aDeck;
         Collections.sort(players);
         setHighestScoringPlayer(players);
@@ -40,10 +40,9 @@ public class Round {
             activeCard = cardDeck.getTopCard();
             activeCard.playTurn();
         }
-        return highestScoringPlayers;
     }
 
-    public static void setHighestScoringPlayer(List<Player> players) {
+    public static List<Player> setHighestScoringPlayer(List<Player> players) {
         highestScoringPlayers.add(players.get(0));
         for (Player player : players) {
             if (player.getPlayerScore() > highestScoringPlayers.get(0).getPlayerScore()) {
@@ -53,6 +52,7 @@ public class Round {
                 highestScoringPlayers.add(player);
             }
         }
+        return highestScoringPlayers;
     }
 
     private static void playBonusAndDoubleTurn (int bonus, boolean isDouble) {
