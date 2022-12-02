@@ -25,7 +25,9 @@ public class DiceRoller {
         for (int i = 0; i < rolledDice.size(); i++) {
             if (rolledDice.size()-i > 2 && isConcatenated(rolledDice, i)) {
                 if(hasTriplet(rolledDice, i)) {
-                    diceSetAside.add(rolledDice.get(i)*111);
+                    diceSetAside.add(rolledDice.get(i));
+                    diceSetAside.add(rolledDice.get(i));
+                    diceSetAside.add(rolledDice.get(i));
                 }
                 i += 2;
             } else {
