@@ -1,8 +1,11 @@
 package Test.Cards;
 
+import Cards.AbstractCard;
 import org.junit.jupiter.api.Test;
 import Cards.Deck;
 
+
+import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,6 +18,15 @@ class TestDeck {
 
     }
 
+
+    @Test
+    void getTopCard() {
+        final Deck d = new Deck();
+        assertEquals(d.getTopCard().getClass().toString().substring(6,11), d.getTopCard().toString().substring(0,5));
+        for (int i = 0; i<56; i++) {
+            d.getTopCard();
+        }
+    }
     @Test
     void getDeckSize() {
         final Deck deck = new Deck();
@@ -29,6 +41,8 @@ class TestDeck {
         final Deck deckInstance = deck.getInstance();
         assertEquals(deckInstance, deck.getInstance());
     }
+
+
 
     }
 
