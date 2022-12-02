@@ -29,6 +29,12 @@ class TestInputValidator {
 
     @Test
     void checkChoiceValidityStraight() {
+        final InputValidator iv = new InputValidator();
+        String answer = "2,3";
+        List<Integer> rolledDice = new ArrayList<Integer>(Arrays.asList(5,2,3));
+        List<Integer> diceSetAside = new ArrayList<Integer>(Arrays.asList(5,4,1,6));
+        List<Integer> expected = new ArrayList<Integer>(Arrays.asList(2,3));
+        assertEquals(expected, iv.checkChoiceValidityStraight(answer, rolledDice, diceSetAside));
     }
 
     @Test
