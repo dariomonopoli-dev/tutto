@@ -14,15 +14,20 @@ class TestScoreCalculator {
     @Test
     void calculateScore() {
         final ScoreCalculator sc = new ScoreCalculator();
-        List<Integer> someDices = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6));
-        assertEquals(150, sc.calculateScore(someDices));
+        List<Integer> someDie = new ArrayList<Integer>(Arrays.asList(1));
+        assertEquals(100, sc.calculateScore(someDie));
+        List<Integer> someOtherDices = new ArrayList<Integer>(Arrays.asList(5,5,5,4,4,4));
+        assertEquals(900, sc.calculateScore(someOtherDices));
+        List<Integer> againOtherDices = new ArrayList<Integer>(Arrays.asList(5,5,5,5));
+        assertEquals(550, sc.calculateScore(againOtherDices));
+
     }
 
 
     @Test
     void calculateTriplet() {
         final ScoreCalculator sc = new ScoreCalculator();
-        List<Integer> someDices = new ArrayList<Integer>(Arrays.asList(111,666));
+        List<Integer> someDices = new ArrayList<Integer>(Arrays.asList(1,1,1,6,6,6));
         assertEquals(1600, sc.calculateScore(someDices));
 
     }
