@@ -77,7 +77,6 @@ class TestInputValidator {
         final InputValidator iv = new InputValidator();
         List<Integer> rolledDice = new ArrayList<Integer>(Arrays.asList(2,2,6,4,4));
         assertEquals(false, iv.hasTriplet(rolledDice, 0));
-
     }
 
     @Test
