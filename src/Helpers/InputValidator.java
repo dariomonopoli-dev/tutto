@@ -120,12 +120,6 @@ public class InputValidator {
         return true;
     }
 
-    private static boolean isConcatenated(List<String> answerList, int currentIndex) {
-        int index = Integer.parseInt(answerList.get(currentIndex));
-        int nextIndex = Integer.parseInt(answerList.get(currentIndex+1));
-        int nextButOneIndex = Integer.parseInt(answerList.get(currentIndex+2));
-        return (index+1 == nextIndex && index+2 == nextButOneIndex);
-    }
 
     public static boolean hasTriplet (List<Integer> rolledDice, int currentIndex) {
         int indexValue = rolledDice.get(currentIndex);

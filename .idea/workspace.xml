@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b304c9ff-1b60-419c-9da6-33c034d8c063" name="Changes" comment="eifach eppis">
+    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="eifach eppis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/AbstractCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/AbstractCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardBonus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardBonus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardCloverleaf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardCloverleaf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardFireworks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardFireworks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardPlusMinus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardPlusMinus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardStop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardStop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardStraight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardStraight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardX2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardX2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/GameInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/GameInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/Gameplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/Gameplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/DiceRoller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/DiceRoller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/ScoreCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/ScoreCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Round/Round.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Round/Round.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestAbstractCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestAbstractCard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardBonus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardBonus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardCloverleaf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardCloverleaf.class" afterDir="false" />
@@ -14,6 +31,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStop.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStraight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStraight.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardX2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardX2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestDeck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestDeck.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestDisplayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestDisplayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameplay.class" afterDir="false" />
@@ -22,12 +40,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestScoreCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestScoreCalculator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Player/TestPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Player/TestPlayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Round/TestRound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Round/TestRound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Helpers/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/ScoreCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/ScoreCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Round/Round.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Round/Round.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tutto.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,31 +58,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
-  <component name="RunManager" selected="Application.Gameplay">
-    <configuration name="Gameplay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Gamestate.Gameplay" />
+}]]></component>
+  <component name="RunManager" selected="JUnit.All in tutto">
+    <configuration name="All in tutto" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="tutto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Gamestate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <extension name="coverage" sample_coverage="false" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,39 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDeck.getDeckSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tutto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.Cards.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test.Cards" />
-      <option name="MAIN_CLASS_NAME" value="Test.Cards.TestDeck" />
-      <option name="METHOD_NAME" value="getDeckSize" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestDeck.getInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tutto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.Cards.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test.Cards" />
-      <option name="MAIN_CLASS_NAME" value="Test.Cards.TestDeck" />
-      <option name="METHOD_NAME" value="getInstance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestDiceRoller.isConcatenated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestInputValidator.checkChoiceValidity (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tutto" />
       <extension name="coverage">
         <pattern>
@@ -126,16 +106,49 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Test.Helpers" />
-      <option name="MAIN_CLASS_NAME" value="Test.Helpers.TestDiceRoller" />
-      <option name="METHOD_NAME" value="isConcatenated" />
+      <option name="MAIN_CLASS_NAME" value="Test.Helpers.TestInputValidator" />
+      <option name="METHOD_NAME" value="checkChoiceValidity" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestInputValidator.checkChoiceValidity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tutto" />
-      <extension name="coverage" sample_coverage="false">
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.Helpers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.Helpers" />
+      <option name="MAIN_CLASS_NAME" value="Test.Helpers.TestInputValidator" />
+      <option name="METHOD_NAME" value="checkChoiceValidity" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Deditable.java.test.console=true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestInputValidator.checkChoiceValidityStraight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tutto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.Helpers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.Helpers" />
+      <option name="MAIN_CLASS_NAME" value="Test.Helpers.TestInputValidator" />
+      <option name="METHOD_NAME" value="checkChoiceValidityStraight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer.getChoiceContinueRoll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tutto" />
+      <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Test.Player.*" />
           <option name="ENABLED" value="true" />
@@ -143,8 +156,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test.Player" />
       <option name="MAIN_CLASS_NAME" value="Test.Player.TestPlayer" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="getChoiceContinueRoll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer.getChoiceDice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tutto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.Player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.Player" />
+      <option name="MAIN_CLASS_NAME" value="Test.Player.TestPlayer" />
+      <option name="METHOD_NAME" value="getChoiceDice" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,46 +189,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-      <module name="tutto" />
-      <extension name="coverage" sample_coverage="false" />
-      <option name="PACKAGE_NAME" value="Test.Helpers" />
-      <option name="MAIN_CLASS_NAME" value="Test.Helpers.TestDiceRoller" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.Gameplay" />
       <item itemvalue="JUnit.TestDeck" />
-      <item itemvalue="JUnit.Unnamed" />
+      <item itemvalue="JUnit.All in tutto" />
       <item itemvalue="JUnit.TestScoreCalculator" />
-      <item itemvalue="JUnit.TestDiceRoller.isConcatenated" />
-      <item itemvalue="JUnit.TestPlayer" />
-      <item itemvalue="JUnit.TestDeck.getDeckSize" />
-      <item itemvalue="JUnit.TestDeck.getInstance" />
+      <item itemvalue="JUnit.TestPlayer.getChoiceContinueRoll" />
+      <item itemvalue="JUnit.TestPlayer.getChoiceDice" />
+      <item itemvalue="JUnit.TestInputValidator.checkChoiceValidity (1)" />
+      <item itemvalue="JUnit.TestInputValidator.checkChoiceValidityStraight" />
+      <item itemvalue="JUnit.TestInputValidator.checkChoiceValidity" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Gameplay" />
-        <item itemvalue="JUnit.TestPlayer" />
-        <item itemvalue="JUnit.TestDiceRoller.isConcatenated" />
-        <item itemvalue="JUnit.TestDeck.getDeckSize" />
-        <item itemvalue="JUnit.TestDeck.getInstance" />
+        <item itemvalue="JUnit.TestPlayer.getChoiceDice" />
+        <item itemvalue="JUnit.TestPlayer.getChoiceContinueRoll" />
+        <item itemvalue="JUnit.TestInputValidator.checkChoiceValidity (1)" />
+        <item itemvalue="JUnit.TestInputValidator.checkChoiceValidityStraight" />
+        <item itemvalue="JUnit.TestInputValidator.checkChoiceValidity" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b304c9ff-1b60-419c-9da6-33c034d8c063" name="Changes" comment="" />
+      <changelist id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="eifach eppis" />
       <created>1669822414390</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669822414390</updated>
       <workItem from="1669822417176" duration="3966000" />
+      <workItem from="1670009175975" duration="1203000" />
+      <workItem from="1670014446635" duration="359000" />
+      <workItem from="1670059350676" duration="504000" />
+      <workItem from="1670059915643" duration="194000" />
+      <workItem from="1670060208694" duration="51000" />
+      <workItem from="1670060296224" duration="2469000" />
     </task>
     <task id="LOCAL-00001" summary="finished displayWinnerScreen">
       <created>1669891186354</created>
@@ -246,19 +270,53 @@
     <option name="LAST_COMMIT_MESSAGE" value="eifach eppis" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tutto$TestDeck_getDeckSize.ic" NAME="TestDeck.getDeckSize Coverage Results" MODIFIED="1669823346481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Test.Cards.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/tutto$TestDeck.ic" NAME="TestDeck Coverage Results" MODIFIED="1669825418324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/tutto$TestPlayer.ic" NAME="TestPlayer Coverage Results" MODIFIED="1669826124958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/tutto$TestPlayer.ic" NAME="TestPlayer Coverage Results" MODIFIED="1669991692815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Test.Player.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestDiceRoller_isConcatenated.ic" NAME="TestDiceRoller.isConcatenated Coverage Results" MODIFIED="1669824251304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Helpers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$All_in_tutto.ic" NAME="All in tutto Coverage Results" MODIFIED="1670062330369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/tutto$TestDeck_getInstance.ic" NAME="TestDeck.getInstance Coverage Results" MODIFIED="1669823062569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Test.Cards.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tutto$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1669826042426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/tutto$TestDiceRoller_isConcatenated.ic" NAME="TestDiceRoller.isConcatenated Coverage Results" MODIFIED="1669824251304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/tutto$TestDeck.ic" NAME="TestDeck Coverage Results" MODIFIED="1669991576903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Test.Cards.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestInputValidator_hasValidIndex.ic" NAME="TestInputValidator.hasValidIndex Coverage Results" MODIFIED="1669994739629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Test.Helpers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestDeck_getDeckSize.ic" NAME="TestDeck.getDeckSize Coverage Results" MODIFIED="1669823346481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Cards.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestInputValidator_checkChoiceValidityStraight.ic" NAME="TestInputValidator.checkChoiceValidityStraight Coverage Results" MODIFIED="1670060106907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Helpers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestScoreCalculator.ic" NAME="TestScoreCalculator Coverage Results" MODIFIED="1669992184595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Helpers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestInputValidator_checkChoiceValidity.ic" NAME="TestInputValidator.checkChoiceValidity Coverage Results" MODIFIED="1670059975643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Helpers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestDeck_getTopCard.ic" NAME="TestDeck.getTopCard Coverage Results" MODIFIED="1670010112563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Cards.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestInputValidator_checkChoiceValidity__1_.ic" NAME="TestInputValidator.checkChoiceValidity (1) Coverage Results" MODIFIED="1670060345482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Helpers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestScoreCalculator_calculateScore2.ic" NAME="TestScoreCalculator.calculateScore2 Coverage Results" MODIFIED="1669992346048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Helpers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$AllTests.ic" NAME="AllTests Coverage Results" MODIFIED="1669997306223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/tutto$TestPlayer_getChoiceContinueRoll.ic" NAME="TestPlayer.getChoiceContinueRoll Coverage Results" MODIFIED="1670060499237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Player.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1670009250244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/tutto$TestRound_setHighestScoringPlayer.ic" NAME="TestRound.setHighestScoringPlayer Coverage Results" MODIFIED="1669993514986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Round.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tutto$TestPlayer_getChoiceDice.ic" NAME="TestPlayer.getChoiceDice Coverage Results" MODIFIED="1670062159156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Test.Player.*</FILTER>
     </SUITE>
   </component>
 </project>
