@@ -1,15 +1,21 @@
 package Test.Gamestate;
 
+import Gamestate.GameInitializer;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestGameInitializer {
+class TestGameInitializer extends GameInitializer {
 
     @Test
-    void getPlayers() {
+    void TestGetPlayers() {
+        final GameInitializer gI = new GameInitializer();
+        gI.getPlayers();
     }
 
     @Test
-    void getWinningScore() {
+    void TestGetWinningScore() {
+        final GameInitializer gI = new GameInitializer();
+        gI.getWinningScore();
     }
+
 }
