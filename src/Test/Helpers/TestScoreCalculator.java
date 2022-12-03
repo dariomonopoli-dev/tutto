@@ -20,6 +20,9 @@ class TestScoreCalculator {
         assertEquals(900, sc.calculateScore(someOtherDices));
         List<Integer> againOtherDices = new ArrayList<Integer>(Arrays.asList(5,5,5,5));
         assertEquals(550, sc.calculateScore(againOtherDices));
+        List<Integer> againOtherDice = new ArrayList<Integer>(Arrays.asList(5,5,5,5,5,5));
+        assertEquals(1000, sc.calculateScore(againOtherDice));
+
 
     }
 
