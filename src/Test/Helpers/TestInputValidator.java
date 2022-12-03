@@ -17,8 +17,9 @@ class TestInputValidator {
 
     @Test
     void checkChoiceValidity() {
+        System.out.println("Input 4,6 to pass this test");
         final InputValidator iv = new InputValidator();
-        final String answer = "4,6";
+        final String answer = "4,5";
         final List<Integer> rolledDice =  new ArrayList<Integer>(Arrays.asList(2,3,4,1,6,5));
         final List<Integer> expected = new ArrayList<>();
         expected.add(0, 1);
@@ -87,4 +88,5 @@ class TestInputValidator {
         assertEquals(true, iv.hasValidIndex(answer1, activeDice));
 
     }
+
 }
