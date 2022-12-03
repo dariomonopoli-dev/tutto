@@ -59,7 +59,11 @@ public class TestDiceRoller {
         final DiceRoller dr = new DiceRoller();
         List<Integer> diceRoll = new ArrayList<Integer>(Arrays.asList(1,1,2,3,4,5));
         List<Integer> expected = new ArrayList<Integer>(Arrays.asList(1,1,5));
+        List<Integer> diceRoll2 = new ArrayList<Integer>(Arrays.asList(1,1,1,3,4,5));
+        List<Integer> expected2 = new ArrayList<Integer>(Arrays.asList(1,1,1,5));
+
         assertEquals(expected, dr.getAllValidDice(diceRoll));
+        assertEquals(expected2, dr.getAllValidDice(diceRoll2));
     }
 }
 
