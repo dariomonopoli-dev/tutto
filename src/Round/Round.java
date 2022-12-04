@@ -164,7 +164,7 @@ public class Round {
         turnScore += 1000;
         for (Player highestScoringPlayer : highestScoringPlayers) {
             if (!highestScoringPlayer.equals(activePlayer)) {
-                highestScoringPlayer.decreasePlayerScore(1000);
+                highestScoringPlayer.decreasePlayerScoreBy1000();
             }
         }
         if (anotherRollAfterTutto(activePlayer)) {
