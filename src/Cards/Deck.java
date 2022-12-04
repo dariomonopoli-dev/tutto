@@ -12,21 +12,6 @@ import java.util.Stack;
 
 public class Deck {
 
-    private final PrintStream standardOut = System.out;
-    private final InputStream standardIn = System.in;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-
-    @BeforeEach
-    public void setUp() {
-        System.setOut(new PrintStream(outputStreamCaptor));
-    }
-
-    @AfterEach
-    public void tearDown() {
-        System.setOut(standardOut);
-        System.setIn(standardIn);
-    }
-
     private static final Deck uniqueInstance = new Deck();
     private static Stack<AbstractCard> deck;
 
