@@ -70,6 +70,7 @@ public class Round {
         numberOfTuttos = 0;
         int activeDice = 6;
         boolean turnIsActive = true;
+        int intermediateScore = 0;
         while (turnIsActive) {
             List<Integer> rolledDice = DiceRoller.rollDice(activeDice);
             Displayer.displayDice(rolledDice);
@@ -82,12 +83,11 @@ public class Round {
             }
             String answer = activePlayer.getChoiceDice(activeDice);
             List<Integer> diceSetAsideThrow = checkChoiceValidity(answer, rolledDice);
-
-            turnScore += calculateScore(diceSetAsideThrow);
+            intermediateScore += calculateScore(diceSetAsideThrow);
             activeDice -= diceSetAsideThrow.size();
             if (activeDice == 0) {
-                turnIsActive = anotherRollAfterTutto(activePlayer);
-                turnScore += isDouble ? turnScore : bonus;
+                turnIsActive = anotherRollAfterTutto(activePlayer, true);
+                turnScore += isDouble ? intermediateScore * 2 : intermediateScore + bonus;
                 if (turnIsActive) {
                     activeCard = cardDeck.getTopCard();
                     activeCard.playTurn();
@@ -167,7 +167,7 @@ public class Round {
                 highestScoringPlayer.decreasePlayerScoreBy1000();
             }
         }
-        if (anotherRollAfterTutto(activePlayer)) {
+        if (anotherRollAfterTutto(activePlayer, true)) {
             activeCard = cardDeck.getTopCard();
             activeCard.playTurn();
         }
@@ -235,14 +235,16 @@ public class Round {
             }
         }
         turnScore += 2000;
-        if (anotherRollAfterTutto(activePlayer)) {
+        if (anotherRollAfterTutto(activePlayer, false)) {
             activeCard = cardDeck.getTopCard();
             activeCard.playTurn();
         }
     }
 
-    private static boolean anotherRollAfterTutto (Player activePlayer) {
-        System.out.println("Congratulations " + activePlayer.getPlayerName() + "! You have a Tutto!");
+    private static boolean anotherRollAfterTutto (Player activePlayer, boolean displayTuttoMessage) {
+        if (displayTuttoMessage) {
+            System.out.println("Congratulations " + activePlayer.getPlayerName() + "! You have a Tutto!");
+        }
         boolean anotherRound = activePlayer.getChoiceAnotherRoll();
         numberOfTuttos++;
         return anotherRound;
