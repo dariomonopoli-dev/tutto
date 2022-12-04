@@ -4,8 +4,6 @@ import java.util.*;
 
 public class InputValidator {
 
-    private static final Scanner input = new Scanner(System.in);
-
     /**
      * @post method checks whether the input if of the correct form and
      *  a feasible choice (i.e. not more indexes than dice)
@@ -151,6 +149,7 @@ public class InputValidator {
     }
 
     private static String getNewIndexChoice() {
+        Scanner input = new Scanner(System.in);
         System.out.println("Invalid input =(");
         System.out.println("Please enter indexes in the correct format (e.g. 2 or 2,3,4):");
         return input.nextLine();
