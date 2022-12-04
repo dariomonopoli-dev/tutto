@@ -16,9 +16,7 @@ public class Round {
 
     private static Player activePlayer;
 
-    private static List<Player> highestScoringPlayers = new ArrayList<>();
-
-    private static Scanner input = new Scanner(System.in);
+    private static final List<Player> highestScoringPlayers = new ArrayList<>();
 
     private static int numberOfTuttos;
 
@@ -248,15 +246,5 @@ public class Round {
         boolean anotherRound = activePlayer.getChoiceAnotherRoll();
         numberOfTuttos++;
         return anotherRound;
-    }
-
-    private static int countDiceSetAside(List<Integer> diceSetAside) {
-        int total = 0;
-        if (diceSetAside.size() > 0) {
-            for (int dice : diceSetAside) {
-                total += (dice > 6) ? 3 : 1;
-            }
-        }
-        return total;
     }
 }
