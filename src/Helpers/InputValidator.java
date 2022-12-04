@@ -114,7 +114,7 @@ public class InputValidator {
         return true;
     }
 
-    private static boolean isValidChoiceStraight (List<String> answerList, List<Integer> rolledDice, List<Integer> diceSetAsideOrig) {
+    protected static boolean isValidChoiceStraight(List<String> answerList, List<Integer> rolledDice, List<Integer> diceSetAsideOrig) {
         List<Integer> diceSetAsideCopy = new ArrayList<>(diceSetAsideOrig);
         for (String s : answerList) {
             int index = Integer.parseInt(s) - 1;
@@ -135,9 +135,9 @@ public class InputValidator {
     }
 
     public static boolean hasSingle (List<Integer> rolledDice, int currentIndex) {
-        List<String> singles = Arrays.asList("1","5");
+        List<Integer> singles = Arrays.asList(1,5);
         int currentChoice = rolledDice.get(currentIndex);
-        return singles.contains(Integer.toString(currentChoice));
+        return singles.contains(currentChoice);
     }
 
     private static List<String> getStringList(String answer) {

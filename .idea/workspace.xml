@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="wrote test for Round class">
-      <change beforePath="$PROJECT_DIR$/src/Test/Helpers/TestScoreCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Helpers/TestScoreCalculator.java" afterDir="false" />
+    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="added Test for StopCard">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Round/TestRound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Round/TestRound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Round/TestRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Round/TestRound.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +189,7 @@
       <workItem from="1670171182131" duration="1404000" />
       <workItem from="1670180625592" duration="1166000" />
       <workItem from="1670181867332" duration="6633000" />
-      <workItem from="1670188535159" duration="4501000" />
+      <workItem from="1670188535159" duration="1424000" />
     </task>
     <task id="LOCAL-00001" summary="finished displayWinnerScreen">
       <created>1669891186354</created>
@@ -238,21 +240,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670185045335</updated>
     </task>
-    <task id="LOCAL-00008" summary="wrote test for Round class">
-      <created>1670190184276</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1670190184276</updated>
-    </task>
-    <task id="LOCAL-00009" summary="wrote test for Round class">
-      <created>1670193097783</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1670193097783</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,26 +268,10 @@
     <MESSAGE value="fixed scoring" />
     <MESSAGE value="fixed input bug" />
     <MESSAGE value="added Test for StopCard" />
-    <MESSAGE value="wrote test for Round class" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrote test for Round class" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Test/Round/TestRound.java</url>
-          <line>49</line>
-          <properties class="Test.Round.TestRound" method="TestTwoHighestScoringPlayers">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="added Test for StopCard" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tutto$All_in_tutto.ic" NAME="All in tutto Coverage Results" MODIFIED="1670193011353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/tutto$All_in_tutto.ic" NAME="All in tutto Coverage Results" MODIFIED="1670190112776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/tutto$TestDeck.ic" NAME="TestDeck Coverage Results" MODIFIED="1669991576903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Test.Cards.*</FILTER>
     </SUITE>
