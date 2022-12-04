@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class GameInitializer {
 
 
-    private static int getPlayerNumber() {
+    protected static int getPlayerNumber() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Before the game can start, please enter how many players you are:");
         while (true) {
