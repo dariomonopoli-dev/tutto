@@ -13,36 +13,34 @@ public class Displayer {
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_YELLOW = "\033[0;93m";
-    public static final String RED_BOLD_BRIGHT = "\033[1;91m";
     public static final String GREEN_BOLD_BRIGHT = "\033[1;92m";
     public static final String BLUE_BOLD = "\033[1;34m";
 
     protected static String messageWelcomeScreen() {
-        String welcomeMessage = ANSI_BLUE+ """
+        return ANSI_BLUE+ """
             ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ████████╗ ██████╗     ████████╗██╗   ██╗████████╗████████╗ ██████╗
             ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔═══██╗    ╚══██╔══╝██║   ██║╚══██╔══╝╚══██╔══╝██╔═══██╗
             ██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗         ██║   ██║   ██║       ██║   ██║   ██║   ██║      ██║   ██║   ██║
             ██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝         ██║   ██║   ██║       ██║   ██║   ██║   ██║      ██║   ██║   ██║
             ╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗       ██║   ╚██████╔╝       ██║   ╚██████╔╝   ██║      ██║   ╚██████╔╝
              ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝    ╚═════╝        ╚═╝    ╚═════╝    ╚═╝      ╚═╝    ╚═════╝""";
-        return welcomeMessage;
 
     }
     public static void displayWelcomeScreen() {
         System.out.println(messageWelcomeScreen());
-        System.out.println("Developed by Valentin Meyer, Dario Monopoli, Lennart Töllke and Remo Wiget"+ANSI_RESET);
+        System.out.println("Developed by " + ANSI_GREEN + "Valentin Meyer" + ANSI_BLUE + ", " + ANSI_GREEN + "Dario Monopoli" + ANSI_BLUE
+                + ", " + ANSI_GREEN + "Lennart Töllke" + ANSI_BLUE + " and " + ANSI_GREEN + "Remo Wiget"+ANSI_RESET);
 
     }
 
     protected static String messageWin() {
-        String winnerMessage = GREEN_BOLD_BRIGHT +"""
+        return GREEN_BOLD_BRIGHT +"""
             ██╗    ██╗███████╗    ██╗  ██╗ █████╗ ██╗   ██╗███████╗     █████╗     ██╗    ██╗██╗███╗   ██╗███╗   ██╗███████╗██████╗ ██╗██╗
             ██║    ██║██╔════╝    ██║  ██║██╔══██╗██║   ██║██╔════╝    ██╔══██╗    ██║    ██║██║████╗  ██║████╗  ██║██╔════╝██╔══██╗██║██║
             ██║ █╗ ██║█████╗      ███████║███████║██║   ██║█████╗      ███████║    ██║ █╗ ██║██║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝██║██║
             ██║███╗██║██╔══╝      ██╔══██║██╔══██║╚██╗ ██╔╝██╔══╝      ██╔══██║    ██║███╗██║██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗╚═╝╚═╝
             ╚███╔███╔╝███████╗    ██║  ██║██║  ██║ ╚████╔╝ ███████╗    ██║  ██║    ╚███╔███╔╝██║██║ ╚████║██║ ╚████║███████╗██║  ██║██╗██╗
              ╚══╝╚══╝ ╚══════╝    ╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝    ╚═╝  ╚═╝     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝"""+ ANSI_RESET;
-        return winnerMessage;
 
     }
     public static void displayWinnerScreen(List<Player> winningPlayers, List<Player> players) {
@@ -65,8 +63,7 @@ public class Displayer {
     }
 
     protected static String messageCard(AbstractCard card) {
-        String messageCard = card.getGraphicalRepresentation();
-        return messageCard;
+        return card.getGraphicalRepresentation();
 
     }
     public static void displayCard(AbstractCard card) {
