@@ -34,7 +34,8 @@ public class InputValidator {
                 "1,2,3,4,5,6"
         );
         List<String> answerList = getStringList(answer);
-        return (possibleAnswers.contains(answer) && answerList.size() <= activeDice);
+        int lastIndex = Integer.parseInt(answerList.get(answerList.size()-1));
+        return (possibleAnswers.contains(answer) && lastIndex <= activeDice);
     }
 
     /**
