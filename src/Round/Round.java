@@ -82,10 +82,11 @@ public class Round {
             String answer = activePlayer.getChoiceDice(activeDice);
             List<Integer> diceSetAsideThrow = checkChoiceValidity(answer, rolledDice);
             intermediateScore += calculateScore(diceSetAsideThrow);
+            turnScore += intermediateScore;
             activeDice -= diceSetAsideThrow.size();
             if (activeDice == 0) {
                 turnIsActive = anotherRollAfterTutto(activePlayer, true);
-                turnScore += isDouble ? intermediateScore * 2 : intermediateScore + bonus;
+                turnScore += isDouble ? intermediateScore : intermediateScore + bonus;
                 if (turnIsActive) {
                     activeCard = cardDeck.getTopCard();
                     activeCard.playTurn();
