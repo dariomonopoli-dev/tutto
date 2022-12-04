@@ -70,7 +70,7 @@ class TestInputValidator extends InputValidator {
         final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,3,3,4,4,5));
         final List<Integer> expected = Arrays.asList(1,5);
         List<Integer> selectedDice = checkChoiceValidity("1,5", rolledDice);
-        assertTrue(expected.size() == selectedDice.size() && expected.containsAll(selectedDice) && selectedDice.containsAll(expected));
+        assertTrue(expected.containsAll(selectedDice) && selectedDice.containsAll(expected));
     }
 
     @Test
@@ -78,7 +78,7 @@ class TestInputValidator extends InputValidator {
         final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,3,3,4,4,5));
         final List<Integer> expected = Arrays.asList(1,5);
         List<Integer> selectedDice = checkChoiceValidity("1,6", rolledDice);
-        assertTrue(expected.size() == selectedDice.size() && expected.containsAll(selectedDice) && selectedDice.containsAll(expected));
+        assertTrue(expected.containsAll(selectedDice) && selectedDice.containsAll(expected));
     }
 
     @Test
