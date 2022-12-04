@@ -21,7 +21,7 @@ class TestPlayer {
     @Test
     void updatePlayerScore() {
         final Player player1 = new Player("Philipp");
-        player1.updatePlayerScore(1000);
+        player1.increasePlayerScore(1000);
         assertEquals(1000, player1.getPlayerScore());
 
     }
@@ -29,8 +29,8 @@ class TestPlayer {
     @Test
     void subtractPlayerScore() {
         final Player player1 = new Player("Philipp");
-        player1.updatePlayerScore(1000);
-        player1.subtractPlayerScore(1000);
+        player1.increasePlayerScore(1000);
+        player1.decreasePlayerScore(1000);
         assertEquals(0, player1.getPlayerScore());
     }
 

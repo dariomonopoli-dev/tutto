@@ -16,7 +16,7 @@ class TestRound {
         Round r = new Round();
         Player player1 = new Player("Philipp");
         Player player2 = new Player("Johnny");
-        player2.updatePlayerScore(1000);
+        player2.increasePlayerScore(1000);
         ArrayList<Player>  allPlayers = new ArrayList<>();
         allPlayers.add(0, player1);
         allPlayers.add(1, player2);

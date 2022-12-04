@@ -16,15 +16,17 @@ public class Player implements Comparable<Player> {
     public String getPlayerName () {
         return playerName;
     }
+
     public int getPlayerScore () {
         return playerScore;
     }
-    public void updatePlayerScore (int additionalScore) {
+
+    public void increasePlayerScore (int additionalScore) {
         if (additionalScore < 0) throw new IllegalArgumentException("Score must be positive!");
         playerScore += additionalScore;
     }
 
-    public void subtractPlayerScore(int additionalScore) {
+    public void decreasePlayerScore(int additionalScore) {
         if (additionalScore != 1000) throw new IllegalArgumentException("You can only subtract 1000 points!");
         playerScore -= additionalScore;
     }

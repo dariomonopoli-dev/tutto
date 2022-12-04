@@ -44,7 +44,7 @@ public class Round {
             }
             activeCard = cardDeck.getTopCard();
             activeCard.playTurn();
-            activePlayer.updatePlayerScore(turnScore);
+            activePlayer.increasePlayerScore(turnScore);
             System.out.println(activePlayer.getPlayerName() + ", you scored " +
                     Displayer.ANSI_PURPLE + turnScore + Displayer.ANSI_RESET + " points!");
             turnScore = 0;
@@ -164,7 +164,7 @@ public class Round {
         turnScore += 1000;
         for (Player highestScoringPlayer : highestScoringPlayers) {
             if (!highestScoringPlayer.equals(activePlayer)) {
-                highestScoringPlayer.subtractPlayerScore(1000);
+                highestScoringPlayer.decreasePlayerScore(1000);
             }
         }
         if (anotherRollAfterTutto(activePlayer)) {
