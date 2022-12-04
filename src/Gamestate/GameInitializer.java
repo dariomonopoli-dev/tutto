@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class GameInitializer {
 
-    private static final Scanner scanner = new Scanner(System.in);
 
     private static int getPlayerNumber() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Before the game can start, please enter how many players you are:");
         while (true) {
             try {
@@ -28,7 +28,8 @@ public class GameInitializer {
         }
     }
 
-    private static String getPlayerName(int number) {
+    protected static String getPlayerName(int number) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Player number "+ number +", please enter your Name:");
         while (true) {
             try {
@@ -61,6 +62,7 @@ public class GameInitializer {
     }
 
     protected static int getWinningScore(){
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Now you can decide how many points are needed to win the game (the default value is 6000)");
         while (true) {
             try {

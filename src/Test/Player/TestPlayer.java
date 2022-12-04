@@ -30,7 +30,7 @@ class TestPlayer {
     void subtractPlayerScore() {
         final Player player1 = new Player("Philipp");
         player1.increasePlayerScore(1000);
-        player1.decreasePlayerScore(1000);
+        player1.decreasePlayerScoreBy1000();
         assertEquals(0, player1.getPlayerScore());
     }
 

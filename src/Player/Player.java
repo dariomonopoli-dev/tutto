@@ -26,9 +26,8 @@ public class Player implements Comparable<Player> {
         playerScore += additionalScore;
     }
 
-    public void decreasePlayerScore(int additionalScore) {
-        if (additionalScore != 1000) throw new IllegalArgumentException("You can only subtract 1000 points!");
-        playerScore -= additionalScore;
+    public void decreasePlayerScoreBy1000() {
+        playerScore -= 1000;
     }
 
     Scanner input = new Scanner(System.in);
