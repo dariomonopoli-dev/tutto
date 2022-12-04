@@ -16,35 +16,28 @@ public class Displayer {
     public static final String GREEN_BOLD_BRIGHT = "\033[1;92m";
     public static final String BLUE_BOLD = "\033[1;34m";
 
-    protected static String messageWelcomeScreen() {
-        return ANSI_BLUE+ """
+    public static void displayWelcomeScreen() {
+        System.out.println(ANSI_BLUE+ """
             ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ████████╗ ██████╗     ████████╗██╗   ██╗████████╗████████╗ ██████╗
             ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔═══██╗    ╚══██╔══╝██║   ██║╚══██╔══╝╚══██╔══╝██╔═══██╗
             ██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗         ██║   ██║   ██║       ██║   ██║   ██║   ██║      ██║   ██║   ██║
             ██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝         ██║   ██║   ██║       ██║   ██║   ██║   ██║      ██║   ██║   ██║
             ╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗       ██║   ╚██████╔╝       ██║   ╚██████╔╝   ██║      ██║   ╚██████╔╝
-             ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝    ╚═════╝        ╚═╝    ╚═════╝    ╚═╝      ╚═╝    ╚═════╝""";
-
-    }
-    public static void displayWelcomeScreen() {
-        System.out.println(messageWelcomeScreen());
+             ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝    ╚═════╝        ╚═╝    ╚═════╝    ╚═╝      ╚═╝    ╚═════╝""");
         System.out.println("Developed by " + ANSI_GREEN + "Valentin Meyer" + ANSI_BLUE + ", " + ANSI_GREEN + "Dario Monopoli" + ANSI_BLUE
                 + ", " + ANSI_GREEN + "Lennart Töllke" + ANSI_BLUE + " and " + ANSI_GREEN + "Remo Wiget"+ANSI_RESET);
 
     }
 
-    protected static String messageWin() {
-        return GREEN_BOLD_BRIGHT +"""
+
+    public static void displayWinnerScreen(List<Player> winningPlayers, List<Player> players) {
+        System.out.println(GREEN_BOLD_BRIGHT +"""
             ██╗    ██╗███████╗    ██╗  ██╗ █████╗ ██╗   ██╗███████╗     █████╗     ██╗    ██╗██╗███╗   ██╗███╗   ██╗███████╗██████╗ ██╗██╗
             ██║    ██║██╔════╝    ██║  ██║██╔══██╗██║   ██║██╔════╝    ██╔══██╗    ██║    ██║██║████╗  ██║████╗  ██║██╔════╝██╔══██╗██║██║
             ██║ █╗ ██║█████╗      ███████║███████║██║   ██║█████╗      ███████║    ██║ █╗ ██║██║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝██║██║
             ██║███╗██║██╔══╝      ██╔══██║██╔══██║╚██╗ ██╔╝██╔══╝      ██╔══██║    ██║███╗██║██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗╚═╝╚═╝
             ╚███╔███╔╝███████╗    ██║  ██║██║  ██║ ╚████╔╝ ███████╗    ██║  ██║    ╚███╔███╔╝██║██║ ╚████║██║ ╚████║███████╗██║  ██║██╗██╗
-             ╚══╝╚══╝ ╚══════╝    ╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝    ╚═╝  ╚═╝     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝"""+ ANSI_RESET;
-
-    }
-    public static void displayWinnerScreen(List<Player> winningPlayers, List<Player> players) {
-        System.out.println(messageWin());
+             ╚══╝╚══╝ ╚══════╝    ╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝    ╚═╝  ╚═╝     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝"""+ ANSI_RESET);
         System.out.println("Congratulations to: ");
         for (Player player : winningPlayers) {
             System.out.println(GREEN_BOLD_BRIGHT + player.getPlayerName() + ANSI_RESET);
@@ -52,6 +45,7 @@ public class Displayer {
         System.out.println();
         displayScores(players);
     }
+
 
     public static void displayScores(List<Player> players) {
         System.out.println("┌────────────────────┬─────────────┐");
@@ -62,12 +56,9 @@ public class Displayer {
         System.out.println("└────────────────────┴─────────────┘");
     }
 
-    protected static String messageCard(AbstractCard card) {
-        return card.getGraphicalRepresentation();
 
-    }
     public static void displayCard(AbstractCard card) {
-        System.out.println(messageCard(card));
+        System.out.println(card.getGraphicalRepresentation());
     }
 
     public static void displayDice(List<Integer> dice) {
