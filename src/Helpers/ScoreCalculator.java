@@ -1,9 +1,6 @@
 package Helpers;
 
 
-import Cards.*;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Collections;
@@ -19,25 +16,25 @@ public class ScoreCalculator {
         int score = 0;
         for (int i = 0; i < diceAmounts.size(); i++) {
             int die = i+1;
-            int occurence = diceAmounts.get(i);
-            if (occurence < 3) {
+            int occurrence = diceAmounts.get(i);
+            if (occurrence < 3) {
                 if (die == 1) {
-                    score += 100 * occurence;
+                    score += 100 * occurrence;
                 } else {
-                    score += 50 * occurence;
+                    score += 50 * occurrence;
                 }
-            } else if (occurence == 3) {
+            } else if (occurrence == 3) {
                 if (die == 1) {
                     score += 1000;
                 } else {
                     score += 100 * die;
                 }
-            } else if (occurence < 6) {
-                occurence -= 3;
+            } else if (occurrence < 6) {
+                occurrence -= 3;
                 if (die == 1) {
-                    score += 100 * occurence + 1000;
+                    score += 100 * occurrence + 1000;
                 } else {
-                    score += 50 * occurence + 500;
+                    score += 50 * occurrence + 500;
                 }
             } else {
                 if (die == 1) {

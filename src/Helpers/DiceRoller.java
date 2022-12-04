@@ -6,10 +6,10 @@ import static Helpers.InputValidator.hasSingle;
 import static Helpers.InputValidator.hasTriplet;
 
 public class DiceRoller {
-    private static Random ran = new Random();
+    private static final Random ran = new Random();
 
     public static ArrayList<Integer> rollDice(int numberOfDice) {
-        ArrayList<Integer> rolledDice = new ArrayList<Integer>(numberOfDice);
+        ArrayList<Integer> rolledDice = new ArrayList<>(numberOfDice);
         if (!(numberOfDice >=1 && numberOfDice <=6)) {
             throw new IllegalArgumentException("Enter a number of dices between 1 and 6!");
         }

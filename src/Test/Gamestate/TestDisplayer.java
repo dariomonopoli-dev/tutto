@@ -1,17 +1,9 @@
 package Test.Gamestate;
 
-import Cards.AbstractCard;
 import Cards.CardCloverleaf;
 import Gamestate.Displayer;
-import Player.Player;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 

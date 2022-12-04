@@ -10,10 +10,6 @@ public abstract class AbstractCard {
         return this.cardName;
     }
 
-    public String getDescription(){
-        return this.cardDescription;
-    }
-
     public String getGraphicalRepresentation(){
         return this.cardGraphicalRepresentation;
     }

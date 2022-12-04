@@ -4,7 +4,7 @@ import java.util.*;
 
 public class InputValidator {
 
-    private static Scanner input = new Scanner(System.in);
+    private static final Scanner input = new Scanner(System.in);
 
     /**
      * @post method checks whether the input if of the correct form and
@@ -88,8 +88,8 @@ public class InputValidator {
      * @post check whether a roll has valid dice for a straight to choose
      */
     public static boolean checkIsValidRollStraight (List<Integer> rolledDice, List<Integer> diceSetAside) {
-        for (int i = 0; i < rolledDice.size(); i++) {
-            if (!diceSetAside.contains(rolledDice.get(i))) {
+        for (Integer dieValue : rolledDice) {
+            if (!diceSetAside.contains(dieValue)) {
                 return true;
             }
         }

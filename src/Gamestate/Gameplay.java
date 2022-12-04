@@ -10,16 +10,16 @@ import java.util.Scanner;
 
 public class Gameplay {
 
-    private static void waitForEnter(String message) {
+    private static void waitForEnter() {
         Scanner getEnter = new Scanner(System.in);
-        System.out.println(Displayer.ANSI_YELLOW + message + Displayer.ANSI_RESET);
+        System.out.println("Press " + Displayer.ANSI_YELLOW + "Enter" + Displayer.ANSI_RESET + " to Start the game!");
         getEnter.nextLine();  // Read user input
     }
 
     private static void startGame() {
 
         Displayer.displayWelcomeScreen();
-        waitForEnter("Press Enter to Start the game!");
+        waitForEnter();
 
         // Initialization
         ArrayList<Player> players = GameInitializer.getPlayers();
