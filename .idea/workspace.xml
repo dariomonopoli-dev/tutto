@@ -4,10 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="fixed scoring">
+    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="fixed input bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/InputValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/AbstractCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/AbstractCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardBonus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardBonus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardCloverleaf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardCloverleaf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardFireworks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardFireworks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardPlusMinus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardPlusMinus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardStop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardStop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardStraight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardStraight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/CardX2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/CardX2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/DiceRoller 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/ScoreCalculator 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Round/Round 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardBonus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardBonus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardCloverleaf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardCloverleaf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardFireworks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardFireworks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardPlusMinus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardPlusMinus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStraight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStraight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardX2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardX2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestDisplayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestDisplayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Player/TestPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Player/TestPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Round/TestRound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Round/TestRound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/Round/TestRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Round/TestRound.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +68,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Gameplay">
+  <component name="RunManager" selected="JUnit.All in tutto">
     <configuration name="Gameplay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Gamestate.Gameplay" />
       <module name="tutto" />
@@ -188,7 +212,7 @@
       <workItem from="1670060296224" duration="2469000" />
       <workItem from="1670171182131" duration="1404000" />
       <workItem from="1670180625592" duration="1166000" />
-      <workItem from="1670181867332" duration="640000" />
+      <workItem from="1670181867332" duration="3079000" />
     </task>
     <task id="LOCAL-00001" summary="finished displayWinnerScreen">
       <created>1669891186354</created>
@@ -225,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670181300141</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed input bug">
+      <created>1670182689815</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670182689815</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +282,8 @@
     <MESSAGE value="unversioned changes in classes" />
     <MESSAGE value="fixed TestInputValidator to not need input from tester" />
     <MESSAGE value="fixed scoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed scoring" />
+    <MESSAGE value="fixed input bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed input bug" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tutto$All_in_tutto.ic" NAME="All in tutto Coverage Results" MODIFIED="1670181031587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />

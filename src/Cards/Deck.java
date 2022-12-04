@@ -1,10 +1,32 @@
 package Cards;
 
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.Collections;
 import java.util.Stack;
 
 public class Deck {
+
+    private final PrintStream standardOut = System.out;
+    private final InputStream standardIn = System.in;
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+
+    @BeforeEach
+    public void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
+    }
+
+    @AfterEach
+    public void tearDown() {
+        System.setOut(standardOut);
+        System.setIn(standardIn);
+    }
+
     private static final Deck uniqueInstance = new Deck();
     private static Stack<AbstractCard> deck;
 
