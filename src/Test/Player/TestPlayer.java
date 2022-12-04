@@ -57,7 +57,7 @@ class TestPlayer {
 
     @Test
     void getChoiceDice() {
-        System.out.println("Input first any number then 1,2,3,4,5,6 to pass this test");
+        System.out.println("Input 1,2,3,4,5,6 to pass this test");
         final Player player1 = new Player("Philipp");
         assertEquals("1,2,3,4,5,6", player1.getChoiceDice(6));
 
