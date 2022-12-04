@@ -13,6 +13,12 @@ public class Deck {
         initializeDeck();
     }
 
+    // for Test purposes
+    public Deck(AbstractCard card){
+        deck = new Stack<>();
+        deck.push(card);
+    }
+
     public void initializeDeck() {
         deck.clear();
 
@@ -75,7 +81,6 @@ public class Deck {
         }
         return currentCard;
     }
-
 
     public void shuffle() {
         Collections.shuffle(deck);
