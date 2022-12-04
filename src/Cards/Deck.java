@@ -1,25 +1,12 @@
 package Cards;
 
 
-import Cards.*;
-
 import java.util.Collections;
 import java.util.Stack;
 
 public class Deck {
     private static final Deck uniqueInstance = new Deck();
     private static Stack<AbstractCard> deck;
-
-    private final int numberOfBonusCards200 = 5;
-    private final int numberOfBonusCards300 = 5;
-    private final int numberOfBonusCards400 = 5;
-    private final int numberOfBonusCards500 = 5;
-    private final int numberOfBonusCards600 = 5;
-    private final int numberOfFireworksCards = 5;
-    private final int numberOfStopCards = 10;
-    private final int numberOfPlusMinusCards = 5;
-    private final int numberOfStraightCards = 5;
-    private final int numberOfX2Cards = 5;
 
     public Deck(){
         deck = new Stack<>();
@@ -29,38 +16,48 @@ public class Deck {
     public void initializeDeck() {
         deck.clear();
 
+        int numberOfBonusCards200 = 5;
         for (int i = 0; i < numberOfBonusCards200; i++) {
             deck.push(CardBonus.getInstance(200));
         }
+        int numberOfBonusCards300 = 5;
         for (int i = 0; i < numberOfBonusCards300; i++) {
             deck.push(CardBonus.getInstance(300));
         }
+        int numberOfBonusCards400 = 5;
         for (int i = 0; i < numberOfBonusCards400; i++) {
             deck.push(CardBonus.getInstance(400));
         }
+        int numberOfBonusCards500 = 5;
         for (int i = 0; i < numberOfBonusCards500; i++) {
             deck.push(CardBonus.getInstance(500));
         }
+        int numberOfBonusCards600 = 5;
         for (int i = 0; i < numberOfBonusCards600; i++) {
             deck.push(CardBonus.getInstance(600));
         }
 
+        int numberOfFireworksCards = 5;
         for (int i = 0; i < numberOfFireworksCards; i++) {
             deck.push(CardFireworks.getInstance());
         }
 
+        int numberOfStopCards = 10;
         for (int i = 0; i < numberOfStopCards; i++) {
             deck.push(CardStop.getInstance());
         }
 
+        int numberOfPlusMinusCards = 5;
         for (int i = 0; i < numberOfPlusMinusCards; i++) {
             deck.push(CardPlusMinus.getInstance());
         }
 
+        int numberOfStraightCards = 5;
         for (int i = 0; i < numberOfStraightCards; i++) {
             deck.push(CardStraight.getInstance());
         }
 
+        int numberOfX2Cards = 5;
         for (int i = 0; i < numberOfX2Cards; i++) {
             deck.push(CardX2.getInstance());
         }
