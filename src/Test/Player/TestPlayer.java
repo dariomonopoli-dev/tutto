@@ -1,10 +1,35 @@
 package Test.Player;
 
 import Player.Player;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+
+
 class TestPlayer {
+
+    private final PrintStream standardOut = System.out;
+    private final InputStream standardIn = System.in;
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+
+    @BeforeEach
+    public void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
+    }
+
+    @AfterEach
+    public void tearDown() {
+        System.setOut(standardOut);
+        System.setIn(standardIn);
+    }
 
     @Test
     void getPlayerName() {
@@ -36,35 +61,48 @@ class TestPlayer {
 
     @Test
     void getChoiceContinueRoll() {
-        System.out.println("Input first any letter then R to pass this test");
+        String userInput = "R\n";
+        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
         final Player player1 = new Player("Philipp");
-        assertEquals(true, player1.getChoiceContinueRoll());
+        assertTrue(player1.getChoiceContinueRoll());
     }
 
     @Test
     void getChoiceAnotherRound() {
-        System.out.println("Input first any letter then Y to pass this test");
+        String userInput = """
+                R
+                Y
+                """;
+        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
         final Player player1 = new Player("Philipp");
-        assertEquals(true, player1.getChoiceAnotherRoll());
+        assertTrue(player1.getChoiceAnotherRoll());
     }
 
     @Test
     void getChoiceDisplayScores() {
-        System.out.println("Input first any letter then D to pass this test");
+        String userInput = """
+                a
+                D
+                """;
+        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
         final Player player1 = new Player("Philipp");
-        assertEquals(true, player1.getChoiceDisplayScores());
+        assertTrue(player1.getChoiceDisplayScores());
     }
 
     @Test
-    void getChoiceDice() {
-        System.out.println("Input 1,2,3,4,5,6 to pass this test");
+    void GetChoiceDice() {
+        String userInput = "1,2,3,4,5,6\n";
+        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
         final Player player1 = new Player("Philipp");
         assertEquals("1,2,3,4,5,6", player1.getChoiceDice(6));
-
     }
 
     @Test
-    void compareTo() {
+    void CompareTo() {
         Player player1 = new Player("Dario");
         assertEquals(0, player1.compareTo(player1));
     }
