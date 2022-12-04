@@ -142,26 +142,38 @@ class TestPlayer {
     }
 
     @Test
-    @Disabled
-    void TestGetAnotherRoll(){
+    void TestGetAnotherRoll() {
         String userInput = """
-                a
+                r
                 R
                 """;
         ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(testIn);
-        String[] expectedOutput = {
-                // invalid Input
-                "OreSeur, enter \u001B[0;93mR\u001B[0m to roll your dice again:",
-                // Empty input
-                "\u001B[31mInvalid input =(\u001B[0m",
-                "Please enter '\u001B[0;93mR\u001B[0m' to roll the dice.",};
-        final Player player1 = new Player("OreSeur");
+        final Player player1 = new Player("Philipp");
         player1.getAnotherRoll();
-        String[] lines = outputStreamCaptor.toString().split(System.lineSeparator());
-        // checkout output
-        assertArrayEquals(expectedOutput,lines);
     }
+
+//    @Test
+//    @Disabled
+//    void TestGetAnotherRoll(){
+//        String userInput = """
+//                a
+//                R
+//                """;
+//        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+//        System.setIn(testIn);
+//        String[] expectedOutput = {
+//                // invalid Input
+//                "OreSeur, enter \u001B[0;93mR\u001B[0m to roll your dice again:",
+//                // Empty input
+//                "\u001B[31mInvalid input =(\u001B[0m",
+//                "Please enter '\u001B[0;93mR\u001B[0m' to roll the dice.",};
+//        final Player player1 = new Player("OreSeur");
+//        player1.getAnotherRoll();
+//        String[] lines = outputStreamCaptor.toString().split(System.lineSeparator());
+//        // checkout output
+//        assertArrayEquals(expectedOutput,lines);
+//    }
 
     @Test
     void CompareTo() {
