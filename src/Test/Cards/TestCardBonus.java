@@ -23,13 +23,4 @@ class TestCardBonus {
         assertEquals(cardC.getBonus(), 200);
         assertNotEquals(cardB.getBonus(),300);
     }
-
-    @Test
-    public void getCardName(){
-        assertEquals(cardA.getCardName(), "Bonus Card 500");
-        assertEquals(cardC.getCardName(), "Bonus Card 200");
-    }
-
-
-
 }

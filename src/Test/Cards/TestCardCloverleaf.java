@@ -22,9 +22,4 @@ class TestCardCloverleaf {
         assertEquals(cardA.getBonus(), 0);
     }
 
-    @Test
-    public void getCardName(){
-        assertEquals(cardA.getCardName(), "Card Cloverleaf");
-
-    }
 }

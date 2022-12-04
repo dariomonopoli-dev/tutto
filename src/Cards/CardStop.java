@@ -7,12 +7,10 @@ public class CardStop extends AbstractCard {
     // Singleton, only one Instance of card is needed
     private static final CardStop uniqueInstance = new CardStop();
     private CardStop() {
-        this.cardName = "Card Stop";
-        this.cardDescription = "Tough luck! You have to end your turn, and your left neighbour has his turn.";
         this.cardGraphicalRepresentation = Displayer.ANSI_RED + """                
                                   ╔══════════╗
                                   ║          ║
-                                  ║          ║  Tough luck! You have to end your turn, and your left neighbour has his turn.
+                                  ║          ║  Tough luck! You have to end your turn, and the next Player has his turn.
                                   ║   STOP   ║
                                   ║          ║
                                   ║          ║

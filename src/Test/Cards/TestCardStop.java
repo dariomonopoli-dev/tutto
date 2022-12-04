@@ -1,7 +1,6 @@
 package Test.Cards;
 
 import Cards.AbstractCard;
-import Cards.CardFireworks;
 import Cards.CardStop;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,9 +22,4 @@ class TestCardStop {
         assertEquals(cardA.getBonus(), 0);
     }
 
-    @Test
-    public void getCardName(){
-        assertEquals(cardA.getCardName(), "Card Stop");
-
-    }
 }
