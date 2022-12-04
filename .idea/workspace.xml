@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="deleted obsolete test in TestInputValidator">
+    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="unversioned changes in classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/AbstractCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/AbstractCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/Displayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/GameInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/GameInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Gamestate/Gameplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Gamestate/Gameplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/DiceRoller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/DiceRoller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestInputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestInputValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/InputValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/ScoreCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/ScoreCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Round/Round.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Round/Round.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestDisplayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestDisplayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/Helpers/TestInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Helpers/TestInputValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +44,6 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -84,22 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGameInitializer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tutto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.Gamestate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test.Gamestate" />
-      <option name="MAIN_CLASS_NAME" value="Test.Gamestate.TestGameInitializer" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestInputValidator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestInputValidator.checkChoiceValidity (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tutto" />
       <extension name="coverage">
         <pattern>
@@ -109,22 +102,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test.Helpers" />
       <option name="MAIN_CLASS_NAME" value="Test.Helpers.TestInputValidator" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="checkChoiceValidity" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestInputValidator.TestCheckChoiceValidity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPlayer.getChoiceContinueRoll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tutto" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.Helpers.*" />
+          <option name="PATTERN" value="Test.Player.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Test.Helpers" />
-      <option name="MAIN_CLASS_NAME" value="Test.Helpers.TestInputValidator" />
-      <option name="METHOD_NAME" value="TestCheckChoiceValidity" />
+      <option name="PACKAGE_NAME" value="Test.Player" />
+      <option name="MAIN_CLASS_NAME" value="Test.Player.TestPlayer" />
+      <option name="METHOD_NAME" value="getChoiceContinueRoll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer.getChoiceDice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tutto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.Player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.Player" />
+      <option name="MAIN_CLASS_NAME" value="Test.Player.TestPlayer" />
+      <option name="METHOD_NAME" value="getChoiceDice" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,19 +169,19 @@
       <item itemvalue="JUnit.TestDeck" />
       <item itemvalue="JUnit.All in tutto" />
       <item itemvalue="JUnit.TestScoreCalculator" />
-      <item itemvalue="JUnit.TestInputValidator.TestCheckChoiceValidity" />
       <item itemvalue="JUnit.Test in tutto" />
       <item itemvalue="JUnit.Test.Gamestate in tutto" />
-      <item itemvalue="JUnit.TestGameInitializer" />
-      <item itemvalue="JUnit.TestInputValidator" />
+      <item itemvalue="JUnit.TestPlayer.getChoiceContinueRoll" />
+      <item itemvalue="JUnit.TestPlayer.getChoiceDice" />
+      <item itemvalue="JUnit.TestInputValidator.checkChoiceValidity (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestInputValidator" />
-        <item itemvalue="JUnit.TestInputValidator.TestCheckChoiceValidity" />
-        <item itemvalue="JUnit.TestGameInitializer" />
         <item itemvalue="JUnit.Test in tutto" />
         <item itemvalue="JUnit.Test.Gamestate in tutto" />
+        <item itemvalue="JUnit.TestPlayer.getChoiceDice" />
+        <item itemvalue="JUnit.TestPlayer.getChoiceContinueRoll" />
+        <item itemvalue="JUnit.TestInputValidator.checkChoiceValidity (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -190,8 +200,7 @@
       <workItem from="1670059915643" duration="194000" />
       <workItem from="1670060208694" duration="51000" />
       <workItem from="1670060296224" duration="2469000" />
-      <workItem from="1670171182131" duration="3175000" />
-      <workItem from="1670178877999" duration="757000" />
+      <workItem from="1670171182131" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="finished displayWinnerScreen">
       <created>1669891186354</created>
@@ -214,14 +223,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669891594002</updated>
     </task>
-    <task id="LOCAL-00004" summary="deleted obsolete test in TestInputValidator">
-      <created>1670172958065</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1670172958065</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,23 +247,7 @@
     <MESSAGE value="updated hasValidIndex" />
     <MESSAGE value="changed updatePlayerScore to increasePlayerScore and changed subtractPlayerScore to decreasePlayerScoreBy1000 with no parameter" />
     <MESSAGE value="unversioned changes in classes" />
-    <MESSAGE value="deleted obsolete test in TestInputValidator" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted obsolete test in TestInputValidator" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Test/Helpers/TestInputValidator.java</url>
-          <line>35</line>
-          <properties class="Test.Helpers.TestInputValidator" method="TestCheckChoiceValidity">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="unversioned changes in classes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tutto$All_in_tutto.ic" NAME="All in tutto Coverage Results" MODIFIED="1670062330369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
