@@ -3,6 +3,7 @@ package Test.Player;
 import Player.Player;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
@@ -32,15 +33,37 @@ class TestPlayer {
     }
 
     @Test
-    void getPlayerName() {
+    void TestGetPlayerName() {
         final Player player1 = new Player("Philipp");
         assertEquals("Philipp", player1.getPlayerName());
     }
 
     @Test
-    void getPlayerScore() {
+    void TestGetPlayerScore() {
         final Player player1 = new Player("Philipp");
         assertEquals(0, player1.getPlayerScore());
+    }
+
+    @Test
+    void TestIncreasePlayerScore() {
+        final Player player1 = new Player("Docks");
+        player1.increasePlayerScore(11);
+        assertEquals(player1.getPlayerScore(), 11);
+    }
+
+    @Test
+    @Disabled
+    void TestIncreasePlayerScoreExeption() {
+        final Player player1 = new Player("Docks");
+        player1.increasePlayerScore(-11);
+        //assertThrows();
+    }
+
+    @Test
+    void TestDecreasePlayerScoreby1000() {
+        final Player player1 = new Player("Ham");
+        player1.decreasePlayerScoreBy1000();
+        assertEquals(-1000, player1.getPlayerScore());
     }
 
     @Test
@@ -48,7 +71,6 @@ class TestPlayer {
         final Player player1 = new Player("Philipp");
         player1.increasePlayerScore(1000);
         assertEquals(1000, player1.getPlayerScore());
-
     }
 
     @Test
@@ -60,28 +82,43 @@ class TestPlayer {
     }
 
     @Test
-    void getChoiceContinueRoll() {
-        String userInput = "R\n";
+    void TestGetChoiceContinueRollYes(){
+        String userInput = """
+                A
+                R
+                """;
         ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(testIn);
-        final Player player1 = new Player("Philipp");
+        final Player player1 = new Player("Elend Venture");
         assertTrue(player1.getChoiceContinueRoll());
     }
 
     @Test
-    void getChoiceAnotherRound() {
+    void TestGetChoiceContinueRollNo(){
+        String userInput = """
+                A
+                E
+                """;
+        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
+        final Player player1 = new Player("Lord Ruler");
+        assertFalse(player1.getChoiceContinueRoll());
+    }
+
+    @Test
+    void TestGetChoiceAnotherRound() {
         String userInput = """
                 R
                 Y
                 """;
         ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(testIn);
-        final Player player1 = new Player("Philipp");
+        final Player player1 = new Player("Sazed");
         assertTrue(player1.getChoiceAnotherRoll());
     }
 
     @Test
-    void getChoiceDisplayScores() {
+    void TestGetChoiceDisplayScores() {
         String userInput = """
                 a
                 D
@@ -93,12 +130,37 @@ class TestPlayer {
     }
 
     @Test
-    void GetChoiceDice() {
-        String userInput = "1,2,3,4,5,6\n";
+    void TestGetChoiceDice() {
+        String userInput = """
+                z
+                1,2,3,4,5,6
+                """;
         ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(testIn);
         final Player player1 = new Player("Philipp");
         assertEquals("1,2,3,4,5,6", player1.getChoiceDice(6));
+    }
+
+    @Test
+    @Disabled
+    void TestGetAnotherRoll(){
+        String userInput = """
+                a
+                R
+                """;
+        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
+        String[] expectedOutput = {
+                // invalid Input
+                "OreSeur, enter \u001B[0;93mR\u001B[0m to roll your dice again:",
+                // Empty input
+                "\u001B[31mInvalid input =(\u001B[0m",
+                "Please enter '\u001B[0;93mR\u001B[0m' to roll the dice.",};
+        final Player player1 = new Player("OreSeur");
+        player1.getAnotherRoll();
+        String[] lines = outputStreamCaptor.toString().split(System.lineSeparator());
+        // checkout output
+        assertArrayEquals(expectedOutput,lines);
     }
 
     @Test
