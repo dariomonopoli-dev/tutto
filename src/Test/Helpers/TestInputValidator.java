@@ -12,10 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class TestInputValidator {
 
     @Test
-    void checkDieIndex() {
-    }
-
-    @Test
     void checkChoiceValidity() {
         System.out.println("Input 4,6 to pass this test");
         final InputValidator iv = new InputValidator();
