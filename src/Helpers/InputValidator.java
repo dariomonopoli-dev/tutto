@@ -32,7 +32,13 @@ public class InputValidator {
                 "1,2,3,4,5,6"
         );
         List<String> answerList = getStringList(answer);
-        int lastIndex = Integer.parseInt(answerList.get(answerList.size()-1));
+        int lastIndex = activeDice+1;
+        try {
+            lastIndex = Integer.parseInt(answerList.get(answerList.size() - 1));
+        }
+        catch (NumberFormatException e) {
+            lastIndex = activeDice+1;
+        }
         return (possibleAnswers.contains(answer) && lastIndex <= activeDice);
     }
 
@@ -59,10 +65,11 @@ public class InputValidator {
      */
     public static List<Integer> checkChoiceValidityStraight (String answer, List<Integer> rolledDice, List<Integer> diceSetAside) {
         List<String> answerList = getStringList(answer);
-
-        while (!isValidChoiceStraight(answerList, rolledDice, diceSetAside)) {
+        boolean validInput = isValidChoiceStraight(answerList, rolledDice, diceSetAside);
+        while (!validInput) {
             answer = getNewIndexChoice();
             answerList = getStringList(answer);
+            validInput = isValidChoiceStraight(answerList, rolledDice, diceSetAside);
         }
         return getSelectedDice(answerList, rolledDice);
     }
