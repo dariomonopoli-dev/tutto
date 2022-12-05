@@ -35,6 +35,7 @@ class TestPlayer {
     @Test
     void TestGetPlayerName() {
         final Player player1 = new Player("Philipp");
+
         assertEquals("Philipp", player1.getPlayerName());
     }
 
@@ -52,11 +53,15 @@ class TestPlayer {
     }
 
     @Test
-    @Disabled
-    void TestIncreasePlayerScoreExeption() {
-        final Player player1 = new Player("Docks");
-        player1.increasePlayerScore(-11);
-        //assertThrows();
+    void TestIncreasePlayerScoreException() {
+        try {
+            final Player player1 = new Player("Docks");
+            player1.increasePlayerScore(-11);
+        }
+        catch (IllegalArgumentException e) {
+            String message = "Score must be positive!";
+            assertEquals(message, e.getMessage());
+        }
     }
 
     @Test
