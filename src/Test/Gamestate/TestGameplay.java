@@ -37,9 +37,9 @@ class TestGameplay extends Gameplay {
         ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(testIn);
 
-        waitForEnter("Press " + Displayer.ANSI_YELLOW + "Enter" + Displayer.ANSI_RESET + " to Start the game!");
+        waitForEnter("Test message with a lot of symbols!#*Ü*");
 
-        String expectedOutput1 = "Press " + Displayer.ANSI_YELLOW + "Enter" + Displayer.ANSI_RESET + " to Start the game!";
+        String expectedOutput1 = "Test message with a lot of symbols!#*Ü*";
 
         assertTrue(outputStreamCaptor.toString().contains(expectedOutput1));
     }
