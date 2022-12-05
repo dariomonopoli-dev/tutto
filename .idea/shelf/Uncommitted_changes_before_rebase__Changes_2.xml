@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_rebase_[Changes]2" date="1670230222195" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]2/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/tutto/Test/Player/TestPlayer.class" />
+    <option name="AFTER_PATH" value="out/production/tutto/Test/Player/TestPlayer.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]2/TestPlayer.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/tutto/Cards/Deck.class" />
+    <option name="AFTER_PATH" value="out/production/tutto/Cards/Deck.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]2/Deck.class" />
+  </binary>
+</changelist>

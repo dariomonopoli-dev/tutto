@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="test for getAnotherRoll">
+    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="addded a lot of branches to inputValidator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Cards/Deck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Round/Round.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Round/Round.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardBonus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardBonus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardCloverleaf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardCloverleaf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardFireworks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardFireworks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardPlusMinus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardPlusMinus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStraight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardStraight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardX2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestCardX2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestDeck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Cards/TestDeck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestInputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestInputValidator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Player/TestPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Player/TestPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cards/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Round/Round.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Round/Round.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Helpers/TestInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Helpers/TestInputValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +17,10 @@
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="1" />
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -213,8 +196,6 @@
       <workItem from="1670180625592" duration="1166000" />
       <workItem from="1670181867332" duration="6633000" />
       <workItem from="1670188535159" duration="1424000" />
-      <workItem from="1670194308888" duration="369000" />
-      <workItem from="1670226510593" duration="2252000" />
     </task>
     <task id="LOCAL-00001" summary="finished displayWinnerScreen">
       <created>1669891186354</created>
@@ -272,14 +253,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670193794130</updated>
     </task>
-    <task id="LOCAL-00009" summary="test for getAnotherRoll">
-      <created>1670194432939</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1670194432939</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,19 +282,7 @@
     <MESSAGE value="fixed input bug" />
     <MESSAGE value="added Test for StopCard" />
     <MESSAGE value="addded a lot of branches to inputValidator" />
-    <MESSAGE value="test for getAnotherRoll" />
-    <option name="LAST_COMMIT_MESSAGE" value="test for getAnotherRoll" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Round/Round.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="addded a lot of branches to inputValidator" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tutto$All_in_tutto.ic" NAME="All in tutto Coverage Results" MODIFIED="1670227669670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
