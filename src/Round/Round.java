@@ -80,13 +80,13 @@ public class Round {
                 return;
             }
             String answer = activePlayer.getChoiceDice(activeDice);
-            List<Integer> diceSetAsideThrow = checkChoiceValidity(answer, rolledDice);
+            List<Integer> diceSetAsideThrow = checkChoiceValidity(answer, rolledDice, activePlayer);
             intermediateScore += calculateScore(diceSetAsideThrow);
-            turnScore += intermediateScore;
+            turnScore += calculateScore(diceSetAsideThrow);
             activeDice -= diceSetAsideThrow.size();
             if (activeDice == 0) {
                 turnIsActive = anotherRollAfterTutto(activePlayer, true);
-                turnScore += isDouble ? intermediateScore : intermediateScore + bonus;
+                turnScore += isDouble ? intermediateScore : bonus;
                 if (turnIsActive) {
                     activeCard = cardDeck.getTopCard();
                     activeCard.playTurn();
@@ -154,7 +154,7 @@ public class Round {
                 return;
             }
             String answer = activePlayer.getChoiceDice(activeDice);
-            List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice);
+            List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice, activePlayer);
             activeDice -= diceSetAside.size();
             if (activeDice == 0) {
                 turnIsActive = false;
@@ -189,7 +189,7 @@ public class Round {
                 return;
             }
             String answer = activePlayer.getChoiceDice(activeDice);
-            List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice);
+            List<Integer> diceSetAside = checkChoiceValidity(answer, rolledDice, activePlayer);
             activeDice -= diceSetAside.size();
             if (activeDice == 0 && numberOfTuttos == 0) {
                 System.out.println("Congratulations " + activePlayer.getPlayerName() + ", you got a Tutto! " +
@@ -225,7 +225,7 @@ public class Round {
                 }
             }
             String answer = activePlayer.getChoiceDice(activeDice);
-            List<Integer> diceSetAsideThrow = checkChoiceValidityStraight(answer, rolledDice, diceSetAsideTurn);
+            List<Integer> diceSetAsideThrow = checkChoiceValidityStraight(answer, rolledDice, diceSetAsideTurn, activePlayer);
             activeDice -= diceSetAsideThrow.size();
             diceSetAsideTurn.addAll(diceSetAsideThrow);
             if (activeDice == 0) {
