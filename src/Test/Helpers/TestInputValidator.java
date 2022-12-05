@@ -1,6 +1,7 @@
 package Test.Helpers;
 
 import Helpers.InputValidator;
+import Player.Player;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -69,7 +70,8 @@ class TestInputValidator extends InputValidator {
 
         final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,3,3,4,4,5));
         final List<Integer> expected = Arrays.asList(1,5);
-        List<Integer> selectedDice = checkChoiceValidity("1,5", rolledDice);
+        final Player player = new Player("Alendi");
+        List<Integer> selectedDice = checkChoiceValidity("1,5", rolledDice, player);
         assertTrue(expected.containsAll(selectedDice) && selectedDice.containsAll(expected));
     }
 
@@ -77,7 +79,8 @@ class TestInputValidator extends InputValidator {
     void TestCheckChoiceValidityCorrectInput() {
         final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,3,3,4,4,5));
         final List<Integer> expected = Arrays.asList(1,5);
-        List<Integer> selectedDice = checkChoiceValidity("1,6", rolledDice);
+        final Player player = new Player("Raschek");
+        List<Integer> selectedDice = checkChoiceValidity("1,6", rolledDice, player);
         assertTrue(expected.containsAll(selectedDice) && selectedDice.containsAll(expected));
     }
 
@@ -87,7 +90,8 @@ class TestInputValidator extends InputValidator {
         List<Integer> rolledDice = new ArrayList<>(Arrays.asList(2,3));
         List<Integer> diceSetAside = new ArrayList<>(Arrays.asList(5,4,1,6));
         List<Integer> expected = new ArrayList<>(Arrays.asList(2,3));
-        assertEquals(expected, checkChoiceValidityStraight(answer, rolledDice, diceSetAside));
+        final Player player = new Player("Tindwyl");
+        assertEquals(expected, checkChoiceValidityStraight(answer, rolledDice, diceSetAside, player));
     }
 
     @Test
@@ -102,7 +106,8 @@ class TestInputValidator extends InputValidator {
         List<Integer> rolledDice = new ArrayList<>(Arrays.asList(2,3,1));
         List<Integer> diceSetAside = new ArrayList<>(Arrays.asList(5,4,1));
         List<Integer> expected = new ArrayList<>(Arrays.asList(2,3));
-        assertEquals(expected, checkChoiceValidityStraight(initialAnswer, rolledDice, diceSetAside));
+        final Player player = new Player("Demoux");
+        assertEquals(expected, checkChoiceValidityStraight(initialAnswer, rolledDice, diceSetAside, player));
     }
 
     @Test
