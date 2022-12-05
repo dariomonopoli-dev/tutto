@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Gameplay {
 
-    protected static void waitForEnter(String message) {
+    public static void waitForEnter(String message) {
         Scanner getEnter = new Scanner(System.in);
         System.out.println(message);
         getEnter.nextLine();  // Read user input
