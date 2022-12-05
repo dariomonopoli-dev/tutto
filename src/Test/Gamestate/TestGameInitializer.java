@@ -64,7 +64,7 @@ class TestGameInitializer extends GameInitializer {
     void TestGetPlayerNameInvalidsFirst() {
         String userInput =
                 """
-                            
+                        
                         Vin, heir to the Survivor aka Valette Renoux
                         Vin
                         """;
@@ -78,7 +78,7 @@ class TestGameInitializer extends GameInitializer {
     {
         String userInput =
                 """
-                        -5 
+                        -5
                         IXVV
                         4000
                         """;
