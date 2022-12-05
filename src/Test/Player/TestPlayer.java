@@ -3,7 +3,6 @@ package Test.Player;
 import Player.Player;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
@@ -53,7 +52,7 @@ class TestPlayer {
     }
 
     @Test
-    void TestIncreasePlayerScoreException() {
+    void TestIncreasePlayerScoreExceptionMsg() {
         try {
             final Player player1 = new Player("Docks");
             player1.increasePlayerScore(-11);
@@ -62,6 +61,12 @@ class TestPlayer {
             String message = "Score must be positive!";
             assertEquals(message, e.getMessage());
         }
+    }
+
+    @Test
+    void TestIncreasePlayerScoreException() {
+        final Player player1 = new Player("Docks");
+        assertThrows(IllegalArgumentException.class, () -> player1.increasePlayerScore(-11));
     }
 
     @Test
