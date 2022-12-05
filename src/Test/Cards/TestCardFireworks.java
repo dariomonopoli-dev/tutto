@@ -13,12 +13,12 @@ class TestCardFireworks {
     static public AbstractCard cardB = CardFireworks.getInstance();
 
     @Test
-    public void getInstanceEqual() {
+    public void TestGetInstanceEqual() {
         assertSame(cardA, cardB);
     }
 
     @Test
-    public void getCardBonus(){
+    public void TestGetCardBonus(){
         assertEquals(cardA.getBonus(), 0);
     }
 

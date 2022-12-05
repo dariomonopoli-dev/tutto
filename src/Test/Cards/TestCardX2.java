@@ -12,12 +12,12 @@ class TestCardX2 {
     static public AbstractCard cardB = CardX2.getInstance();
 
     @Test
-    public void getInstanceEqual() {
+    public void TestGetInstanceEqual() {
         assertSame(cardA, cardB);
     }
 
     @Test
-    public void getCardBonus(){
+    public void TestGetCardBonus(){
         assertEquals(cardA.getBonus(), 0);
     }
 
