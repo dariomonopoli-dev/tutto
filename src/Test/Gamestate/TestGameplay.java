@@ -37,7 +37,7 @@ class TestGameplay extends Gameplay {
         ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(testIn);
 
-        waitForEnter();
+        waitForEnter("Press " + Displayer.ANSI_YELLOW + "Enter" + Displayer.ANSI_RESET + " to Start the game!");
 
         String expectedOutput1 = "Press " + Displayer.ANSI_YELLOW + "Enter" + Displayer.ANSI_RESET + " to Start the game!";
 
