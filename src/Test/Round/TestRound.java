@@ -74,85 +74,85 @@ class TestRound {
         assertEquals(0, player1.getPlayerScore());
     }
 
-//    @Test
-//    void TestPlayBonusCard() {
-//        String userInput = """
-//                        R
-//                        1
-//                        2
-//                        3
-//                        4
-//                        5
-//                        6
-//                        1,2,3
-//                        1,2,4
-//                        1,2,5
-//                        1,2,6
-//                        1,3,4
-//                        1,3,5
-//                        1,3,6
-//                        1,4,5
-//                        1,4,6
-//                        1,5,6
-//                        2,3,4
-//                        2,3,5
-//                        2,3,6
-//                        2,4,5
-//                        2,4,6
-//                        2,5,6
-//                        3,4,5
-//                        3,4,6
-//                        3,5,6
-//                        4,5,6
-//                        E
-//                        """;
-//        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
-//        System.setIn(testIn);
-//        Deck deck = new Deck(CardBonus.getInstance(200));
-//        final Player player1 = new Player("Elend Venture");
-//        final List<Player> players = Arrays.asList(player1);
-//        Round.playRound(players, deck);
-//    }
-//
-//    @Test
-//    void TestPlayX2Card() {
-//        String userInput = """
-//                        R
-//                        1
-//                        2
-//                        3
-//                        4
-//                        5
-//                        6
-//                        1,2,3
-//                        1,2,4
-//                        1,2,5
-//                        1,2,6
-//                        1,3,4
-//                        1,3,5
-//                        1,3,6
-//                        1,4,5
-//                        1,4,6
-//                        1,5,6
-//                        2,3,4
-//                        2,3,5
-//                        2,3,6
-//                        2,4,5
-//                        2,4,6
-//                        2,5,6
-//                        3,4,5
-//                        3,4,6
-//                        3,5,6
-//                        4,5,6
-//                        E
-//                        """;
-//        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
-//        System.setIn(testIn);
-//        Deck deck = new Deck(CardX2.getInstance());
-//        final Player player1 = new Player("Cett");
-//        final List<Player> players = Arrays.asList(player1);
-//        Round.playRound(players, deck);
-//    }
+    @Test
+    void TestPlayBonusCard() {
+        String userInput = """
+                        R
+                        1
+                        2
+                        3
+                        4
+                        5
+                        6
+                        1,2,3
+                        1,2,4
+                        1,2,5
+                        1,2,6
+                        1,3,4
+                        1,3,5
+                        1,3,6
+                        1,4,5
+                        1,4,6
+                        1,5,6
+                        2,3,4
+                        2,3,5
+                        2,3,6
+                        2,4,5
+                        2,4,6
+                        2,5,6
+                        3,4,5
+                        3,4,6
+                        3,5,6
+                        4,5,6
+                        E
+                        """;
+        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
+        Deck deck = new Deck(CardBonus.getInstance(200));
+        final Player player1 = new Player("Elend Venture");
+        final List<Player> players = Arrays.asList(player1);
+        Round.playRound(players, deck);
+    }
+
+    @Test
+    void TestPlayX2Card() {
+        String userInput = """
+                        R
+                        1
+                        2
+                        3
+                        4
+                        5
+                        6
+                        1,2,3
+                        1,2,4
+                        1,2,5
+                        1,2,6
+                        1,3,4
+                        1,3,5
+                        1,3,6
+                        1,4,5
+                        1,4,6
+                        1,5,6
+                        2,3,4
+                        2,3,5
+                        2,3,6
+                        2,4,5
+                        2,4,6
+                        2,5,6
+                        3,4,5
+                        3,4,6
+                        3,5,6
+                        4,5,6
+                        E
+                        """;
+        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
+        Deck deck = new Deck(CardX2.getInstance());
+        final Player player1 = new Player("Cett");
+        final List<Player> players = Arrays.asList(player1);
+        Round.playRound(players, deck);
+    }
 
 //    @Test
 //    void TestPlayPlusMinusCard() {
@@ -176,15 +176,36 @@ class TestRound {
 //        Round.playRound(players, deck);
 //    }
 //
-//    @Test
-//    void TestPlayFireWorkCard() {
-//        String userInput = testInputOnlyR;
-//        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
-//        System.setIn(testIn);
-//        Deck deck = new Deck(CardFireworks.getInstance());
-//        final Player player1 = new Player("Breeze");
-//        final List<Player> players = Arrays.asList(player1);
-//        Round.playRound(players, deck);
-//    }
+    @Test
+    void TestPlayFireWorkCard() {
+        String userInput = """
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           R
+                           """;
+        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(testIn);
+        Deck deck = new Deck(CardFireworks.getInstance());
+        final Player player1 = new Player("Breeze");
+        final List<Player> players = Arrays.asList(player1);
+        Round.playRound(players, deck);
+    }
 
 }
