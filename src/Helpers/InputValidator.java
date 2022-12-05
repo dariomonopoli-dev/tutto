@@ -1,5 +1,7 @@
 package Helpers;
 
+import Player.Player;
+
 import java.util.*;
 
 public class InputValidator {
@@ -46,11 +48,11 @@ public class InputValidator {
      * @post method ensures the selected die-indexes are valid options
      * and returns a list where each choice corresponds to one item
      */
-    public static List<Integer> checkChoiceValidity (String answer, List<Integer> rolledDice) {
+    public static List<Integer> checkChoiceValidity (String answer, List<Integer> rolledDice, Player activePlayer) {
         List<String> answerList = getStringList(answer);
         boolean validInput = isValidChoice(rolledDice, answerList);
         while (!validInput) {
-            answer = getNewIndexChoice();
+            answer = activePlayer.getChoiceDice(rolledDice.size());
             answerList = getStringList(answer);
             // go through every choice
             validInput = isValidChoice(rolledDice, answerList);
@@ -63,11 +65,11 @@ public class InputValidator {
      * for a straight and returns a list where each choice corresponds
      * to one item
      */
-    public static List<Integer> checkChoiceValidityStraight (String answer, List<Integer> rolledDice, List<Integer> diceSetAside) {
+    public static List<Integer> checkChoiceValidityStraight (String answer, List<Integer> rolledDice, List<Integer> diceSetAside, Player activePlayer) {
         List<String> answerList = getStringList(answer);
         boolean validInput = isValidChoiceStraight(answerList, rolledDice, diceSetAside);
         while (!validInput) {
-            answer = getNewIndexChoice();
+            answer = activePlayer.getChoiceDice(rolledDice.size());
             answerList = getStringList(answer);
             validInput = isValidChoiceStraight(answerList, rolledDice, diceSetAside);
         }
@@ -126,7 +128,6 @@ public class InputValidator {
         return true;
     }
 
-
     public static boolean hasTriplet (List<Integer> rolledDice, int currentIndex) {
         int indexValue = rolledDice.get(currentIndex);
         int nextIndexValue = rolledDice.get(currentIndex+1);
@@ -153,12 +154,5 @@ public class InputValidator {
             choicesList.add(rolledDice.get(choice));
         }
         return choicesList;
-    }
-
-    private static String getNewIndexChoice() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Invalid input =(");
-        System.out.println("Please enter indexes in the correct format (e.g. 2 or 2,3,4):");
-        return input.nextLine();
     }
 }
