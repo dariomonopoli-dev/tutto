@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="unversioned files">
+    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="tests for Round">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Round/TestRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Round/TestRound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Round/TestRound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Round/TestRound.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.TestRound">
+  <component name="RunManager" selected="JUnit.All Classes without Tests">
     <configuration name="Gameplay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Gamestate.Gameplay" />
       <module name="tutto" />
@@ -283,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670230319570</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="tests for Round">
+      <created>1670231142107</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670231142107</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,12 +320,16 @@
     <MESSAGE value="added Test for StopCard" />
     <MESSAGE value="addded a lot of branches to inputValidator" />
     <MESSAGE value="unversioned files" />
-    <option name="LAST_COMMIT_MESSAGE" value="unversioned files" />
+    <MESSAGE value="tests for Round" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests for Round" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tutto$All_in_tutto.ic" NAME="All in tutto Coverage Results" MODIFIED="1670230704819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/tutto$TestRound.ic" NAME="TestRound Coverage Results" MODIFIED="1670231208671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <EXCLUDED_FILTER>Test.*</EXCLUDED_FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/tutto$TestDeck.ic" NAME="TestDeck Coverage Results" MODIFIED="1670193690725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/tutto$All_Classes_without_Tests.ic" NAME="All Classes without Tests Coverage Results" MODIFIED="1670231074834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/tutto$All_Classes_without_Tests.ic" NAME="All Classes without Tests Coverage Results" MODIFIED="1670231242419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <EXCLUDED_FILTER>Test.*</EXCLUDED_FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/tutto$TestDeck_getTopCard.ic" NAME="TestDeck.getTopCard Coverage Results" MODIFIED="1670010112563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

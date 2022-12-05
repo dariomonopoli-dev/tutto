@@ -154,28 +154,6 @@ class TestRound {
         Round.playRound(players, deck);
     }
 
-//    @Test
-//    void TestPlayPlusMinusCard() {
-//        String userInput = testInputDiceChoice;
-//        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
-//        System.setIn(testIn);
-//        Deck deck = new Deck(CardPlusMinus.getInstance());
-//        final Player player1 = new Player("Sazed");
-//        final List<Player> players = Arrays.asList(player1);
-//        Round.playRound(players, deck);
-//    }
-//
-//    @Test
-//    void TestPlayCloverLeafCard() {
-//        String userInput = testInputDiceChoice;
-//        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
-//        System.setIn(testIn);
-//        Deck deck = new Deck(CardCloverleaf.getInstance());
-//        final Player player1 = new Player("Ham");
-//        final List<Player> players = Arrays.asList(player1);
-//        Round.playRound(players, deck);
-//    }
-//
     @Test
     void TestPlayFireWorkCard() {
         String userInput = """
@@ -207,5 +185,28 @@ class TestRound {
         final List<Player> players = Arrays.asList(player1);
         Round.playRound(players, deck);
     }
+
+//    @Test
+//    void TestPlayPlusMinusCard() {
+//        String userInput = testInputDiceChoice;
+//        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+//        System.setIn(testIn);
+//        Deck deck = new Deck(CardPlusMinus.getInstance());
+//        final Player player1 = new Player("Sazed");
+//        final List<Player> players = Arrays.asList(player1);
+//        Round.playRound(players, deck);
+//    }
+//
+//    @Test
+//    void TestPlayCloverLeafCard() {
+//        String userInput = testInputDiceChoice;
+//        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
+//        System.setIn(testIn);
+//        Deck deck = new Deck(CardCloverleaf.getInstance());
+//        final Player player1 = new Player("Ham");
+//        final List<Player> players = Arrays.asList(player1);
+//        Round.playRound(players, deck);
+//    }
+//
 
 }
