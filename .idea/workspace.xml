@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="removed redundant post conditions">
+    <list default="true" id="52cfe622-e25b-4901-aa4c-c010c4a0670b" name="Changes" comment="added private methods where possible">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Helpers/InputValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Gamestate/TestGameInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestInputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tutto/Test/Helpers/TestInputValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Helpers/TestInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Helpers/TestInputValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.All in tutto">
+  <component name="RunManager" selected="JUnit.All Classes without Tests">
     <configuration name="Gameplay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Gamestate.Gameplay" />
       <module name="tutto" />
@@ -196,8 +192,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestRound" />
         <item itemvalue="Application.Gameplay" />
+        <item itemvalue="JUnit.TestRound" />
         <item itemvalue="JUnit.Test in tutto" />
         <item itemvalue="JUnit.Test.Gamestate in tutto" />
         <item itemvalue="JUnit.TestPlayer.getChoiceDice" />
@@ -223,7 +219,7 @@
       <workItem from="1670180625592" duration="1166000" />
       <workItem from="1670181867332" duration="6633000" />
       <workItem from="1670188535159" duration="1424000" />
-      <workItem from="1670233193120" duration="3375000" />
+      <workItem from="1670233193120" duration="4686000" />
     </task>
     <task id="LOCAL-00001" summary="finished displayWinnerScreen">
       <created>1669891186354</created>
@@ -309,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670234918728</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added private methods where possible">
+      <created>1670237625019</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670237625019</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,15 +344,16 @@
     <MESSAGE value="unversioned files" />
     <MESSAGE value="tests for Round" />
     <MESSAGE value="removed redundant post conditions" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed redundant post conditions" />
+    <MESSAGE value="added private methods where possible" />
+    <option name="LAST_COMMIT_MESSAGE" value="added private methods where possible" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tutto$TestRound.ic" NAME="TestRound Coverage Results" MODIFIED="1670231208671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <EXCLUDED_FILTER>Test.*</EXCLUDED_FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tutto$All_in_tutto.ic" NAME="All in tutto Coverage Results" MODIFIED="1670236217237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/tutto$All_in_tutto.ic" NAME="All in tutto Coverage Results" MODIFIED="1670237635044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/tutto$TestDeck.ic" NAME="TestDeck Coverage Results" MODIFIED="1670193690725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/tutto$All_Classes_without_Tests.ic" NAME="All Classes without Tests Coverage Results" MODIFIED="1670233690755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/tutto$All_Classes_without_Tests.ic" NAME="All Classes without Tests Coverage Results" MODIFIED="1670238290656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <EXCLUDED_FILTER>Test.*</EXCLUDED_FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/tutto$TestDeck_getTopCard.ic" NAME="TestDeck.getTopCard Coverage Results" MODIFIED="1670010112563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
