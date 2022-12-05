@@ -6,10 +6,6 @@ import java.util.*;
 
 public class InputValidator {
 
-    /**
-     * @post method checks whether the input if of the correct form and
-     *  a feasible choice (i.e. not more indexes than dice)
-     */
     public static boolean hasValidIndex (String answer,int activeDice) {
         List<String> possibleAnswers = Arrays.asList(
                 "1","2","3","4","5","6",
@@ -76,9 +72,6 @@ public class InputValidator {
         return getSelectedDice(answerList, rolledDice);
     }
 
-    /**
-     * @post check whether a roll has valid dice to choose
-     */
     public static boolean checkIsValidRoll (List<Integer> rolledDice) {
         int occurrenceOnes = Collections.frequency(rolledDice, 1);
         int occurrenceTwos = Collections.frequency(rolledDice, 2);
@@ -91,9 +84,6 @@ public class InputValidator {
                 occurrenceFours > 2 || occurrenceFives > 0 || occurrenceSix > 2);
     }
 
-    /**
-     * @post check whether a roll has valid dice for a straight to choose
-     */
     public static boolean checkIsValidRollStraight (List<Integer> rolledDice, List<Integer> diceSetAside) {
         for (Integer dieValue : rolledDice) {
             if (!diceSetAside.contains(dieValue)) {
