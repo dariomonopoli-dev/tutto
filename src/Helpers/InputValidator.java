@@ -93,7 +93,7 @@ public class InputValidator {
         return false;
     }
 
-    public static boolean isValidChoice (List<Integer> rolledDice, List<String> answerList) {
+    private static boolean isValidChoice (List<Integer> rolledDice, List<String> answerList) {
         List<Integer> chosenDice = getSelectedDice(answerList, rolledDice);
         for (int die : chosenDice) {
             int amountOfDice = Collections.frequency(chosenDice, die);
@@ -106,7 +106,7 @@ public class InputValidator {
         return true;
     }
 
-    protected static boolean isValidChoiceStraight(List<String> answerList, List<Integer> rolledDice, List<Integer> diceSetAsideOrig) {
+    private static boolean isValidChoiceStraight(List<String> answerList, List<Integer> rolledDice, List<Integer> diceSetAsideOrig) {
         List<Integer> diceSetAsideCopy = new ArrayList<>(diceSetAsideOrig);
         for (String s : answerList) {
             int index = Integer.parseInt(s) - 1;

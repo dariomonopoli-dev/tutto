@@ -138,43 +138,43 @@ class TestInputValidator extends InputValidator {
         assertFalse(checkIsValidRollStraight(rolledDice, setAside));
     }
 
-    @Test
-    void TestIsValidChoiceCorrect() {
-        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(3,3,3,1));
-        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3","4"));
-        assertTrue(isValidChoice(rolledDice, answerList));
-    }
+//    @Test
+//    void TestIsValidChoiceCorrect() {
+//        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(3,3,3,1));
+//        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3","4"));
+//        assertTrue(isValidChoice(rolledDice, answerList));
+//    }
 
-    @Test
-    void TestIsValidChoiceWrong() {
-        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(3,2,3,1));
-        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3","4"));
-        assertFalse(isValidChoice(rolledDice, answerList));
-    }
+//    @Test
+//    void TestIsValidChoiceWrong() {
+//        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(3,2,3,1));
+//        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3","4"));
+//        assertFalse(isValidChoice(rolledDice, answerList));
+//    }
 
-    @Test
-    void TestIsValidChoiceStraightCorrect() {
-        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,2,3));
-        final List<Integer> diceSetAside =  new ArrayList<>(Arrays.asList(6,5,4));
-        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3"));
-        assertTrue(isValidChoiceStraight(answerList ,rolledDice, diceSetAside));
-    }
+//    @Test
+//    void TestIsValidChoiceStraightCorrect() {
+//        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,2,3));
+//        final List<Integer> diceSetAside =  new ArrayList<>(Arrays.asList(6,5,4));
+//        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3"));
+//        assertTrue(isValidChoiceStraight(answerList ,rolledDice, diceSetAside));
+//    }
 
-    @Test
-    void TestIsValidChoiceStraightAlreadySetAside() {
-        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,2,4));
-        final List<Integer> diceSetAside =  new ArrayList<>(Arrays.asList(6,5,4));
-        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3"));
-        assertFalse(isValidChoiceStraight(answerList ,rolledDice, diceSetAside));
-    }
+//    @Test
+//    void TestIsValidChoiceStraightAlreadySetAside() {
+//        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,2,4));
+//        final List<Integer> diceSetAside =  new ArrayList<>(Arrays.asList(6,5,4));
+//        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3"));
+//        assertFalse(isValidChoiceStraight(answerList ,rolledDice, diceSetAside));
+//    }
 
-    @Test
-    void TestIsValidChoiceStraightSameDiceChosen() {
-        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,1,3));
-        final List<Integer> diceSetAside =  new ArrayList<>(Arrays.asList(6,5,4));
-        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3"));
-        assertFalse(isValidChoiceStraight(answerList ,rolledDice, diceSetAside));
-    }
+//    @Test
+//    void TestIsValidChoiceStraightSameDiceChosen() {
+//        final List<Integer> rolledDice =  new ArrayList<>(Arrays.asList(1,1,3));
+//        final List<Integer> diceSetAside =  new ArrayList<>(Arrays.asList(6,5,4));
+//        final List<String> answerList =  new ArrayList<>(Arrays.asList("1","2","3"));
+//        assertFalse(isValidChoiceStraight(answerList ,rolledDice, diceSetAside));
+//    }
 
     @Test
     void TestHasTripletCorrect() {
