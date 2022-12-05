@@ -3,14 +3,12 @@ package Test.Gamestate;
 import Gamestate.GameInitializer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -86,26 +84,6 @@ class TestGameInitializer extends GameInitializer {
         System.setIn(testIn);
         assertEquals(4000,GameInitializer.getWinningScore());
     }
-
-    @Test
-    @Disabled
-    void TestGetPlayer(){
-        String userInput =
-                """
-                        2
-                        Vin
-                        Kelsier
-                        """;
-        ByteArrayInputStream testIn = new ByteArrayInputStream(userInput.getBytes());
-        System.setIn(testIn);
-        ArrayList returnArrayList = GameInitializer.getPlayers();
-        Integer lenReturnArrayList = returnArrayList.size();
-        assertEquals(2,lenReturnArrayList);
-    }
-
-
-
-
 }
 
 
